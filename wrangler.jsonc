@@ -1,22 +1,22 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "japanese-quiz-game",
-  "compatibility_date": "2026-08-26",
-  "main": ".svelte-kit/cloudflare/_worker.js",
-  "assets": {
-    "binding": "ASSETS",
-    "directory": ".svelte-kit/cloudflare"
-  },
-  "workers_dev": true,
-  "preview_urls": true,
-  "observability": {
-    "enabled": true
-  },
-    "d1_databases": [
-      {
-       "binding": "DB",
-       "database_name": "quiz-game",
-       "migrations_dir": "./drizzle"
-      }
-     ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "japanese-quiz-game",
+	"compatibility_date": "2026-08-26",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"workers_dev": true,
+	"preview_urls": true,
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "quiz-game",
+			"migrations_dir": "./drizzle"
+		}
+	]
 }
