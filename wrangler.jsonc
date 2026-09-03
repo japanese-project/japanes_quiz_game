@@ -5,18 +5,18 @@
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"assets": {
 		"binding": "ASSETS",
-		"directory": ".svelte-kit/cloudflare"
+		"directory": ".svelte-kit/cloudflare",
 	},
 	"workers_dev": true,
 	"preview_urls": true,
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
 	"d1_databases": [
 		{
 			"binding": "DB",
 			"database_name": "quiz-game",
-			"migrations_dir": "./drizzle"
-		}
-	]
+			"migrations_dir": "./drizzle",
+		},
+	],
 }
