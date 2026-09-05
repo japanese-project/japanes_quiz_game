@@ -1,34 +1,133 @@
 <script lang="ts">
-	import type { ActionData, PageData } from './$types';
+	import { onMount } from 'svelte';
+	import Dashboard from '$lib/components/Dashboard.svelte';
+	import LoginScreen from '$lib/components/LoginScreen.svelte';
+	import QuizScreen from '$lib/components/QuizScreen.svelte';
+	import ResultScreen from '$lib/components/ResultScreen.svelte';
+	import { questions } from '$lib/data/questions';
+	import type { Level, Screen, UserProgress } from '$lib/types';
 
-	let { data, form }: { data: PageData; form: ActionData } = $props();
+	const emptyProgress = (): UserProgress => ({
+		N4: { score: 0, answered: 0, best: 0 },
+		N3: { score: 0, answered: 0, best: 0 }
+	});
+	type UserProfiles = Record<string, UserProgress>;
+
+	let screen = $state<Screen>('login');
+	let username = $state('');
+	let selectedLevel = $state<Level>('N4');
+	let progress = $state<UserProgress>(emptyProgress());
+	let profiles = $state<UserProfiles>({});
+	let ready = $state(false);
+	let activeQuestions = $derived(questions.filter((question) => question.level === selectedLevel));
+	let rankings = $derived(
+		Object.entries(profiles)
+			.map(([name, userProgress]) => {
+				const score = userProgress.N4.score + userProgress.N3.score;
+				const answered = userProgress.N4.answered + userProgress.N3.answered;
+				return {
+					username: name,
+					totalScore: score,
+					answered,
+					accuracy: answered ? Math.round((score / (answered * 10)) * 100) : 0
+				};
+			})
+			.sort((a, b) => b.totalScore - a.totalScore || b.accuracy - a.accuracy)
+	);
+
+	onMount(() => {
+		try {
+			const savedName = localStorage.getItem('jq-username');
+			const savedProfiles = localStorage.getItem('jq-users');
+			const savedProgress = localStorage.getItem('jq-progress');
+			if (savedProfiles) profiles = JSON.parse(savedProfiles) as UserProfiles;
+			if (savedName) {
+				username = savedName;
+				if (profiles[savedName]) {
+					progress = profiles[savedName];
+				} else {
+					progress = savedProgress ? (JSON.parse(savedProgress) as UserProgress) : emptyProgress();
+					profiles = { ...profiles, [savedName]: progress };
+					localStorage.setItem('jq-users', JSON.stringify(profiles));
+				}
+				screen = 'dashboard';
+			}
+		} catch {
+			progress = emptyProgress();
+			profiles = {};
+		}
+		ready = true;
+	});
+
+	function login(name: string) {
+		username = name;
+		progress = profiles[name] ?? emptyProgress();
+		profiles = { ...profiles, [name]: progress };
+		localStorage.setItem('jq-username', name);
+		localStorage.setItem('jq-users', JSON.stringify(profiles));
+		screen = 'dashboard';
+	}
+
+	function logout() {
+		localStorage.removeItem('jq-username');
+		username = '';
+		screen = 'login';
+	}
+
+	function startQuiz(level: Level) {
+		selectedLevel = level;
+		screen = 'quiz';
+	}
+
+	function finishQuiz(score: number) {
+		const oldLevel = progress[selectedLevel];
+		progress = {
+			...progress,
+			[selectedLevel]: {
+				score: oldLevel.score + score,
+				answered: oldLevel.answered + activeQuestions.length,
+				best: Math.max(oldLevel.best, score)
+			}
+		};
+		profiles = { ...profiles, [username]: progress };
+		localStorage.setItem('jq-users', JSON.stringify(profiles));
+		localStorage.setItem('jq-progress', JSON.stringify(progress));
+		screen = 'result';
+	}
 </script>
 
-<div class="mx-auto flex min-h-screen max-w-md flex-col items-center justify-center gap-6 px-4">
-	<h1 class="text-3xl font-bold">Japanese Quiz Game</h1>
+<svelte:head>
+	<title>Japanese Quest | JLPT Quiz</title>
+	<meta
+		name="description"
+		content="Practice JLPT N4 and N3 vocabulary, kanji, and grammar with interactive Japanese quizzes."
+	/>
+</svelte:head>
 
-	{#if data.user}
-		<p class="text-lg">
-			Welcome back, <span class="font-semibold">{data.user.username}</span>!
-		</p>
-		<form method="POST" action="?/logout">
-			<button type="submit" class="text-sm text-gray-500 underline">Log out</button>
-		</form>
+{#if ready}
+	{#if screen === 'login'}
+		<LoginScreen onLogin={login} />
 	{:else}
-		<form method="POST" action="?/login" class="flex w-full flex-col gap-3">
-			<label for="username" class="text-sm font-medium">Enter a username to start playing</label>
-			<input
-				id="username"
-				name="username"
-				type="text"
-				required
-				class="rounded border px-3 py-2"
-				placeholder="e.g. sakura123"
+		{#if screen === 'dashboard'}
+			<Dashboard {username} {rankings} onStart={startQuiz} onLogout={logout} />
+		{:else if screen === 'quiz'}
+			<QuizScreen
+				level={selectedLevel}
+				questions={activeQuestions}
+				onFinish={finishQuiz}
+				onExit={() => (screen = 'dashboard')}
 			/>
-			{#if form?.error}
-				<p class="text-sm text-red-600">{form.error}</p>
-			{/if}
-			<button type="submit" class="rounded bg-black px-4 py-2 text-white"> Start </button>
-		</form>
+		{:else}
+			<ResultScreen
+				onDashboard={() => (screen = 'dashboard')}
+				onRetry={() => startQuiz(selectedLevel)}
+			/>
+		{/if}
 	{/if}
-</div>
+{:else}
+	<div class="grid min-h-screen place-items-center bg-[#f5f8fc]">
+		<div
+			class="size-8 animate-spin rounded-full border-4 border-slate-200 border-t-[#173d66]"
+		></div>
+	</div>
+{/if}
