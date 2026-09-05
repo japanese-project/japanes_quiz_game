@@ -1,24 +1,24 @@
-import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core'
 
 export const user = sqliteTable('user', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
-	username: text('username').notNull().unique()
+	username: text('username').notNull().unique(),
 	// uncomment the below line if you want to add password field
 	//   password: text('password').notNull()
-});
+})
 
 export const level = sqliteTable('level', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
 	name: text('name').notNull().unique(), // 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
-	sortOrder: integer('sort_order').notNull()
-});
+	sortOrder: integer('sort_order').notNull(),
+})
 
 export const category = sqliteTable('category', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
-	name: text('name').notNull().unique() // 'Vocabulary' | 'Grammar' | 'Kanji'
-});
+	name: text('name').notNull().unique(), // 'Vocabulary' | 'Grammar' | 'Kanji'
+})
 
 export const quiz = sqliteTable('quiz', {
 	id: text('id')
@@ -31,8 +31,8 @@ export const quiz = sqliteTable('quiz', {
 		.notNull()
 		.references(() => category.id),
 	title: text('title').notNull(),
-	description: text('description')
-});
+	description: text('description'),
+})
 
 export const question = sqliteTable('question', {
 	id: text('id')
@@ -42,8 +42,8 @@ export const question = sqliteTable('question', {
 		.notNull()
 		.references(() => quiz.id, { onDelete: 'cascade' }),
 	prompt: text('prompt').notNull(),
-	orderIndex: integer('order_index').notNull().default(0)
-});
+	orderIndex: integer('order_index').notNull().default(0),
+})
 
 export const choice = sqliteTable('choice', {
 	id: text('id')
@@ -53,8 +53,8 @@ export const choice = sqliteTable('choice', {
 		.notNull()
 		.references(() => question.id, { onDelete: 'cascade' }),
 	text: text('text').notNull(),
-	isCorrect: integer('is_correct', { mode: 'boolean' }).notNull().default(false)
-});
+	isCorrect: integer('is_correct', { mode: 'boolean' }).notNull().default(false),
+})
 
 export const quizAttempt = sqliteTable('quiz_attempt', {
 	id: text('id')
@@ -71,5 +71,5 @@ export const quizAttempt = sqliteTable('quiz_attempt', {
 	totalQuestions: integer('total_questions').notNull(),
 	completedAt: integer('completed_at', { mode: 'timestamp' })
 		.notNull()
-		.$defaultFn(() => new Date())
-});
+		.$defaultFn(() => new Date()),
+})
