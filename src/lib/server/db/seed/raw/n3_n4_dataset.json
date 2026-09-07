@@ -1,0 +1,2744 @@
+{
+  "dataset": {
+    "source_reference": "JapaneseTest4You",
+    "total_records": 300,
+    "categories": [
+      {
+        "level": "N3",
+        "type": "grammar",
+        "records": [
+          {
+            "id": "N3-G-001",
+            "question": "新しい薬を飲んだ＿＿、熱が下がった。",
+            "choices": ["ところに", "ところへ", "ところが", "ところ"],
+            "answer": "ところ",
+            "answer_index": 3,
+            "explanation": "〜たところ means 'when/as a result'",
+            "translation": "After taking the new medicine, my fever went down."
+          },
+          {
+            "id": "N3-G-002",
+            "question": "毎日暑さが＿＿。",
+            "choices": ["増すことだ", "増すばかりだ", "増したばかりだ", "増すところだ"],
+            "answer": "増すばかりだ",
+            "answer_index": 1,
+            "explanation": "〜ばかりだ indicates a continuing change",
+            "translation": "The heat only increases every day."
+          },
+          {
+            "id": "N3-G-003",
+            "question": "最近、経済は＿＿。",
+            "choices": ["回復しつついた", "回復しているところ", "回復していた", "回復しつつある"],
+            "answer": "回復しつつある",
+            "answer_index": 3,
+            "explanation": "〜つつある means 'is gradually doing'",
+            "translation": "The economy is gradually recovering recently."
+          },
+          {
+            "id": "N3-G-004",
+            "question": "彼は最近、＿＿。",
+            "choices": ["遅刻するべきだ", "遅刻している", "遅刻しがちだ", "遅刻しやすいだ"],
+            "answer": "遅刻しがちだ",
+            "answer_index": 2,
+            "explanation": "〜がち means 'tend to'",
+            "translation": "He tends to be late recently."
+          },
+          {
+            "id": "N3-G-005",
+            "question": "予算が足りないので、この計画は＿＿。",
+            "choices": ["断念するものだ", "断念してしまう", "断念せざるを得ない", "断念しなければならない"],
+            "answer": "断念せざるを得ない",
+            "answer_index": 2,
+            "explanation": "〜ざるを得ない means 'cannot help but'",
+            "translation": "Because the budget is insufficient, we cannot help but abandon this plan."
+          },
+          {
+            "id": "N3-G-006",
+            "question": "彼は一生懸命努力しているから、＿＿。",
+            "choices": ["成功するに違いない", "成功するはずだ", "成功するだろう", "成功するかもしれない"],
+            "answer": "成功するに違いない",
+            "answer_index": 0,
+            "explanation": "〜に違いない expresses strong certainty",
+            "translation": "He is working hard, so he must succeed."
+          },
+          {
+            "id": "N3-G-007",
+            "question": "この問題＿＿、まだ結論が出ていない。",
+            "choices": ["に比べては", "について", "として", "に関しては"],
+            "answer": "に関しては",
+            "answer_index": 3,
+            "explanation": "〜に関して means 'regarding'",
+            "translation": "Regarding this problem, no conclusion has been reached yet."
+          },
+          {
+            "id": "N3-G-008",
+            "question": "この大会は年齢＿＿参加できます。",
+            "choices": ["を問わず", "に関わらず", "を限りに", "にかかわらず"],
+            "answer": "を問わず",
+            "answer_index": 0,
+            "explanation": "〜を問わず means 'regardless of'",
+            "translation": "This competition is open regardless of age."
+          },
+          {
+            "id": "N3-G-009",
+            "question": "地震＿＿多くの家が倒壊した。",
+            "choices": ["による", "に比べて", "に対して", "によって"],
+            "answer": "によって",
+            "answer_index": 3,
+            "explanation": "〜によって indicates cause",
+            "translation": "Many houses collapsed due to the earthquake."
+          },
+          {
+            "id": "N3-G-010",
+            "question": "会議は三日間＿＿開かれた。",
+            "choices": ["にわたって", "に渡る", "にかけて", "によって"],
+            "answer": "にわたって",
+            "answer_index": 0,
+            "explanation": "〜にわたって means 'over a period'",
+            "translation": "The meeting was held over three days."
+          },
+          {
+            "id": "N3-G-011",
+            "question": "彼は入社＿＿引っ越した。",
+            "choices": ["を契機に", "に先立って", "に伴って", "をきっかけに"],
+            "answer": "を契機に",
+            "answer_index": 0,
+            "explanation": "〜を契機に means 'using as a trigger'",
+            "translation": "He moved on the occasion of joining the company."
+          },
+          {
+            "id": "N3-G-012",
+            "question": "彼をリーダー＿＿チームを組んだ。",
+            "choices": ["として", "にとって", "について", "にとって"],
+            "answer": "として",
+            "answer_index": 0,
+            "explanation": "〜を〜として means 'as'",
+            "translation": "We formed a team with him as leader."
+          },
+          {
+            "id": "N3-G-013",
+            "question": "私が知っている＿＿、彼は無実だ。",
+            "choices": ["間", "うち", "ところ", "限り"],
+            "answer": "限り",
+            "answer_index": 3,
+            "explanation": "〜限り means 'as far as'",
+            "translation": "As far as I know, he is innocent."
+          },
+          {
+            "id": "N3-G-014",
+            "question": "雨＿＿降らなければ、遠足に行ける。",
+            "choices": ["さえ", "こそ", "しか", "でも"],
+            "answer": "さえ",
+            "answer_index": 0,
+            "explanation": "〜さえ〜ば means 'if only'",
+            "translation": "If only it doesn't rain, we can go on the excursion."
+          },
+          {
+            "id": "N3-G-015",
+            "question": "あなた＿＿、私が探していた人です。",
+            "choices": ["が", "は", "こそ", "こそ"],
+            "answer": "こそ",
+            "answer_index": 2,
+            "explanation": "〜こそ emphasizes the preceding word",
+            "translation": "You are exactly the person I was looking for."
+          },
+          {
+            "id": "N3-G-016",
+            "question": "彼女は美しくも＿＿、頭もいい。",
+            "choices": ["あるなら", "あると", "あるから", "あれば"],
+            "answer": "あれば",
+            "answer_index": 3,
+            "explanation": "〜も〜ば〜も indicates 'both...and...'",
+            "translation": "She is both beautiful and smart."
+          },
+          {
+            "id": "N3-G-017",
+            "question": "年を取ると、目が悪くなる＿＿。",
+            "choices": ["ことだ", "はずだ", "ところだ", "ものだ"],
+            "answer": "ものだ",
+            "answer_index": 3,
+            "explanation": "〜ものだ expresses general truth",
+            "translation": "As you get older, your eyes get worse."
+          },
+          {
+            "id": "N3-G-018",
+            "question": "彼は今日来る＿＿。",
+            "choices": ["はずだ", "かもしれない", "だろう", "つもりだ"],
+            "answer": "はずだ",
+            "answer_index": 0,
+            "explanation": "〜はずだ expresses expectation",
+            "translation": "He is supposed to come today."
+          },
+          {
+            "id": "N3-G-019",
+            "question": "遅刻しない＿＿、早く出た。",
+            "choices": ["ように", "つもりで", "ものだ", "ために"],
+            "answer": "ように",
+            "answer_index": 0,
+            "explanation": "〜ように indicates purpose (negative/volitional)",
+            "translation": "I left early so as not to be late."
+          },
+          {
+            "id": "N3-G-020",
+            "question": "日本語が話せる＿＿。",
+            "choices": ["ようになった", "になった", "ことになった", "ところになった"],
+            "answer": "ようになった",
+            "answer_index": 0,
+            "explanation": "〜ようになる means 'came to be able to'",
+            "translation": "I came to be able to speak Japanese."
+          },
+          {
+            "id": "N3-G-021",
+            "question": "母は私に野菜を＿＿。",
+            "choices": ["食べさせた", "食べさせられた", "食べた", "食べられた"],
+            "answer": "食べさせた",
+            "answer_index": 0,
+            "explanation": "〜させる is causative",
+            "translation": "My mother made me eat vegetables."
+          },
+          {
+            "id": "N3-G-022",
+            "question": "私は犬に手を＿＿。",
+            "choices": ["噛んだ", "噛ませた", "噛まさせた", "噛まれた"],
+            "answer": "噛まれた",
+            "answer_index": 3,
+            "explanation": "〜られる passive",
+            "translation": "My hand was bitten by a dog."
+          },
+          {
+            "id": "N3-G-023",
+            "question": "宿題を忘れて＿＿。",
+            "choices": ["しまった", "みた", "あった", "おいた"],
+            "answer": "しまった",
+            "answer_index": 0,
+            "explanation": "〜てしまう expresses completion or regret",
+            "translation": "I forgot my homework."
+          },
+          {
+            "id": "N3-G-024",
+            "question": "壁に絵がかけて＿＿。",
+            "choices": ["ある", "みる", "いる", "おく"],
+            "answer": "ある",
+            "answer_index": 0,
+            "explanation": "〜てある indicates resultant state",
+            "translation": "A picture is hung on the wall."
+          },
+          {
+            "id": "N3-G-025",
+            "question": "明日のために、準備して＿＿。",
+            "choices": ["おく", "しまう", "みる", "ある"],
+            "answer": "おく",
+            "answer_index": 0,
+            "explanation": "〜ておく means to do in advance",
+            "translation": "I'll prepare in advance for tomorrow."
+          },
+          {
+            "id": "N3-G-026",
+            "question": "新しいレストランに行って＿＿。",
+            "choices": ["みる", "しまう", "ある", "おく"],
+            "answer": "みる",
+            "answer_index": 0,
+            "explanation": "〜てみる means to try doing",
+            "translation": "I'll try going to the new restaurant."
+          },
+          {
+            "id": "N3-G-027",
+            "question": "これからも頑張って＿＿。",
+            "choices": ["いく", "おく", "くる", "しまう"],
+            "answer": "いく",
+            "answer_index": 0,
+            "explanation": "〜ていく shows future continuation",
+            "translation": "I will continue to do my best from now on."
+          },
+          {
+            "id": "N3-G-028",
+            "question": "このペンは書き＿＿。",
+            "choices": ["やすい", "がちだ", "にくい", "すぎる"],
+            "answer": "やすい",
+            "answer_index": 0,
+            "explanation": "〜やすい means easy to do",
+            "translation": "This pen is easy to write with."
+          },
+          {
+            "id": "N3-G-029",
+            "question": "食べ＿＿お腹が痛い。",
+            "choices": ["すぎて", "すぎている", "すぎた", "すぎる"],
+            "answer": "すぎて",
+            "answer_index": 0,
+            "explanation": "〜すぎる means too much",
+            "translation": "I ate too much and my stomach hurts."
+          },
+          {
+            "id": "N3-G-030",
+            "question": "彼は知ってい＿＿、教えてくれなかった。",
+            "choices": ["ながら", "のに", "つつ", "ても"],
+            "answer": "ながら",
+            "answer_index": 0,
+            "explanation": "〜ながら can mean 'although'",
+            "translation": "Although he knew, he didn't tell me."
+          },
+          {
+            "id": "N3-G-031",
+            "question": "一生懸命勉強した＿＿、試験に落ちた。",
+            "choices": ["のに", "けど", "ので", "から"],
+            "answer": "のに",
+            "answer_index": 0,
+            "explanation": "〜のに expresses contrast/unexpected result",
+            "translation": "Although I studied hard, I failed the exam."
+          },
+          {
+            "id": "N3-G-032",
+            "question": "風邪をひいた＿＿、休んだ。",
+            "choices": ["ので", "ながら", "のに", "から"],
+            "answer": "ので",
+            "answer_index": 0,
+            "explanation": "〜ので indicates reason",
+            "translation": "I had a cold, so I rested."
+          },
+          {
+            "id": "N3-G-033",
+            "question": "疲れた＿＿、早く寝よう。",
+            "choices": ["から", "けど", "のに", "ので"],
+            "answer": "から",
+            "answer_index": 0,
+            "explanation": "〜から indicates reason/cause",
+            "translation": "I'm tired, so let's go to bed early."
+          },
+          {
+            "id": "N3-G-034",
+            "question": "明日は雨が＿＿。",
+            "choices": ["降るかもしれない", "降るようだ", "降るはずだ", "降るでしょう"],
+            "answer": "降るかもしれない",
+            "answer_index": 0,
+            "explanation": "〜かもしれない expresses possibility",
+            "translation": "It may rain tomorrow."
+          },
+          {
+            "id": "N3-G-035",
+            "question": "来年は旅行に行く＿＿。",
+            "choices": ["つもりだ", "かもしれない", "はずだ", "予定だ"],
+            "answer": "つもりだ",
+            "answer_index": 0,
+            "explanation": "〜つもり means intention",
+            "translation": "I intend to go on a trip next year."
+          },
+          {
+            "id": "N3-G-036",
+            "question": "私は友達に本を貸して＿＿。",
+            "choices": ["もらった", "くれた", "やった", "あげた"],
+            "answer": "もらった",
+            "answer_index": 0,
+            "explanation": "〜てもらう means to have someone do something",
+            "translation": "I had my friend lend me a book."
+          },
+          {
+            "id": "N3-G-037",
+            "question": "子供の頃、野菜を＿＿。",
+            "choices": ["食べさせられた", "食べた", "食べさせた", "食べられた"],
+            "answer": "食べさせられた",
+            "answer_index": 0,
+            "explanation": "〜させられる means to be made to do",
+            "translation": "When I was a child, I was often made to eat vegetables."
+          },
+          {
+            "id": "N3-G-038",
+            "question": "財布を落として＿＿。",
+            "choices": ["しまった", "あった", "みた", "おいた"],
+            "answer": "しまった",
+            "answer_index": 0,
+            "explanation": "〜てしまう expresses unfortunate completion",
+            "translation": "I dropped my wallet."
+          },
+          {
+            "id": "N3-G-039",
+            "question": "彼にもっと早く来て＿＿。",
+            "choices": ["ほしい", "くれたい", "あげたい", "もらいたい"],
+            "answer": "ほしい",
+            "answer_index": 0,
+            "explanation": "〜てほしい means want someone to do",
+            "translation": "I want him to come earlier."
+          },
+          {
+            "id": "N3-G-040",
+            "question": "雨が降って＿＿、行く。",
+            "choices": ["も", "たら", "でも", "なら"],
+            "answer": "も",
+            "answer_index": 0,
+            "explanation": "〜ても means 'even if'",
+            "translation": "Even if it rains, I'll go."
+          },
+          {
+            "id": "N3-G-041",
+            "question": "お茶＿＿飲みましょう。",
+            "choices": ["でも", "に", "が", "を"],
+            "answer": "でも",
+            "answer_index": 0,
+            "explanation": "〜でも gives examples",
+            "translation": "Let's drink tea or something."
+          },
+          {
+            "id": "N3-G-042",
+            "question": "ここにはバス＿＿ない。",
+            "choices": ["しか", "まで", "でも", "だけ"],
+            "answer": "しか",
+            "answer_index": 0,
+            "explanation": "〜しか〜ない means 'nothing but'",
+            "translation": "There is only a bus here."
+          },
+          {
+            "id": "N3-G-043",
+            "question": "彼＿＿優しい人はいない。",
+            "choices": ["ほど", "さえ", "より", "くらい"],
+            "answer": "ほど",
+            "answer_index": 0,
+            "explanation": "〜ほど indicates extent",
+            "translation": "There is no one as kind as him."
+          },
+          {
+            "id": "N3-G-044",
+            "question": "山＿＿海が好きだ。",
+            "choices": ["より", "を", "が", "ほど"],
+            "answer": "より",
+            "answer_index": 0,
+            "explanation": "〜より is comparison",
+            "translation": "I like the sea more than mountains."
+          },
+          {
+            "id": "N3-G-045",
+            "question": "去年＿＿今年は暖かい。",
+            "choices": ["に比べて", "に対して", "ほど", "より"],
+            "answer": "に比べて",
+            "answer_index": 0,
+            "explanation": "〜に比べて means compared to",
+            "translation": "Compared to last year, this year is warm."
+          },
+          {
+            "id": "N3-G-046",
+            "question": "この問題＿＿考えた。",
+            "choices": ["について", "によって", "にとって", "に対して"],
+            "answer": "について",
+            "answer_index": 0,
+            "explanation": "〜について means about",
+            "translation": "I thought about this problem."
+          },
+          {
+            "id": "N3-G-047",
+            "question": "彼は親＿＿失礼だ。",
+            "choices": ["に対して", "によって", "について", "にとって"],
+            "answer": "に対して",
+            "answer_index": 0,
+            "explanation": "〜に対して means towards",
+            "translation": "He is rude to his parents."
+          },
+          {
+            "id": "N3-G-048",
+            "question": "インターネット＿＿情報を得る。",
+            "choices": ["によって", "について", "に対して", "にとって"],
+            "answer": "によって",
+            "answer_index": 0,
+            "explanation": "〜によって means by means of",
+            "translation": "I get information via the internet."
+          },
+          {
+            "id": "N3-G-049",
+            "question": "本日＿＿この店は閉店します。",
+            "choices": ["をもって", "について", "に対して", "において"],
+            "answer": "をもって",
+            "answer_index": 0,
+            "explanation": "〜をもって means 'as of'",
+            "translation": "This store will close as of today."
+          },
+          {
+            "id": "N3-G-050",
+            "question": "社長＿＿、全員が参加した。",
+            "choices": ["をはじめ", "に関して", "にとって", "を中心に"],
+            "answer": "をはじめ",
+            "answer_index": 0,
+            "explanation": "〜をはじめ means 'including'",
+            "translation": "Including the president, everyone participated."
+          }
+        ]
+      },
+      {
+        "level": "N3",
+        "type": "kanji",
+        "records": [
+          {
+            "id": "N3-K-001",
+            "question": "「この映画は時間が短い。」「短い」の読み方は？",
+            "choices": ["たんい", "しょう", "ちいさい", "みじかい"],
+            "answer": "みじかい",
+            "answer_index": 3,
+            "explanation": "短い is read as みじかい",
+            "translation": "This movie is short in time."
+          },
+          {
+            "id": "N3-K-002",
+            "question": "「彼は話を続ける。」「続ける」の読み方は？",
+            "choices": ["つずける", "ぞくける", "つづく", "つづける"],
+            "answer": "つづける",
+            "answer_index": 3,
+            "explanation": "続ける is read as つづける",
+            "translation": "He continues talking."
+          },
+          {
+            "id": "N3-K-003",
+            "question": "「人口が減っている。」「減って」の読み方は？",
+            "choices": ["げって", "けって", "やって", "へって"],
+            "answer": "へって",
+            "answer_index": 3,
+            "explanation": "減る is read as へる, 減って is へって",
+            "translation": "The population is decreasing."
+          },
+          {
+            "id": "N3-K-004",
+            "question": "「収入が増えた。」「増えた」の読み方は？",
+            "choices": ["ました", "ぞうえた", "こうえた", "ふえた"],
+            "answer": "ふえた",
+            "answer_index": 3,
+            "explanation": "増える is read as ふえる",
+            "translation": "Income increased."
+          },
+          {
+            "id": "N3-K-005",
+            "question": "「ルールを改める。」「改める」の読み方は？",
+            "choices": ["かいめる", "かえる", "なおる", "あらためる"],
+            "answer": "あらためる",
+            "answer_index": 3,
+            "explanation": "改める is read as あらためる",
+            "translation": "I revise the rules."
+          },
+          {
+            "id": "N3-K-006",
+            "question": "「状況が変わった。」「変わった」の読み方は？",
+            "choices": ["へんかった", "たがった", "こわった", "かわった"],
+            "answer": "かわった",
+            "answer_index": 3,
+            "explanation": "変わる is read as かわる",
+            "translation": "The situation changed."
+          },
+          {
+            "id": "N3-K-007",
+            "question": "「二つの数を比べる。」「比べる」の読み方は？",
+            "choices": ["ひべる", "たとえる", "ならべる", "くらべる"],
+            "answer": "くらべる",
+            "answer_index": 3,
+            "explanation": "比べる is read as くらべる",
+            "translation": "Compare two numbers."
+          },
+          {
+            "id": "N3-K-008",
+            "question": "「両者には相違がある。」「相違」の読み方は？",
+            "choices": ["あいい", "そうい", "そうち", "そうい"],
+            "answer": "そうい",
+            "answer_index": 1,
+            "explanation": "相違 is read as そうい",
+            "translation": "There is a difference between the two."
+          },
+          {
+            "id": "N3-K-009",
+            "question": "「試験を受ける。」「試験」の読み方は？",
+            "choices": ["しげん", "じけん", "てすと", "しけん"],
+            "answer": "しけん",
+            "answer_index": 3,
+            "explanation": "試験 is read as しけん",
+            "translation": "Take an exam."
+          },
+          {
+            "id": "N3-K-010",
+            "question": "「実験を行う。」「実験」の読み方は？",
+            "choices": ["じけん", "じつけん", "しっけん", "じっけん"],
+            "answer": "じっけん",
+            "answer_index": 3,
+            "explanation": "実験 is read as じっけん",
+            "translation": "Conduct an experiment."
+          },
+          {
+            "id": "N3-K-011",
+            "question": "「技術が進歩した。」「技術」の読み方は？",
+            "choices": ["ぎじつ", "ぎじゅつ", "ぎちゅつ", "ぎじゅつ"],
+            "answer": "ぎじゅつ",
+            "answer_index": 1,
+            "explanation": "技術 is read as ぎじゅつ",
+            "translation": "Technology advanced."
+          },
+          {
+            "id": "N3-K-012",
+            "question": "「研究を続ける。」「研究」の読み方は？",
+            "choices": ["けんぎゅう", "けんきょう", "けんぎょう", "けんきゅう"],
+            "answer": "けんきゅう",
+            "answer_index": 3,
+            "explanation": "研究 is read as けんきゅう",
+            "translation": "Continue research."
+          },
+          {
+            "id": "N3-K-013",
+            "question": "「製品を製造する。」「製造」の読み方は？",
+            "choices": ["せいそう", "しせい", "せいぞ", "せいぞう"],
+            "answer": "せいぞう",
+            "answer_index": 3,
+            "explanation": "製造 is read as せいぞう",
+            "translation": "Manufacture products."
+          },
+          {
+            "id": "N3-K-014",
+            "question": "「工場で働く。」「工場」の読み方は？",
+            "choices": ["こうば", "こうじょう", "くうじょう", "こうじょう"],
+            "answer": "こうじょう",
+            "answer_index": 1,
+            "explanation": "工場 is read as こうじょう",
+            "translation": "Work at a factory."
+          },
+          {
+            "id": "N3-K-015",
+            "question": "「都市に住む。」「都市」の読み方は？",
+            "choices": ["つし", "とし", "ちし", "とし"],
+            "answer": "とし",
+            "answer_index": 1,
+            "explanation": "都市 is read as とし",
+            "translation": "Live in a city."
+          },
+          {
+            "id": "N3-K-016",
+            "question": "「道路を渡る。」「道路」の読み方は？",
+            "choices": ["どろ", "とうろ", "どうろ", "どうろ"],
+            "answer": "どうろ",
+            "answer_index": 2,
+            "explanation": "道路 is read as どうろ",
+            "translation": "Cross the road."
+          },
+          {
+            "id": "N3-K-017",
+            "question": "「橋を渡る。」「橋」の読み方は？",
+            "choices": ["きょう", "ばし", "はし", "はし"],
+            "answer": "はし",
+            "answer_index": 2,
+            "explanation": "橋 is read as はし",
+            "translation": "Cross a bridge."
+          },
+          {
+            "id": "N3-K-018",
+            "question": "「川で泳ぐ。」「川」の読み方は？",
+            "choices": ["せん", "かわ", "がわ", "かわ"],
+            "answer": "かわ",
+            "answer_index": 1,
+            "explanation": "川 is read as かわ",
+            "translation": "Swim in the river."
+          },
+          {
+            "id": "N3-K-019",
+            "question": "「山に登る。」「山」の読み方は？",
+            "choices": ["さん", "やま", "ざん", "やま"],
+            "answer": "やま",
+            "answer_index": 1,
+            "explanation": "山 is read as やま",
+            "translation": "Climb a mountain."
+          },
+          {
+            "id": "N3-K-020",
+            "question": "「海を見る。」「海」の読み方は？",
+            "choices": ["かい", "うみ", "わ", "うみ"],
+            "answer": "うみ",
+            "answer_index": 1,
+            "explanation": "海 is read as うみ",
+            "translation": "Look at the sea."
+          },
+          {
+            "id": "N3-K-021",
+            "question": "「空気がきれいだ。」「空気」の読み方は？",
+            "choices": ["そらき", "くき", "くうき", "くうき"],
+            "answer": "くうき",
+            "answer_index": 2,
+            "explanation": "空気 is read as くうき",
+            "translation": "The air is clean."
+          },
+          {
+            "id": "N3-K-022",
+            "question": "「台風が来た。」「台風」の読み方は？",
+            "choices": ["だいふう", "たいふう", "たふう", "たいふう"],
+            "answer": "たいふう",
+            "answer_index": 1,
+            "explanation": "台風 is read as たいふう",
+            "translation": "A typhoon came."
+          },
+          {
+            "id": "N3-K-023",
+            "question": "「雪が降る。」「雪」の読み方は？",
+            "choices": ["せつ", "ゆき", "ゆう", "ゆき"],
+            "answer": "ゆき",
+            "answer_index": 1,
+            "explanation": "雪 is read as ゆき",
+            "translation": "Snow falls."
+          },
+          {
+            "id": "N3-K-024",
+            "question": "「雨が降る。」「雨」の読み方は？",
+            "choices": ["う", "あめ", "さめ", "あめ"],
+            "answer": "あめ",
+            "answer_index": 1,
+            "explanation": "雨 is read as あめ",
+            "translation": "Rain falls."
+          },
+          {
+            "id": "N3-K-025",
+            "question": "「春が来た。」「春」の読み方は？",
+            "choices": ["しゅん", "はる", "はり", "はる"],
+            "answer": "はる",
+            "answer_index": 1,
+            "explanation": "春 is read as はる",
+            "translation": "Spring came."
+          },
+          {
+            "id": "N3-K-026",
+            "question": "「夏は暑い。」「夏」の読み方は？",
+            "choices": ["か", "なつ", "なつ", "なつ"],
+            "answer": "なつ",
+            "answer_index": 1,
+            "explanation": "夏 is read as なつ",
+            "translation": "Summer is hot."
+          },
+          {
+            "id": "N3-K-027",
+            "question": "「秋は紅葉がきれい。」「秋」の読み方は？",
+            "choices": ["しゅう", "あき", "あき", "あき"],
+            "answer": "あき",
+            "answer_index": 1,
+            "explanation": "秋 is read as あき",
+            "translation": "Autumn leaves are beautiful."
+          },
+          {
+            "id": "N3-K-028",
+            "question": "「冬は寒い。」「冬」の読み方は？",
+            "choices": ["とう", "ふゆ", "ふゆ", "ふゆ"],
+            "answer": "ふゆ",
+            "answer_index": 1,
+            "explanation": "冬 is read as ふゆ",
+            "translation": "Winter is cold."
+          },
+          {
+            "id": "N3-K-029",
+            "question": "「朝起きる。」「朝」の読み方は？",
+            "choices": ["ちょう", "あさ", "あさ", "あさ"],
+            "answer": "あさ",
+            "answer_index": 1,
+            "explanation": "朝 is read as あさ",
+            "translation": "Wake up in the morning."
+          },
+          {
+            "id": "N3-K-030",
+            "question": "「昼ご飯を食べる。」「昼」の読み方は？",
+            "choices": ["ちゅう", "ひる", "ひる", "ひる"],
+            "answer": "ひる",
+            "answer_index": 1,
+            "explanation": "昼 is read as ひる",
+            "translation": "Eat lunch."
+          },
+          {
+            "id": "N3-K-031",
+            "question": "「夜遅くまで勉強する。」「夜」の読み方は？",
+            "choices": ["や", "よる", "よ", "よる"],
+            "answer": "よる",
+            "answer_index": 1,
+            "explanation": "夜 is read as よる",
+            "translation": "Study until late at night."
+          },
+          {
+            "id": "N3-K-032",
+            "question": "「今日は何曜日ですか？」「曜日」の読み方は？",
+            "choices": ["ようじつ", "ようび", "ようび", "ようび"],
+            "answer": "ようび",
+            "answer_index": 1,
+            "explanation": "曜日 is read as ようび",
+            "translation": "What day of the week is it today?"
+          },
+          {
+            "id": "N3-K-033",
+            "question": "「一週間後に会う。」「週」の読み方は？",
+            "choices": ["しゅう", "しゅう", "しゅ", "しゅう"],
+            "answer": "しゅう",
+            "answer_index": 0,
+            "explanation": "週 is read as しゅう",
+            "translation": "Meet in a week."
+          },
+          {
+            "id": "N3-K-034",
+            "question": "「月曜日は忙しい。」「月曜日」の読み方は？",
+            "choices": ["がつようび", "げつようび", "げつようび", "げつようび"],
+            "answer": "げつようび",
+            "answer_index": 1,
+            "explanation": "月曜日 is read as げつようび",
+            "translation": "Monday is busy."
+          },
+          {
+            "id": "N3-K-035",
+            "question": "「火曜日に会う。」「火曜日」の読み方は？",
+            "choices": ["ひようび", "かようび", "かようび", "かようび"],
+            "answer": "かようび",
+            "answer_index": 1,
+            "explanation": "火曜日 is read as かようび",
+            "translation": "Meet on Tuesday."
+          },
+          {
+            "id": "N3-K-036",
+            "question": "「水曜日は休みだ。」「水曜日」の読み方は？",
+            "choices": ["みずようび", "すいようび", "すいようび", "すいようび"],
+            "answer": "すいようび",
+            "answer_index": 1,
+            "explanation": "水曜日 is read as すいようび",
+            "translation": "Wednesday is a holiday."
+          },
+          {
+            "id": "N3-K-037",
+            "question": "「木曜日にテストがある。」「木曜日」の読み方は？",
+            "choices": ["きようび", "もくようび", "もくようび", "もくようび"],
+            "answer": "もくようび",
+            "answer_index": 1,
+            "explanation": "木曜日 is read as もくようび",
+            "translation": "There is a test on Thursday."
+          },
+          {
+            "id": "N3-K-038",
+            "question": "「金曜日にパーティーがある。」「金曜日」の読み方は？",
+            "choices": ["かねようび", "きんようび", "きんようび", "きんようび"],
+            "answer": "きんようび",
+            "answer_index": 1,
+            "explanation": "金曜日 is read as きんようび",
+            "translation": "There is a party on Friday."
+          },
+          {
+            "id": "N3-K-039",
+            "question": "「土曜日に買い物に行く。」「土曜日」の読み方は？",
+            "choices": ["つちようび", "どようび", "どようび", "どようび"],
+            "answer": "どようび",
+            "answer_index": 1,
+            "explanation": "土曜日 is read as どようび",
+            "translation": "Go shopping on Saturday."
+          },
+          {
+            "id": "N3-K-040",
+            "question": "「日曜日は休む。」「日曜日」の読み方は？",
+            "choices": ["ひようび", "にちようび", "にちようび", "にちようび"],
+            "answer": "にちようび",
+            "answer_index": 1,
+            "explanation": "日曜日 is read as にちようび",
+            "translation": "Rest on Sunday."
+          },
+          {
+            "id": "N3-K-041",
+            "question": "「朝ごはんを食べる。」「朝ごはん」の読み方は？",
+            "choices": ["ちょうごはん", "あさごはん", "あさごはん", "あさごはん"],
+            "answer": "あさごはん",
+            "answer_index": 1,
+            "explanation": "朝ごはん is read as あさごはん",
+            "translation": "Eat breakfast."
+          },
+          {
+            "id": "N3-K-042",
+            "question": "「昼ごはんはどこで食べる？」「昼ごはん」の読み方は？",
+            "choices": ["ちゅうごはん", "ひるごはん", "ひるごはん", "ひるごはん"],
+            "answer": "ひるごはん",
+            "answer_index": 1,
+            "explanation": "昼ごはん is read as ひるごはん",
+            "translation": "Where do you eat lunch?"
+          },
+          {
+            "id": "N3-K-043",
+            "question": "「晩ごはんは何時？」「晩ごはん」の読み方は？",
+            "choices": ["ゆうごはん", "ばんごはん", "ばんごはん", "ばんごはん"],
+            "answer": "ばんごはん",
+            "answer_index": 1,
+            "explanation": "晩ごはん is read as ばんごはん",
+            "translation": "What time is dinner?"
+          },
+          {
+            "id": "N3-K-044",
+            "question": "「一週間前に来た。」「一週間」の読み方は？",
+            "choices": ["いちしゅうかん", "いっしゅうかん", "いっしゅうかん", "いっしゅうかん"],
+            "answer": "いっしゅうかん",
+            "answer_index": 1,
+            "explanation": "一週間 is read as いっしゅうかん",
+            "translation": "Came a week ago."
+          },
+          {
+            "id": "N3-K-045",
+            "question": "「半年ぶりに会う。」「半年」の読み方は？",
+            "choices": ["はんねん", "はんとし", "はんとし", "はんとし"],
+            "answer": "はんとし",
+            "answer_index": 1,
+            "explanation": "半年 is read as はんとし",
+            "translation": "Meet after half a year."
+          },
+          {
+            "id": "N3-K-046",
+            "question": "「今月は忙しい。」「今月」の読み方は？",
+            "choices": ["こんげつ", "いまげつ", "こんげつ", "こんげつ"],
+            "answer": "こんげつ",
+            "answer_index": 0,
+            "explanation": "今月 is read as こんげつ",
+            "translation": "This month is busy."
+          },
+          {
+            "id": "N3-K-047",
+            "question": "「来月旅行に行く。」「来月」の読み方は？",
+            "choices": ["こげつ", "らいげつ", "らいげつ", "らいげつ"],
+            "answer": "らいげつ",
+            "answer_index": 1,
+            "explanation": "来月 is read as らいげつ",
+            "translation": "I'll go on a trip next month."
+          },
+          {
+            "id": "N3-K-048",
+            "question": "「先月引っ越した。」「先月」の読み方は？",
+            "choices": ["さきげつ", "せんげつ", "せんげつ", "せんげつ"],
+            "answer": "せんげつ",
+            "answer_index": 1,
+            "explanation": "先月 is read as せんげつ",
+            "translation": "I moved last month."
+          },
+          {
+            "id": "N3-K-049",
+            "question": "「来年には卒業する。」「来年」の読み方は？",
+            "choices": ["きねん", "らいねん", "らいねん", "らいねん"],
+            "answer": "らいねん",
+            "answer_index": 1,
+            "explanation": "来年 is read as らいねん",
+            "translation": "I will graduate next year."
+          },
+          {
+            "id": "N3-K-050",
+            "question": "「去年の夏は暑かった。」「去年」の読み方は？",
+            "choices": ["こねん", "きょねん", "きょねん", "きょねん"],
+            "answer": "きょねん",
+            "answer_index": 1,
+            "explanation": "去年 is read as きょねん",
+            "translation": "Last summer was hot."
+          }
+        ]
+      },
+      {
+        "level": "N3",
+        "type": "vocabulary",
+        "records": [
+          {
+            "id": "N3-V-001",
+            "question": "この本の＿＿はとても面白い。",
+            "choices": ["内用", "内地", "内蔵", "内容"],
+            "answer": "内容",
+            "answer_index": 3,
+            "explanation": "内容 means 'content'",
+            "translation": "The content of this book is very interesting."
+          },
+          {
+            "id": "N3-V-002",
+            "question": "旅行の＿＿をしている。",
+            "choices": ["準便", "準平", "準備", "準備"],
+            "answer": "準備",
+            "answer_index": 2,
+            "explanation": "準備 means 'preparation'",
+            "translation": "I am preparing for the trip."
+          },
+          {
+            "id": "N3-V-003",
+            "question": "彼は多くの＿＿を持っている。",
+            "choices": ["実験", "研修", "経験", "経験"],
+            "answer": "経験",
+            "answer_index": 2,
+            "explanation": "経験 means 'experience'",
+            "translation": "He has a lot of experience."
+          },
+          {
+            "id": "N3-V-004",
+            "question": "時間が＿＿ので、急ごう。",
+            "choices": ["不十分", "無駄", "不足", "不足"],
+            "answer": "不足",
+            "answer_index": 2,
+            "explanation": "不足 means 'lack/insufficient'",
+            "translation": "We are short of time, so let's hurry."
+          },
+          {
+            "id": "N3-V-005",
+            "question": "彼女は＿＿に優しい。",
+            "choices": ["性別", "性能", "性格", "性格"],
+            "answer": "性格",
+            "answer_index": 2,
+            "explanation": "性格 means 'character/personality'",
+            "translation": "She has a kind personality."
+          },
+          {
+            "id": "N3-V-006",
+            "question": "この計画は＿＿な結果をもたらした。",
+            "choices": ["充分", "太分", "十分", "十分"],
+            "answer": "十分",
+            "answer_index": 2,
+            "explanation": "十分 means 'enough/sufficient'",
+            "translation": "This plan brought sufficient results."
+          },
+          {
+            "id": "N3-V-007",
+            "question": "周りの＿＿を見て行動する。",
+            "choices": ["様式", "様相", "洋子", "様子"],
+            "answer": "様子",
+            "answer_index": 3,
+            "explanation": "様子 means 'state/situation'",
+            "translation": "Act while watching the surrounding situation."
+          },
+          {
+            "id": "N3-V-008",
+            "question": "明日の都合を＿＿してください。",
+            "choices": ["確認", "確実", "確認", "確認"],
+            "answer": "確認",
+            "answer_index": 0,
+            "explanation": "確認 means 'confirmation'",
+            "translation": "Please confirm your availability for tomorrow."
+          },
+          {
+            "id": "N3-V-009",
+            "question": "彼は＿＿を求めて留学した。",
+            "choices": ["知恵", "資質", "知識", "知識"],
+            "answer": "知識",
+            "answer_index": 2,
+            "explanation": "知識 means 'knowledge'",
+            "translation": "He went abroad to seek knowledge."
+          },
+          {
+            "id": "N3-V-010",
+            "question": "この商品の＿＿は安全です。",
+            "choices": ["品数", "品位", "品質", "品質"],
+            "answer": "品質",
+            "answer_index": 2,
+            "explanation": "品質 means 'quality'",
+            "translation": "The quality of this product is safe."
+          },
+          {
+            "id": "N3-V-011",
+            "question": "彼の説明は＿＿が足りない。",
+            "choices": ["具体数", "具現性", "具体性", "具体性"],
+            "answer": "具体性",
+            "answer_index": 2,
+            "explanation": "具体性 means 'concreteness'",
+            "translation": "His explanation lacks concreteness."
+          },
+          {
+            "id": "N3-V-012",
+            "question": "毎日＿＿を心がけている。",
+            "choices": ["建康", "健在", "健康", "健康"],
+            "answer": "健康",
+            "answer_index": 2,
+            "explanation": "健康 means 'health'",
+            "translation": "I try to maintain health every day."
+          },
+          {
+            "id": "N3-V-013",
+            "question": "この仕事には＿＿が必要だ。",
+            "choices": ["任責", "重量", "責任", "責任"],
+            "answer": "責任",
+            "answer_index": 2,
+            "explanation": "責任 means 'responsibility'",
+            "translation": "This job requires responsibility."
+          },
+          {
+            "id": "N3-V-014",
+            "question": "＿＿な問題が発生した。",
+            "choices": ["重要", "重点", "重大", "重大"],
+            "answer": "重大",
+            "answer_index": 2,
+            "explanation": "重大 means 'serious/grave'",
+            "translation": "A serious problem occurred."
+          },
+          {
+            "id": "N3-V-015",
+            "question": "彼の＿＿に驚いた。",
+            "choices": ["台度", "耐度", "態度", "態度"],
+            "answer": "態度",
+            "answer_index": 2,
+            "explanation": "態度 means 'attitude'",
+            "translation": "I was surprised by his attitude."
+          },
+          {
+            "id": "N3-V-016",
+            "question": "＿＿をしなければならない。",
+            "choices": ["連落", "連楽", "連絡", "連絡"],
+            "answer": "連絡",
+            "answer_index": 2,
+            "explanation": "連絡 means 'contact/communication'",
+            "translation": "I must make contact."
+          },
+          {
+            "id": "N3-V-017",
+            "question": "この機械の＿＿を説明してください。",
+            "choices": ["操業", "操演", "操作", "操作"],
+            "answer": "操作",
+            "answer_index": 2,
+            "explanation": "操作 means 'operation'",
+            "translation": "Please explain the operation of this machine."
+          },
+          {
+            "id": "N3-V-018",
+            "question": "＿＿の改善が必要だ。",
+            "choices": ["環境", "境遇", "環境", "環境"],
+            "answer": "環境",
+            "answer_index": 0,
+            "explanation": "環境 means 'environment'",
+            "translation": "Environmental improvement is needed."
+          },
+          {
+            "id": "N3-V-019",
+            "question": "彼の＿＿は優秀だ。",
+            "choices": ["能力", "能率", "能力", "能力"],
+            "answer": "能力",
+            "answer_index": 0,
+            "explanation": "能力 means 'ability'",
+            "translation": "His ability is excellent."
+          },
+          {
+            "id": "N3-V-020",
+            "question": "＿＿を達成するために頑張る。",
+            "choices": ["目安", "目印", "目標", "目標"],
+            "answer": "目標",
+            "answer_index": 2,
+            "explanation": "目標 means 'goal'",
+            "translation": "I will work hard to achieve the goal."
+          },
+          {
+            "id": "N3-V-021",
+            "question": "この＿＿は古い習慣だ。",
+            "choices": ["地元", "地区", "地域", "地域"],
+            "answer": "地域",
+            "answer_index": 2,
+            "explanation": "地域 means 'region'",
+            "translation": "This region has old customs."
+          },
+          {
+            "id": "N3-V-022",
+            "question": "＿＿な話を聞いた。",
+            "choices": ["興味ある", "興味深い", "興味深い", "興味深い"],
+            "answer": "興味深い",
+            "answer_index": 1,
+            "explanation": "興味深い means 'interesting'",
+            "translation": "I heard an interesting story."
+          },
+          {
+            "id": "N3-V-023",
+            "question": "この＿＿はすぐに変わった。",
+            "choices": ["状態", "情状", "状況", "状況"],
+            "answer": "状況",
+            "answer_index": 2,
+            "explanation": "状況 means 'situation'",
+            "translation": "The situation changed quickly."
+          },
+          {
+            "id": "N3-V-024",
+            "question": "彼の＿＿は素晴らしい。",
+            "choices": ["技量", "技巧", "技術", "技術"],
+            "answer": "技術",
+            "answer_index": 2,
+            "explanation": "技術 means 'skill/technique'",
+            "translation": "His skill is wonderful."
+          },
+          {
+            "id": "N3-V-025",
+            "question": "＿＿な影響を与えた。",
+            "choices": ["大きい", "大い", "大きな", "大きな"],
+            "answer": "大きな",
+            "answer_index": 2,
+            "explanation": "大きな means 'big/great'",
+            "translation": "It had a great influence."
+          },
+          {
+            "id": "N3-V-026",
+            "question": "この＿＿は長い間続いた。",
+            "choices": ["傾向", "傾倒", "傾向", "傾向"],
+            "answer": "傾向",
+            "answer_index": 0,
+            "explanation": "傾向 means 'trend'",
+            "translation": "This trend continued for a long time."
+          },
+          {
+            "id": "N3-V-027",
+            "question": "彼は＿＿を研究している。",
+            "choices": ["歴代", "歴程", "歴史", "歴史"],
+            "answer": "歴史",
+            "answer_index": 2,
+            "explanation": "歴史 means 'history'",
+            "translation": "He is researching history."
+          },
+          {
+            "id": "N3-V-028",
+            "question": "＿＿な問題を解決した。",
+            "choices": ["複数", "復雑", "複雑", "複雑"],
+            "answer": "複雑",
+            "answer_index": 2,
+            "explanation": "複雑 means 'complex'",
+            "translation": "We solved a complex problem."
+          },
+          {
+            "id": "N3-V-029",
+            "question": "この＿＿を守ってください。",
+            "choices": ["規則", "規格", "規則", "規則"],
+            "answer": "規則",
+            "answer_index": 0,
+            "explanation": "規則 means 'rule'",
+            "translation": "Please follow this rule."
+          },
+          {
+            "id": "N3-V-030",
+            "question": "＿＿が必要だ。",
+            "choices": ["勇者", "勇敢", "勇気", "勇気"],
+            "answer": "勇気",
+            "answer_index": 2,
+            "explanation": "勇気 means 'courage'",
+            "translation": "Courage is necessary."
+          },
+          {
+            "id": "N3-V-031",
+            "question": "彼女は＿＿が豊かだ。",
+            "choices": ["幹性", "敢性", "感性", "感性"],
+            "answer": "感性",
+            "answer_index": 2,
+            "explanation": "感性 means 'sensibility'",
+            "translation": "She has rich sensibility."
+          },
+          {
+            "id": "N3-V-032",
+            "question": "＿＿の向上を目指す。",
+            "choices": ["効能", "功績", "効率", "効率"],
+            "answer": "効率",
+            "answer_index": 2,
+            "explanation": "効率 means 'efficiency'",
+            "translation": "Aim to improve efficiency."
+          },
+          {
+            "id": "N3-V-033",
+            "question": "この＿＿は美しい。",
+            "choices": ["風情", "風土", "風景", "風景"],
+            "answer": "風景",
+            "answer_index": 2,
+            "explanation": "風景 means 'scenery'",
+            "translation": "This scenery is beautiful."
+          },
+          {
+            "id": "N3-V-034",
+            "question": "＿＿を感じた。",
+            "choices": ["危険", "危惧", "危機", "危機"],
+            "answer": "危機",
+            "answer_index": 2,
+            "explanation": "危機 means 'crisis'",
+            "translation": "I felt a crisis."
+          },
+          {
+            "id": "N3-V-035",
+            "question": "この＿＿は大きい。",
+            "choices": ["可能", "可動", "可能性", "可能性"],
+            "answer": "可能性",
+            "answer_index": 2,
+            "explanation": "可能性 means 'possibility'",
+            "translation": "This possibility is high."
+          },
+          {
+            "id": "N3-V-036",
+            "question": "＿＿を払ってください。",
+            "choices": ["注文", "注目", "注意", "注意"],
+            "answer": "注意",
+            "answer_index": 2,
+            "explanation": "注意 means 'attention'",
+            "translation": "Please pay attention."
+          },
+          {
+            "id": "N3-V-037",
+            "question": "＿＿を始めた。",
+            "choices": ["活躍", "生活", "活動", "活動"],
+            "answer": "活動",
+            "answer_index": 2,
+            "explanation": "活動 means 'activity'",
+            "translation": "I started an activity."
+          },
+          {
+            "id": "N3-V-038",
+            "question": "彼の＿＿は正しい。",
+            "choices": ["判別", "判定", "判断", "判断"],
+            "answer": "判断",
+            "answer_index": 2,
+            "explanation": "判断 means 'judgment'",
+            "translation": "His judgment is correct."
+          },
+          {
+            "id": "N3-V-039",
+            "question": "この＿＿は便利だ。",
+            "choices": ["シスタム", "システマ", "システム", "システム"],
+            "answer": "システム",
+            "answer_index": 2,
+            "explanation": "システム means 'system'",
+            "translation": "This system is convenient."
+          },
+          {
+            "id": "N3-V-040",
+            "question": "＿＿を促進する。",
+            "choices": ["発達", "発生", "発展", "発展"],
+            "answer": "発展",
+            "answer_index": 2,
+            "explanation": "発展 means 'development'",
+            "translation": "Promote development."
+          },
+          {
+            "id": "N3-V-041",
+            "question": "この＿＿は重要だ。",
+            "choices": ["要因", "用件", "要素", "要素"],
+            "answer": "要素",
+            "answer_index": 2,
+            "explanation": "要素 means 'element'",
+            "translation": "This element is important."
+          },
+          {
+            "id": "N3-V-042",
+            "question": "彼は＿＿が早い。",
+            "choices": ["理想", "理屈", "理解", "理解"],
+            "answer": "理解",
+            "answer_index": 2,
+            "explanation": "理解 means 'understanding'",
+            "translation": "He understands quickly."
+          },
+          {
+            "id": "N3-V-043",
+            "question": "このプロジェクトには＿＿が必要だ。",
+            "choices": ["資源", "資材", "資格", "資金"],
+            "answer": "資金",
+            "answer_index": 3,
+            "explanation": "資金 means 'funds'",
+            "translation": "This project requires funds."
+          },
+          {
+            "id": "N3-V-044",
+            "question": "彼の＿＿は素晴らしい。",
+            "choices": ["成否", "成案", "成約", "成果"],
+            "answer": "成果",
+            "answer_index": 3,
+            "explanation": "成果 means 'achievement'",
+            "translation": "His achievement is wonderful."
+          },
+          {
+            "id": "N3-V-045",
+            "question": "この＿＿を解決する必要がある。",
+            "choices": ["課税", "課外", "課金", "課題"],
+            "answer": "課題",
+            "answer_index": 3,
+            "explanation": "課題 means 'issue/task'",
+            "translation": "We need to solve this issue."
+          },
+          {
+            "id": "N3-V-046",
+            "question": "＿＿を考える。",
+            "choices": ["対処", "対応", "対策", "対策"],
+            "answer": "対策",
+            "answer_index": 2,
+            "explanation": "対策 means 'countermeasure'",
+            "translation": "Think about countermeasures."
+          },
+          {
+            "id": "N3-V-047",
+            "question": "この＿＿に従う。",
+            "choices": ["基盤", "基本", "基礎", "基準"],
+            "answer": "基準",
+            "answer_index": 3,
+            "explanation": "基準 means 'standard'",
+            "translation": "Follow this standard."
+          },
+          {
+            "id": "N3-V-048",
+            "question": "＿＿を応用する。",
+            "choices": ["論理", "論点", "理論", "理論"],
+            "answer": "理論",
+            "answer_index": 2,
+            "explanation": "理論 means 'theory'",
+            "translation": "Apply the theory."
+          },
+          {
+            "id": "N3-V-049",
+            "question": "彼は＿＿を果たした。",
+            "choices": ["役目", "役職", "役者", "役割"],
+            "answer": "役割",
+            "answer_index": 3,
+            "explanation": "役割 means 'role'",
+            "translation": "He fulfilled his role."
+          },
+          {
+            "id": "N3-V-050",
+            "question": "＿＿が足りないと感じる。",
+            "choices": ["動力", "動態", "動機", "動機"],
+            "answer": "動機",
+            "answer_index": 2,
+            "explanation": "動機 means 'motivation'",
+            "translation": "I feel a lack of motivation."
+          }
+        ]
+      },
+      {
+        "level": "N4",
+        "type": "grammar",
+        "records": [
+          {
+            "id": "N4-G-001",
+            "question": "宿題を忘れて＿＿。",
+            "choices": ["おいた", "あった", "みた", "しまった"],
+            "answer": "しまった",
+            "answer_index": 3,
+            "explanation": "〜てしまう expresses completion or regret",
+            "translation": "I forgot my homework."
+          },
+          {
+            "id": "N4-G-002",
+            "question": "明日のために、準備して＿＿。",
+            "choices": ["ある", "しまう", "みる", "おく"],
+            "answer": "おく",
+            "answer_index": 3,
+            "explanation": "〜ておく means to do in advance",
+            "translation": "I'll prepare in advance for tomorrow."
+          },
+          {
+            "id": "N4-G-003",
+            "question": "窓が開けて＿＿。",
+            "choices": ["いる", "おく", "しまう", "ある"],
+            "answer": "ある",
+            "answer_index": 3,
+            "explanation": "〜てある indicates resultant state",
+            "translation": "The window is open."
+          },
+          {
+            "id": "N4-G-004",
+            "question": "このケーキを食べて＿＿。",
+            "choices": ["おく", "しまう", "ある", "みる"],
+            "answer": "みる",
+            "answer_index": 3,
+            "explanation": "〜てみる means to try doing",
+            "translation": "Try this cake."
+          },
+          {
+            "id": "N4-G-005",
+            "question": "この荷物を持って＿＿。",
+            "choices": ["くる", "しまう", "おく", "いく"],
+            "answer": "いく",
+            "answer_index": 3,
+            "explanation": "〜ていく shows going away from the speaker",
+            "translation": "Carry this luggage (going)."
+          },
+          {
+            "id": "N4-G-006",
+            "question": "ここで写真を撮って＿＿か。",
+            "choices": ["はいけない", "はならない", "はだめ", "もいい"],
+            "answer": "もいい",
+            "answer_index": 3,
+            "explanation": "〜てもいい means 'may'",
+            "translation": "May I take a picture here?"
+          },
+          {
+            "id": "N4-G-007",
+            "question": "ここでタバコを吸って＿＿。",
+            "choices": ["もいい", "はならない", "はだめ", "はいけない"],
+            "answer": "はいけない",
+            "answer_index": 3,
+            "explanation": "〜てはいけない means 'must not'",
+            "translation": "You must not smoke here."
+          },
+          {
+            "id": "N4-G-008",
+            "question": "明日は早く起き＿＿ならない。",
+            "choices": ["なくては", "ないと", "なきゃ", "なければ"],
+            "answer": "なければ",
+            "answer_index": 3,
+            "explanation": "〜なければならない means 'must'",
+            "translation": "I must wake up early tomorrow."
+          },
+          {
+            "id": "N4-G-009",
+            "question": "明日は晴れる＿＿。",
+            "choices": ["かもしれない", "はずだ", "つもりだ", "だろう"],
+            "answer": "だろう",
+            "answer_index": 3,
+            "explanation": "〜だろう expresses speculation",
+            "translation": "It will be sunny tomorrow."
+          },
+          {
+            "id": "N4-G-010",
+            "question": "明日は雨が降る＿＿。",
+            "choices": ["だろう", "はずだ", "つもりだ", "かもしれない"],
+            "answer": "かもしれない",
+            "answer_index": 3,
+            "explanation": "〜かもしれない expresses possibility",
+            "translation": "It may rain tomorrow."
+          },
+          {
+            "id": "N4-G-011",
+            "question": "来年は海外に旅行に行く＿＿。",
+            "choices": ["はずだ", "かもしれない", "だろう", "つもりだ"],
+            "answer": "つもりだ",
+            "answer_index": 3,
+            "explanation": "〜つもり means 'intend to'",
+            "translation": "I intend to travel abroad next year."
+          },
+          {
+            "id": "N4-G-012",
+            "question": "食べ＿＿お腹が痛い。",
+            "choices": ["すぎる", "すぎた", "すぎている", "すぎて"],
+            "answer": "すぎて",
+            "answer_index": 3,
+            "explanation": "〜すぎる means 'too much'",
+            "translation": "I ate too much and my stomach hurts."
+          },
+          {
+            "id": "N4-G-013",
+            "question": "音楽を聴き＿＿勉強する。",
+            "choices": ["つつ", "ても", "のに", "ながら"],
+            "answer": "ながら",
+            "answer_index": 3,
+            "explanation": "〜ながら means 'while'",
+            "translation": "I study while listening to music."
+          },
+          {
+            "id": "N4-G-014",
+            "question": "寒い＿＿窓を閉めた。",
+            "choices": ["から", "のに", "けど", "ので"],
+            "answer": "ので",
+            "answer_index": 3,
+            "explanation": "〜ので indicates reason",
+            "translation": "It was cold, so I closed the window."
+          },
+          {
+            "id": "N4-G-015",
+            "question": "暇だ＿＿手伝う。",
+            "choices": ["ので", "のに", "けど", "から"],
+            "answer": "から",
+            "answer_index": 3,
+            "explanation": "〜から indicates reason/cause",
+            "translation": "I'm free, so I'll help."
+          },
+          {
+            "id": "N4-G-016",
+            "question": "急いだ＿＿間に合わなかった。",
+            "choices": ["ので", "から", "けど", "のに"],
+            "answer": "のに",
+            "answer_index": 3,
+            "explanation": "〜のに expresses contrast/unexpected result",
+            "translation": "Although I hurried, I didn't make it."
+          },
+          {
+            "id": "N4-G-017",
+            "question": "遅れない＿＿早く出る。",
+            "choices": ["ために", "つもりで", "ものだ", "ように"],
+            "answer": "ように",
+            "answer_index": 3,
+            "explanation": "〜ように indicates purpose (negative)",
+            "translation": "I leave early so as not to be late."
+          },
+          {
+            "id": "N4-G-018",
+            "question": "彼は今日来る＿＿。",
+            "choices": ["つもりだ", "かもしれない", "だろう", "はずだ"],
+            "answer": "はずだ",
+            "answer_index": 3,
+            "explanation": "〜はずだ expresses expectation",
+            "translation": "He is supposed to come today."
+          },
+          {
+            "id": "N4-G-019",
+            "question": "母は弟に勉強を＿＿。",
+            "choices": ["された", "させられた", "した", "させた"],
+            "answer": "させた",
+            "answer_index": 3,
+            "explanation": "〜させる is causative",
+            "translation": "My mother made my younger brother study."
+          },
+          {
+            "id": "N4-G-020",
+            "question": "友達に＿＿。",
+            "choices": ["叱った", "叱らせた", "叱らせられた", "叱られた"],
+            "answer": "叱られた",
+            "answer_index": 3,
+            "explanation": "〜られる passive",
+            "translation": "I was scolded by my friend."
+          },
+          {
+            "id": "N4-G-021",
+            "question": "助けて＿＿。",
+            "choices": ["もらいたい", "あげたい", "くれたい", "ほしい"],
+            "answer": "ほしい",
+            "answer_index": 3,
+            "explanation": "〜てほしい means 'want someone to do'",
+            "translation": "I want you to help me."
+          },
+          {
+            "id": "N4-G-022",
+            "question": "早く寝た＿＿いい。",
+            "choices": ["より", "ほど", "くらい", "ほうが"],
+            "answer": "ほうが",
+            "answer_index": 3,
+            "explanation": "〜たほうがいい means 'better to do'",
+            "translation": "You should go to bed early."
+          },
+          {
+            "id": "N4-G-023",
+            "question": "あまり食べない＿＿いい。",
+            "choices": ["より", "ほど", "くらい", "ほうが"],
+            "answer": "ほうが",
+            "answer_index": 3,
+            "explanation": "〜ないほうがいい means 'better not to do'",
+            "translation": "You'd better not eat too much."
+          },
+          {
+            "id": "N4-G-024",
+            "question": "来月、転勤することに＿＿。",
+            "choices": ["した", "なっている", "している", "なった"],
+            "answer": "なった",
+            "answer_index": 3,
+            "explanation": "〜ことになる means 'it has been decided'",
+            "translation": "It has been decided that I will be transferred next month."
+          },
+          {
+            "id": "N4-G-025",
+            "question": "明日、休むことに＿＿。",
+            "choices": ["なった", "している", "なっている", "した"],
+            "answer": "した",
+            "answer_index": 3,
+            "explanation": "〜ことにする means 'decide to do'",
+            "translation": "I decided to take a day off tomorrow."
+          },
+          {
+            "id": "N4-G-026",
+            "question": "健康の＿＿運動する。",
+            "choices": ["ように", "つもりで", "ほど", "ために"],
+            "answer": "ために",
+            "answer_index": 3,
+            "explanation": "〜ために means 'for the sake of'",
+            "translation": "I exercise for my health."
+          },
+          {
+            "id": "N4-G-027",
+            "question": "日本語が話せる＿＿。",
+            "choices": ["ことになった", "ところになった", "になった", "ようになった"],
+            "answer": "ようになった",
+            "answer_index": 3,
+            "explanation": "〜ようになる means 'came to be able to'",
+            "translation": "I came to be able to speak Japanese."
+          },
+          {
+            "id": "N4-G-028",
+            "question": "行く＿＿分からない。",
+            "choices": ["か", "どうか", "のか", "かどうか"],
+            "answer": "かどうか",
+            "answer_index": 3,
+            "explanation": "〜かどうか means 'whether or not'",
+            "translation": "I don't know whether I'll go."
+          },
+          {
+            "id": "N4-G-029",
+            "question": "田中さん＿＿人は知っていますか。",
+            "choices": ["といった", "といって", "という", "という"],
+            "answer": "という",
+            "answer_index": 2,
+            "explanation": "〜という is used to introduce a name or definition",
+            "translation": "Do you know a person called Tanaka?"
+          },
+          {
+            "id": "N4-G-030",
+            "question": "果物＿＿好きです。",
+            "choices": ["とか", "や", "を", "など"],
+            "answer": "など",
+            "answer_index": 3,
+            "explanation": "〜など means 'etc.'",
+            "translation": "I like fruits and such."
+          },
+          {
+            "id": "N4-G-031",
+            "question": "3時間＿＿待った。",
+            "choices": ["ほど", "ぐらい", "より", "くらい"],
+            "answer": "くらい",
+            "answer_index": 3,
+            "explanation": "〜くらい indicates approximate amount",
+            "translation": "I waited about three hours."
+          },
+          {
+            "id": "N4-G-032",
+            "question": "今日は昨日＿＿寒くない。",
+            "choices": ["より", "くらい", "で", "ほど"],
+            "answer": "ほど",
+            "answer_index": 3,
+            "explanation": "〜ほど in negative comparison means 'not as ... as'",
+            "translation": "Today is not as cold as yesterday."
+          },
+          {
+            "id": "N4-G-033",
+            "question": "今日は昨日＿＿暖かい。",
+            "choices": ["ほど", "くらい", "で", "より"],
+            "answer": "より",
+            "answer_index": 3,
+            "explanation": "〜より is used for comparison",
+            "translation": "Today is warmer than yesterday."
+          },
+          {
+            "id": "N4-G-034",
+            "question": "時間に間に合う。",
+            "choices": ["を", "が", "で", "に"],
+            "answer": "に",
+            "answer_index": 3,
+            "explanation": "〜に indicates specific point in time",
+            "translation": "I make it on time."
+          },
+          {
+            "id": "N4-G-035",
+            "question": "彼女＿＿来た。",
+            "choices": ["は", "を", "に", "が"],
+            "answer": "が",
+            "answer_index": 3,
+            "explanation": "〜が marks subject with new information",
+            "translation": "She came."
+          },
+          {
+            "id": "N4-G-036",
+            "question": "本＿＿読む。",
+            "choices": ["が", "に", "で", "を"],
+            "answer": "を",
+            "answer_index": 3,
+            "explanation": "〜を marks direct object",
+            "translation": "Read a book."
+          },
+          {
+            "id": "N4-G-037",
+            "question": "バス＿＿行く。",
+            "choices": ["に", "を", "が", "で"],
+            "answer": "で",
+            "answer_index": 3,
+            "explanation": "〜で indicates means",
+            "translation": "Go by bus."
+          },
+          {
+            "id": "N4-G-038",
+            "question": "学校＿＿行く。",
+            "choices": ["に", "を", "が", "へ"],
+            "answer": "へ",
+            "answer_index": 3,
+            "explanation": "〜へ indicates direction",
+            "translation": "Go to school."
+          },
+          {
+            "id": "N4-G-039",
+            "question": "友達＿＿話す。",
+            "choices": ["に", "を", "が", "と"],
+            "answer": "と",
+            "answer_index": 3,
+            "explanation": "〜と indicates companion/reciprocal",
+            "translation": "Talk with a friend."
+          },
+          {
+            "id": "N4-G-040",
+            "question": "9時＿＿始まる。",
+            "choices": ["に", "で", "を", "から"],
+            "answer": "から",
+            "answer_index": 3,
+            "explanation": "〜から indicates starting point",
+            "translation": "It starts from 9 o'clock."
+          },
+          {
+            "id": "N4-G-041",
+            "question": "5時＿＿働く。",
+            "choices": ["から", "に", "で", "まで"],
+            "answer": "まで",
+            "answer_index": 3,
+            "explanation": "〜まで indicates end point",
+            "translation": "Work until 5 o'clock."
+          },
+          {
+            "id": "N4-G-042",
+            "question": "私の本。",
+            "choices": ["が", "を", "に", "の"],
+            "answer": "の",
+            "answer_index": 3,
+            "explanation": "〜の indicates possession",
+            "translation": "My book."
+          },
+          {
+            "id": "N4-G-043",
+            "question": "今、勉強して＿＿。",
+            "choices": ["ある", "おく", "しまう", "いる"],
+            "answer": "いる",
+            "answer_index": 3,
+            "explanation": "〜ている indicates ongoing action",
+            "translation": "I am studying now."
+          },
+          {
+            "id": "N4-G-044",
+            "question": "ドアが開けて＿＿。",
+            "choices": ["いる", "おく", "しまう", "ある"],
+            "answer": "ある",
+            "answer_index": 3,
+            "explanation": "〜てある indicates resultant state",
+            "translation": "The door is open."
+          },
+          {
+            "id": "N4-G-045",
+            "question": "電気を消して＿＿。",
+            "choices": ["ある", "しまう", "みる", "おく"],
+            "answer": "おく",
+            "answer_index": 3,
+            "explanation": "〜ておく means to do in advance",
+            "translation": "I'll turn off the lights."
+          },
+          {
+            "id": "N4-G-046",
+            "question": "忘れて＿＿。",
+            "choices": ["おく", "みる", "ある", "しまう"],
+            "answer": "しまう",
+            "answer_index": 3,
+            "explanation": "〜てしまう expresses completion/regret",
+            "translation": "I forgot (and regret it)."
+          },
+          {
+            "id": "N4-G-047",
+            "question": "持って＿＿。",
+            "choices": ["いく", "しまう", "おく", "くる"],
+            "answer": "くる",
+            "answer_index": 3,
+            "explanation": "〜てくる means to bring toward speaker",
+            "translation": "Bring (it)."
+          },
+          {
+            "id": "N4-G-048",
+            "question": "雨が降って＿＿行く。",
+            "choices": ["でも", "なら", "たら", "も"],
+            "answer": "も",
+            "answer_index": 3,
+            "explanation": "〜ても means 'even if'",
+            "translation": "Even if it rains, I'll go."
+          },
+          {
+            "id": "N4-G-049",
+            "question": "この本は読み＿＿。",
+            "choices": ["にくい", "すぎる", "がちだ", "やすい"],
+            "answer": "やすい",
+            "answer_index": 3,
+            "explanation": "〜やすい means easy to do",
+            "translation": "This book is easy to read."
+          },
+          {
+            "id": "N4-G-050",
+            "question": "この問題は＿＿。",
+            "choices": ["簡単な", "簡単に", "簡単で", "簡単だ"],
+            "answer": "簡単だ",
+            "answer_index": 3,
+            "explanation": "〜だ ends a sentence for na-adjective",
+            "translation": "This problem is easy."
+          }
+        ]
+      },
+      {
+        "level": "N4",
+        "type": "kanji",
+        "records": [
+          {
+            "id": "N4-K-001",
+            "question": "「ご飯を食べる。」「食べる」の読み方は？",
+            "choices": ["のむ", "みる", "きく", "たべる"],
+            "answer": "たべる",
+            "answer_index": 3,
+            "explanation": "食べる is read as たべる",
+            "translation": "Eat a meal."
+          },
+          {
+            "id": "N4-K-002",
+            "question": "「水を飲む。」「飲む」の読み方は？",
+            "choices": ["たべる", "みる", "よむ", "のむ"],
+            "answer": "のむ",
+            "answer_index": 3,
+            "explanation": "飲む is read as のむ",
+            "translation": "Drink water."
+          },
+          {
+            "id": "N4-K-003",
+            "question": "「学校に行く。」「行く」の読み方は？",
+            "choices": ["くる", "かえる", "あるく", "いく"],
+            "answer": "いく",
+            "answer_index": 3,
+            "explanation": "行く is read as いく",
+            "translation": "Go to school."
+          },
+          {
+            "id": "N4-K-004",
+            "question": "「家に来る。」「来る」の読み方は？",
+            "choices": ["いく", "かえる", "あるく", "くる"],
+            "answer": "くる",
+            "answer_index": 3,
+            "explanation": "来る is read as くる",
+            "translation": "Come home."
+          },
+          {
+            "id": "N4-K-005",
+            "question": "「テレビを見る。」「見る」の読み方は？",
+            "choices": ["きく", "よむ", "かく", "みる"],
+            "answer": "みる",
+            "answer_index": 3,
+            "explanation": "見る is read as みる",
+            "translation": "Watch TV."
+          },
+          {
+            "id": "N4-K-006",
+            "question": "「音を聞く。」「聞く」の読み方は？",
+            "choices": ["みる", "よむ", "かく", "きく"],
+            "answer": "きく",
+            "answer_index": 3,
+            "explanation": "聞く is read as きく",
+            "translation": "Listen to the sound."
+          },
+          {
+            "id": "N4-K-007",
+            "question": "「手紙を書く。」「書く」の読み方は？",
+            "choices": ["よむ", "きく", "はなす", "かく"],
+            "answer": "かく",
+            "answer_index": 3,
+            "explanation": "書く is read as かく",
+            "translation": "Write a letter."
+          },
+          {
+            "id": "N4-K-008",
+            "question": "「本を読む。」「読む」の読み方は？",
+            "choices": ["かく", "みる", "きく", "よむ"],
+            "answer": "よむ",
+            "answer_index": 3,
+            "explanation": "読む is read as よむ",
+            "translation": "Read a book."
+          },
+          {
+            "id": "N4-K-009",
+            "question": "「パンを買う。」「買う」の読み方は？",
+            "choices": ["うる", "かく", "よむ", "かう"],
+            "answer": "かう",
+            "answer_index": 3,
+            "explanation": "買う is read as かう",
+            "translation": "Buy bread."
+          },
+          {
+            "id": "N4-K-010",
+            "question": "「日本語を話す。」「話す」の読み方は？",
+            "choices": ["はなす", "かたる", "ものがたる", "はなす"],
+            "answer": "はなす",
+            "answer_index": 0,
+            "explanation": "話す is read as はなす",
+            "translation": "Speak Japanese."
+          },
+          {
+            "id": "N4-K-011",
+            "question": "「ありがとうと言う。」「言う」の読み方は？",
+            "choices": ["はなす", "かたる", "のべる", "いう"],
+            "answer": "いう",
+            "answer_index": 3,
+            "explanation": "言う is read as いう",
+            "translation": "Say thank you."
+          },
+          {
+            "id": "N4-K-012",
+            "question": "「彼のことを思う。」「思う」の読み方は？",
+            "choices": ["かんがえる", "しる", "わかる", "おもう"],
+            "answer": "おもう",
+            "answer_index": 3,
+            "explanation": "思う is read as おもう",
+            "translation": "Think of him."
+          },
+          {
+            "id": "N4-K-013",
+            "question": "「彼の名前を知る。」「知る」の読み方は？",
+            "choices": ["わかる", "おもう", "かんがえる", "しる"],
+            "answer": "しる",
+            "answer_index": 3,
+            "explanation": "知る is read as しる",
+            "translation": "Know his name."
+          },
+          {
+            "id": "N4-K-014",
+            "question": "「公園を歩く。」「歩く」の読み方は？",
+            "choices": ["はしる", "いく", "かえる", "あるく"],
+            "answer": "あるく",
+            "answer_index": 3,
+            "explanation": "歩く is read as あるく",
+            "translation": "Walk in the park."
+          },
+          {
+            "id": "N4-K-015",
+            "question": "「駅まで走る。」「走る」の読み方は？",
+            "choices": ["あるく", "いく", "かえる", "はしる"],
+            "answer": "はしる",
+            "answer_index": 3,
+            "explanation": "走る is read as はしる",
+            "translation": "Run to the station."
+          },
+          {
+            "id": "N4-K-016",
+            "question": "「バスを待つ。」「待つ」の読み方は？",
+            "choices": ["たつ", "すわる", "あるく", "まつ"],
+            "answer": "まつ",
+            "answer_index": 3,
+            "explanation": "待つ is read as まつ",
+            "translation": "Wait for the bus."
+          },
+          {
+            "id": "N4-K-017",
+            "question": "「本を出す。」「出す」の読み方は？",
+            "choices": ["いれる", "でる", "はいる", "だす"],
+            "answer": "だす",
+            "answer_index": 3,
+            "explanation": "出す is read as だす",
+            "translation": "Take out a book."
+          },
+          {
+            "id": "N4-K-018",
+            "question": "「部屋に入れる。」「入れる」の読み方は？",
+            "choices": ["はいる", "でる", "だす", "いれる"],
+            "answer": "いれる",
+            "answer_index": 3,
+            "explanation": "入れる is read as いれる",
+            "translation": "Put into the room."
+          },
+          {
+            "id": "N4-K-019",
+            "question": "「部屋を出る。」「出る」の読み方は？",
+            "choices": ["はいる", "いれる", "だす", "でる"],
+            "answer": "でる",
+            "answer_index": 3,
+            "explanation": "出る is read as でる",
+            "translation": "Leave the room."
+          },
+          {
+            "id": "N4-K-020",
+            "question": "「部屋に入る。」「入る」の読み方は？",
+            "choices": ["いれる", "でる", "だす", "はいる"],
+            "answer": "はいる",
+            "answer_index": 3,
+            "explanation": "入る is read as はいる",
+            "translation": "Enter the room."
+          },
+          {
+            "id": "N4-K-021",
+            "question": "「朝起きる。」「起きる」の読み方は？",
+            "choices": ["ねる", "たつ", "すわる", "おきる"],
+            "answer": "おきる",
+            "answer_index": 3,
+            "explanation": "起きる is read as おきる",
+            "translation": "Wake up in the morning."
+          },
+          {
+            "id": "N4-K-022",
+            "question": "「夜寝る。」「寝る」の読み方は？",
+            "choices": ["おきる", "たつ", "すわる", "ねる"],
+            "answer": "ねる",
+            "answer_index": 3,
+            "explanation": "寝る is read as ねる",
+            "translation": "Sleep at night."
+          },
+          {
+            "id": "N4-K-023",
+            "question": "「コートを着る。」「着る」の読み方は？",
+            "choices": ["ぬぐ", "はく", "かぶる", "きる"],
+            "answer": "きる",
+            "answer_index": 3,
+            "explanation": "着る is read as きる",
+            "translation": "Wear a coat."
+          },
+          {
+            "id": "N4-K-024",
+            "question": "「靴を脱ぐ。」「脱ぐ」の読み方は？",
+            "choices": ["はく", "きる", "かぶる", "ぬぐ"],
+            "answer": "ぬぐ",
+            "answer_index": 3,
+            "explanation": "脱ぐ is read as ぬぐ",
+            "translation": "Take off shoes."
+          },
+          {
+            "id": "N4-K-025",
+            "question": "「パソコンを使う。」「使う」の読み方は？",
+            "choices": ["つくる", "もつ", "あう", "つかう"],
+            "answer": "つかう",
+            "answer_index": 3,
+            "explanation": "使う is read as つかう",
+            "translation": "Use a computer."
+          },
+          {
+            "id": "N4-K-026",
+            "question": "「食事を作る。」「作る」の読み方は？",
+            "choices": ["つかう", "たべる", "のむ", "つくる"],
+            "answer": "つくる",
+            "answer_index": 3,
+            "explanation": "作る is read as つくる",
+            "translation": "Make a meal."
+          },
+          {
+            "id": "N4-K-027",
+            "question": "「東京に住む。」「住む」の読み方は？",
+            "choices": ["のむ", "たべる", "いきる", "すむ"],
+            "answer": "すむ",
+            "answer_index": 3,
+            "explanation": "住む is read as すむ",
+            "translation": "Live in Tokyo."
+          },
+          {
+            "id": "N4-K-028",
+            "question": "「日本語を習う。」「習う」の読み方は？",
+            "choices": ["まなぶ", "おしえる", "よむ", "ならう"],
+            "answer": "ならう",
+            "answer_index": 3,
+            "explanation": "習う is read as ならう",
+            "translation": "Learn Japanese."
+          },
+          {
+            "id": "N4-K-029",
+            "question": "「勉強する。」「勉強」の読み方は？",
+            "choices": ["べんきょう", "べんきょう", "べんきょう", "べんきょう"],
+            "answer": "べんきょう",
+            "answer_index": 0,
+            "explanation": "勉強 is read as べんきょう",
+            "translation": "Study."
+          },
+          {
+            "id": "N4-K-030",
+            "question": "「学校に行く。」「学校」の読み方は？",
+            "choices": ["がっこう", "がっこう", "がっこう", "がっこう"],
+            "answer": "がっこう",
+            "answer_index": 0,
+            "explanation": "学校 is read as がっこう",
+            "translation": "Go to school."
+          },
+          {
+            "id": "N4-K-031",
+            "question": "「先生が教える。」「先生」の読み方は？",
+            "choices": ["せんせい", "せんせい", "せんせい", "せんせい"],
+            "answer": "せんせい",
+            "answer_index": 0,
+            "explanation": "先生 is read as せんせい",
+            "translation": "The teacher teaches."
+          },
+          {
+            "id": "N4-K-032",
+            "question": "「学生です。」「学生」の読み方は？",
+            "choices": ["がくせい", "がくせい", "がくせい", "がくせい"],
+            "answer": "がくせい",
+            "answer_index": 0,
+            "explanation": "学生 is read as がくせい",
+            "translation": "I am a student."
+          },
+          {
+            "id": "N4-K-033",
+            "question": "「本を読む。」「本」の読み方は？",
+            "choices": ["ほん", "ほん", "ほん", "ほん"],
+            "answer": "ほん",
+            "answer_index": 0,
+            "explanation": "本 is read as ほん",
+            "translation": "Read a book."
+          },
+          {
+            "id": "N4-K-034",
+            "question": "「雑誌を買う。」「雑誌」の読み方は？",
+            "choices": ["ざっし", "ざっし", "ざっし", "ざっし"],
+            "answer": "ざっし",
+            "answer_index": 0,
+            "explanation": "雑誌 is read as ざっし",
+            "translation": "Buy a magazine."
+          },
+          {
+            "id": "N4-K-035",
+            "question": "「新聞を読む。」「新聞」の読み方は？",
+            "choices": ["しんぶん", "しんぶん", "しんぶん", "しんぶん"],
+            "answer": "しんぶん",
+            "answer_index": 0,
+            "explanation": "新聞 is read as しんぶん",
+            "translation": "Read a newspaper."
+          },
+          {
+            "id": "N4-K-036",
+            "question": "「手紙を書く。」「手紙」の読み方は？",
+            "choices": ["てがみ", "てがみ", "てがみ", "てがみ"],
+            "answer": "てがみ",
+            "answer_index": 0,
+            "explanation": "手紙 is read as てがみ",
+            "translation": "Write a letter."
+          },
+          {
+            "id": "N4-K-037",
+            "question": "「電車に乗る。」「電車」の読み方は？",
+            "choices": ["でんしゃ", "でんしゃ", "でんしゃ", "でんしゃ"],
+            "answer": "でんしゃ",
+            "answer_index": 0,
+            "explanation": "電車 is read as でんしゃ",
+            "translation": "Ride a train."
+          },
+          {
+            "id": "N4-K-038",
+            "question": "「バスで行く。」「バス」の読み方は？",
+            "choices": ["バス", "バス", "バス", "バス"],
+            "answer": "バス",
+            "answer_index": 0,
+            "explanation": "バス is read as バス (katakana)",
+            "translation": "Go by bus."
+          },
+          {
+            "id": "N4-K-039",
+            "question": "「空港に着く。」「空港」の読み方は？",
+            "choices": ["くうこう", "くうこう", "くうこう", "くうこう"],
+            "answer": "くうこう",
+            "answer_index": 0,
+            "explanation": "空港 is read as くうこう",
+            "translation": "Arrive at the airport."
+          },
+          {
+            "id": "N4-K-040",
+            "question": "「病院に行く。」「病院」の読み方は？",
+            "choices": ["びょういん", "びょういん", "びょういん", "びょういん"],
+            "answer": "びょういん",
+            "answer_index": 0,
+            "explanation": "病院 is read as びょういん",
+            "translation": "Go to the hospital."
+          },
+          {
+            "id": "N4-K-041",
+            "question": "「薬を飲む。」「薬」の読み方は？",
+            "choices": ["くすり", "くすり", "くすり", "くすり"],
+            "answer": "くすり",
+            "answer_index": 0,
+            "explanation": "薬 is read as くすり",
+            "translation": "Take medicine."
+          },
+          {
+            "id": "N4-K-042",
+            "question": "「銀行に行く。」「銀行」の読み方は？",
+            "choices": ["ぎんこう", "ぎんこう", "ぎんこう", "ぎんこう"],
+            "answer": "ぎんこう",
+            "answer_index": 0,
+            "explanation": "銀行 is read as ぎんこう",
+            "translation": "Go to the bank."
+          },
+          {
+            "id": "N4-K-043",
+            "question": "「郵便局に行く。」「郵便局」の読み方は？",
+            "choices": ["ゆうびんきょく", "ゆうびんきょく", "ゆうびんきょく", "ゆうびんきょく"],
+            "answer": "ゆうびんきょく",
+            "answer_index": 0,
+            "explanation": "郵便局 is read as ゆうびんきょく",
+            "translation": "Go to the post office."
+          },
+          {
+            "id": "N4-K-044",
+            "question": "「図書館で本を借りる。」「図書館」の読み方は？",
+            "choices": ["としょかん", "としょかん", "としょかん", "としょかん"],
+            "answer": "としょかん",
+            "answer_index": 0,
+            "explanation": "図書館 is read as としょかん",
+            "translation": "Borrow a book at the library."
+          },
+          {
+            "id": "N4-K-045",
+            "question": "「市役所に行く。」「市役所」の読み方は？",
+            "choices": ["しやくしょ", "しやくしょ", "しやくしょ", "しやくしょ"],
+            "answer": "しやくしょ",
+            "answer_index": 0,
+            "explanation": "市役所 is read as しやくしょ",
+            "translation": "Go to city hall."
+          },
+          {
+            "id": "N4-K-046",
+            "question": "「警察に届ける。」「警察」の読み方は？",
+            "choices": ["けいさつ", "けいさつ", "けいさつ", "けいさつ"],
+            "answer": "けいさつ",
+            "answer_index": 0,
+            "explanation": "警察 is read as けいさつ",
+            "translation": "Report to the police."
+          },
+          {
+            "id": "N4-K-047",
+            "question": "「火事が起こった。」「火事」の読み方は？",
+            "choices": ["かじ", "かじ", "かじ", "かじ"],
+            "answer": "かじ",
+            "answer_index": 0,
+            "explanation": "火事 is read as かじ",
+            "translation": "A fire broke out."
+          },
+          {
+            "id": "N4-K-048",
+            "question": "「お金を払う。」「お金」の読み方は？",
+            "choices": ["おかね", "おかね", "おかね", "おかね"],
+            "answer": "おかね",
+            "answer_index": 0,
+            "explanation": "お金 is read as おかね",
+            "translation": "Pay money."
+          },
+          {
+            "id": "N4-K-049",
+            "question": "「時間がない。」「時間」の読み方は？",
+            "choices": ["じかん", "じかん", "じかん", "じかん"],
+            "answer": "じかん",
+            "answer_index": 0,
+            "explanation": "時間 is read as じかん",
+            "translation": "There is no time."
+          },
+          {
+            "id": "N4-K-050",
+            "question": "「一年に一度旅行する。」「年」の読み方は？",
+            "choices": ["とし", "ねん", "とし", "ねん"],
+            "answer": "ねん",
+            "answer_index": 1,
+            "explanation": "年 is read as ねん in this compound",
+            "translation": "Travel once a year."
+          }
+        ]
+      },
+      {
+        "level": "N4",
+        "type": "vocabulary",
+        "records": [
+          {
+            "id": "N4-V-001",
+            "question": "この町には人が＿＿。",
+            "choices": ["多い", "多", "多く", "多い"],
+            "answer": "多い",
+            "answer_index": 0,
+            "explanation": "多い means 'many'",
+            "translation": "There are many people in this town."
+          },
+          {
+            "id": "N4-V-002",
+            "question": "今日は客が＿＿。",
+            "choices": ["少ない", "少", "少な", "少ない"],
+            "answer": "少ない",
+            "answer_index": 0,
+            "explanation": "少ない means 'few'",
+            "translation": "There are few customers today."
+          },
+          {
+            "id": "N4-V-003",
+            "question": "この箱はとても＿＿。",
+            "choices": ["大きい", "大き", "大きく", "大きい"],
+            "answer": "大きい",
+            "answer_index": 0,
+            "explanation": "大きい means 'big'",
+            "translation": "This box is very big."
+          },
+          {
+            "id": "N4-V-004",
+            "question": "その問題は＿＿。",
+            "choices": ["小さい", "小さ", "小さく", "小さい"],
+            "answer": "小さい",
+            "answer_index": 0,
+            "explanation": "小さい means 'small'",
+            "translation": "That problem is small."
+          },
+          {
+            "id": "N4-V-005",
+            "question": "この建物は＿＿。",
+            "choices": ["高い", "高", "高く", "高い"],
+            "answer": "高い",
+            "answer_index": 0,
+            "explanation": "高い means 'high/expensive'",
+            "translation": "This building is tall."
+          },
+          {
+            "id": "N4-V-006",
+            "question": "この服は＿＿。",
+            "choices": ["安い", "安", "安く", "安い"],
+            "answer": "安い",
+            "answer_index": 0,
+            "explanation": "安い means 'cheap'",
+            "translation": "This clothes is cheap."
+          },
+          {
+            "id": "N4-V-007",
+            "question": "この線は＿＿。",
+            "choices": ["長い", "長", "長く", "長い"],
+            "answer": "長い",
+            "answer_index": 0,
+            "explanation": "長い means 'long'",
+            "translation": "This line is long."
+          },
+          {
+            "id": "N4-V-008",
+            "question": "この鉛筆は＿＿。",
+            "choices": ["短い", "短", "短く", "短い"],
+            "answer": "短い",
+            "answer_index": 0,
+            "explanation": "短い means 'short'",
+            "translation": "This pencil is short."
+          },
+          {
+            "id": "N4-V-009",
+            "question": "この荷物は＿＿。",
+            "choices": ["重い", "重", "重く", "重い"],
+            "answer": "重い",
+            "answer_index": 0,
+            "explanation": "重い means 'heavy'",
+            "translation": "This luggage is heavy."
+          },
+          {
+            "id": "N4-V-010",
+            "question": "この箱は＿＿。",
+            "choices": ["軽い", "軽", "軽く", "軽い"],
+            "answer": "軽い",
+            "answer_index": 0,
+            "explanation": "軽い means 'light'",
+            "translation": "This box is light."
+          },
+          {
+            "id": "N4-V-011",
+            "question": "ここは駅から＿＿。",
+            "choices": ["遠い", "遠", "遠く", "遠い"],
+            "answer": "遠い",
+            "answer_index": 0,
+            "explanation": "遠い means 'far'",
+            "translation": "It is far from the station."
+          },
+          {
+            "id": "N4-V-012",
+            "question": "コンビニは＿＿。",
+            "choices": ["近い", "近", "近く", "近い"],
+            "answer": "近い",
+            "answer_index": 0,
+            "explanation": "近い means 'near'",
+            "translation": "The convenience store is near."
+          },
+          {
+            "id": "N4-V-013",
+            "question": "朝は＿＿起きる。",
+            "choices": ["早い", "早", "早く", "早く"],
+            "answer": "早く",
+            "answer_index": 2,
+            "explanation": "早く is adverb form of 早い",
+            "translation": "Wake up early in the morning."
+          },
+          {
+            "id": "N4-V-014",
+            "question": "今日は＿＿起きた。",
+            "choices": ["遅い", "遅", "遅く", "遅く"],
+            "answer": "遅く",
+            "answer_index": 2,
+            "explanation": "遅く is adverb form",
+            "translation": "I got up late today."
+          },
+          {
+            "id": "N4-V-015",
+            "question": "夏はとても＿＿。",
+            "choices": ["暑い", "暑", "暑く", "暑い"],
+            "answer": "暑い",
+            "answer_index": 0,
+            "explanation": "暑い means 'hot (weather)'",
+            "translation": "Summer is very hot."
+          },
+          {
+            "id": "N4-V-016",
+            "question": "冬はとても＿＿。",
+            "choices": ["寒い", "寒", "寒く", "寒い"],
+            "answer": "寒い",
+            "answer_index": 0,
+            "explanation": "寒い means 'cold (weather)'",
+            "translation": "Winter is very cold."
+          },
+          {
+            "id": "N4-V-017",
+            "question": "このスープは＿＿。",
+            "choices": ["熱い", "熱", "熱く", "熱い"],
+            "answer": "熱い",
+            "answer_index": 0,
+            "explanation": "熱い means 'hot (to touch/drink)'",
+            "translation": "This soup is hot."
+          },
+          {
+            "id": "N4-V-018",
+            "question": "この水は＿＿。",
+            "choices": ["冷たい", "冷た", "冷たく", "冷たい"],
+            "answer": "冷たい",
+            "answer_index": 0,
+            "explanation": "冷たい means 'cold (to touch)'",
+            "translation": "This water is cold."
+          },
+          {
+            "id": "N4-V-019",
+            "question": "今日は＿＿。",
+            "choices": ["忙しい", "忙し", "忙しく", "忙しい"],
+            "answer": "忙しい",
+            "answer_index": 0,
+            "explanation": "忙しい means 'busy'",
+            "translation": "I am busy today."
+          },
+          {
+            "id": "N4-V-020",
+            "question": "週末は＿＿。",
+            "choices": ["暇", "暇な", "暇で", "暇だ"],
+            "answer": "暇だ",
+            "answer_index": 3,
+            "explanation": "暇 means 'free (time)'",
+            "translation": "I am free on weekends."
+          },
+          {
+            "id": "N4-V-021",
+            "question": "このアプリはとても＿＿。",
+            "choices": ["便利", "便利な", "便利で", "便利だ"],
+            "answer": "便利だ",
+            "answer_index": 3,
+            "explanation": "便利 means 'convenient'",
+            "translation": "This app is very convenient."
+          },
+          {
+            "id": "N4-V-022",
+            "question": "ここは＿＿だ。",
+            "choices": ["不便", "不便な", "不便で", "不便だ"],
+            "answer": "不便だ",
+            "answer_index": 3,
+            "explanation": "不便 means 'inconvenient'",
+            "translation": "This place is inconvenient."
+          },
+          {
+            "id": "N4-V-023",
+            "question": "彼女は＿＿だ。",
+            "choices": ["好きな", "好き", "好きで", "好き"],
+            "answer": "好き",
+            "answer_index": 1,
+            "explanation": "好き means 'like' (na-adjective)",
+            "translation": "I like her."
+          },
+          {
+            "id": "N4-V-024",
+            "question": "私は＿＿だ。",
+            "choices": ["嫌いな", "嫌い", "嫌いで", "嫌い"],
+            "answer": "嫌い",
+            "answer_index": 1,
+            "explanation": "嫌い means 'dislike'",
+            "translation": "I dislike it."
+          },
+          {
+            "id": "N4-V-025",
+            "question": "彼は絵が＿＿。",
+            "choices": ["上手", "上手な", "上手で", "上手だ"],
+            "answer": "上手だ",
+            "answer_index": 3,
+            "explanation": "上手 means 'skilled'",
+            "translation": "He is good at drawing."
+          },
+          {
+            "id": "N4-V-026",
+            "question": "私は歌が＿＿。",
+            "choices": ["下手", "下手な", "下手で", "下手だ"],
+            "answer": "下手だ",
+            "answer_index": 3,
+            "explanation": "下手 means 'unskilled'",
+            "translation": "I am bad at singing."
+          },
+          {
+            "id": "N4-V-027",
+            "question": "この問題は＿＿。",
+            "choices": ["簡単", "簡単な", "簡単で", "簡単だ"],
+            "answer": "簡単だ",
+            "answer_index": 3,
+            "explanation": "簡単 means 'easy/simple'",
+            "translation": "This problem is easy."
+          },
+          {
+            "id": "N4-V-028",
+            "question": "この試験は＿＿。",
+            "choices": ["難しい", "難し", "難しく", "難しい"],
+            "answer": "難しい",
+            "answer_index": 0,
+            "explanation": "難しい means 'difficult'",
+            "translation": "This exam is difficult."
+          },
+          {
+            "id": "N4-V-029",
+            "question": "このスマホは＿＿。",
+            "choices": ["新しい", "新し", "新しく", "新しい"],
+            "answer": "新しい",
+            "answer_index": 0,
+            "explanation": "新しい means 'new'",
+            "translation": "This smartphone is new."
+          },
+          {
+            "id": "N4-V-030",
+            "question": "この本は＿＿。",
+            "choices": ["古い", "古", "古く", "古い"],
+            "answer": "古い",
+            "answer_index": 0,
+            "explanation": "古い means 'old'",
+            "translation": "This book is old."
+          },
+          {
+            "id": "N4-V-031",
+            "question": "この部屋は＿＿。",
+            "choices": ["明るい", "明る", "明るく", "明るい"],
+            "answer": "明るい",
+            "answer_index": 0,
+            "explanation": "明るい means 'bright'",
+            "translation": "This room is bright."
+          },
+          {
+            "id": "N4-V-032",
+            "question": "この部屋は＿＿。",
+            "choices": ["暗い", "暗", "暗く", "暗い"],
+            "answer": "暗い",
+            "answer_index": 0,
+            "explanation": "暗い means 'dark'",
+            "translation": "This room is dark."
+          },
+          {
+            "id": "N4-V-033",
+            "question": "この地域は＿＿。",
+            "choices": ["安全", "安全な", "安全で", "安全だ"],
+            "answer": "安全だ",
+            "answer_index": 3,
+            "explanation": "安全 means 'safe'",
+            "translation": "This area is safe."
+          },
+          {
+            "id": "N4-V-034",
+            "question": "この道は＿＿。",
+            "choices": ["危険", "危険な", "危険で", "危険だ"],
+            "answer": "危険だ",
+            "answer_index": 3,
+            "explanation": "危険 means 'dangerous'",
+            "translation": "This road is dangerous."
+          },
+          {
+            "id": "N4-V-035",
+            "question": "この店は＿＿高い。",
+            "choices": ["少し", "少ない", "少なく", "少し"],
+            "answer": "少し",
+            "answer_index": 0,
+            "explanation": "少し means 'a little'",
+            "translation": "This shop is a little expensive."
+          },
+          {
+            "id": "N4-V-036",
+            "question": "彼は＿＿親切だ。",
+            "choices": ["とても", "たいへん", "すごく", "とても"],
+            "answer": "とても",
+            "answer_index": 0,
+            "explanation": "とても means 'very'",
+            "translation": "He is very kind."
+          },
+          {
+            "id": "N4-V-037",
+            "question": "＿＿行きましょう。",
+            "choices": ["一緒", "一団", "一斉に", "一緒に"],
+            "answer": "一緒に",
+            "answer_index": 3,
+            "explanation": "一緒に means 'together'",
+            "translation": "Let's go together."
+          },
+          {
+            "id": "N4-V-038",
+            "question": "この仕事は＿＿終わった。",
+            "choices": ["まだ", "よく", "とても", "もう"],
+            "answer": "もう",
+            "answer_index": 3,
+            "explanation": "もう means 'already'",
+            "translation": "This work has already finished."
+          },
+          {
+            "id": "N4-V-039",
+            "question": "＿＿来ていない。",
+            "choices": ["もう", "よく", "とても", "まだ"],
+            "answer": "まだ",
+            "answer_index": 3,
+            "explanation": "まだ means 'not yet'",
+            "translation": "He hasn't come yet."
+          },
+          {
+            "id": "N4-V-040",
+            "question": "この本は＿＿面白い。",
+            "choices": ["たいへん", "すごく", "もう", "とても"],
+            "answer": "とても",
+            "answer_index": 3,
+            "explanation": "とても means 'very'",
+            "translation": "This book is very interesting."
+          },
+          {
+            "id": "N4-V-041",
+            "question": "彼は＿＿来る。",
+            "choices": ["もう", "まだ", "よく", "すぐ"],
+            "answer": "すぐ",
+            "answer_index": 3,
+            "explanation": "すぐ means 'soon'",
+            "translation": "He will come soon."
+          },
+          {
+            "id": "N4-V-042",
+            "question": "その話は＿＿知っている。",
+            "choices": ["もう", "まだ", "すぐ", "よく"],
+            "answer": "よく",
+            "answer_index": 3,
+            "explanation": "よく means 'well' or 'often'",
+            "translation": "I know that story well."
+          },
+          {
+            "id": "N4-V-043",
+            "question": "この問題は＿＿難しい。",
+            "choices": ["もう", "まだ", "すぐ", "とても"],
+            "answer": "とても",
+            "answer_index": 3,
+            "explanation": "とても means 'very'",
+            "translation": "This problem is very difficult."
+          },
+          {
+            "id": "N4-V-044",
+            "question": "彼女は＿＿美しい。",
+            "choices": ["たいへん", "すごく", "もう", "とても"],
+            "answer": "とても",
+            "answer_index": 3,
+            "explanation": "とても means 'very'",
+            "translation": "She is very beautiful."
+          },
+          {
+            "id": "N4-V-045",
+            "question": "このレストランは＿＿美味しい。",
+            "choices": ["もう", "まだ", "すぐ", "とても"],
+            "answer": "とても",
+            "answer_index": 3,
+            "explanation": "とても means 'very'",
+            "translation": "This restaurant is very delicious."
+          },
+          {
+            "id": "N4-V-046",
+            "question": "明日は＿＿雨が降る。",
+            "choices": ["きっと", "ぜひ", "もう", "たぶん"],
+            "answer": "たぶん",
+            "answer_index": 3,
+            "explanation": "たぶん means 'probably'",
+            "translation": "It will probably rain tomorrow."
+          },
+          {
+            "id": "N4-V-047",
+            "question": "彼は＿＿来るだろう。",
+            "choices": ["たぶん", "ぜひ", "もう", "きっと"],
+            "answer": "きっと",
+            "answer_index": 3,
+            "explanation": "きっと means 'surely'",
+            "translation": "He will surely come."
+          },
+          {
+            "id": "N4-V-048",
+            "question": "ぜひ＿＿ください。",
+            "choices": ["来る", "来た", "来ない", "来て"],
+            "answer": "来て",
+            "answer_index": 3,
+            "explanation": "ぜひ means 'by all means'",
+            "translation": "Please do come by all means."
+          },
+          {
+            "id": "N4-V-049",
+            "question": "この店は＿＿安い。",
+            "choices": ["もう", "まだ", "すぐ", "とても"],
+            "answer": "とても",
+            "answer_index": 3,
+            "explanation": "とても means 'very'",
+            "translation": "This shop is very cheap."
+          },
+          {
+            "id": "N4-V-050",
+            "question": "彼は＿＿優しい。",
+            "choices": ["もう", "まだ", "すぐ", "とても"],
+            "answer": "とても",
+            "answer_index": 3,
+            "explanation": "とても means 'very'",
+            "translation": "He is very kind."
+          }
+        ]
+      }
+    ]
+  }
+}

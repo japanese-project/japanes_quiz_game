@@ -1,0 +1,5866 @@
+[
+	{
+		"source_id": "N3-G-001",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "新しい薬を飲んだ＿＿、熱が下がった。",
+		"explanation": "〜たところ means 'when/as a result'",
+		"translation": "After taking the new medicine, my fever went down.",
+		"choices": [
+			{
+				"text": "ところが",
+				"is_correct": false
+			},
+			{
+				"text": "ところ",
+				"is_correct": true
+			},
+			{
+				"text": "ところに",
+				"is_correct": false
+			},
+			{
+				"text": "ところへ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-002",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "毎日暑さが＿＿。",
+		"explanation": "〜ばかりだ indicates a continuing change",
+		"translation": "The heat only increases every day.",
+		"choices": [
+			{
+				"text": "増したばかりだ",
+				"is_correct": false
+			},
+			{
+				"text": "増すばかりだ",
+				"is_correct": true
+			},
+			{
+				"text": "増すところだ",
+				"is_correct": false
+			},
+			{
+				"text": "増すことだ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-003",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "最近、経済は＿＿。",
+		"explanation": "〜つつある means 'is gradually doing'",
+		"translation": "The economy is gradually recovering recently.",
+		"choices": [
+			{
+				"text": "回復していた",
+				"is_correct": false
+			},
+			{
+				"text": "回復しつつある",
+				"is_correct": true
+			},
+			{
+				"text": "回復しつついた",
+				"is_correct": false
+			},
+			{
+				"text": "回復しているところ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-004",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼は最近、＿＿。",
+		"explanation": "〜がち means 'tend to'",
+		"translation": "He tends to be late recently.",
+		"choices": [
+			{
+				"text": "遅刻しやすいだ",
+				"is_correct": false
+			},
+			{
+				"text": "遅刻している",
+				"is_correct": false
+			},
+			{
+				"text": "遅刻しがちだ",
+				"is_correct": true
+			},
+			{
+				"text": "遅刻するべきだ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-005",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "予算が足りないので、この計画は＿＿。",
+		"explanation": "〜ざるを得ない means 'cannot help but'",
+		"translation": "Because the budget is insufficient, we cannot help but abandon this plan.",
+		"choices": [
+			{
+				"text": "断念してしまう",
+				"is_correct": false
+			},
+			{
+				"text": "断念するものだ",
+				"is_correct": false
+			},
+			{
+				"text": "断念しなければならない",
+				"is_correct": false
+			},
+			{
+				"text": "断念せざるを得ない",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-006",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼は一生懸命努力しているから、＿＿。",
+		"explanation": "〜に違いない expresses strong certainty",
+		"translation": "He is working hard, so he must succeed.",
+		"choices": [
+			{
+				"text": "成功するかもしれない",
+				"is_correct": false
+			},
+			{
+				"text": "成功するだろう",
+				"is_correct": false
+			},
+			{
+				"text": "成功するはずだ",
+				"is_correct": false
+			},
+			{
+				"text": "成功するに違いない",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-007",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "この問題＿＿、まだ結論が出ていない。",
+		"explanation": "〜に関して means 'regarding'",
+		"translation": "Regarding this problem, no conclusion has been reached yet.",
+		"choices": [
+			{
+				"text": "に関しては",
+				"is_correct": true
+			},
+			{
+				"text": "について",
+				"is_correct": false
+			},
+			{
+				"text": "に比べては",
+				"is_correct": false
+			},
+			{
+				"text": "として",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-008",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "この大会は年齢＿＿参加できます。",
+		"explanation": "〜を問わず means 'regardless of'",
+		"translation": "This competition is open regardless of age.",
+		"choices": [
+			{
+				"text": "にかかわらず",
+				"is_correct": false
+			},
+			{
+				"text": "に関わらず",
+				"is_correct": false
+			},
+			{
+				"text": "を問わず",
+				"is_correct": true
+			},
+			{
+				"text": "を限りに",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-009",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "地震＿＿多くの家が倒壊した。",
+		"explanation": "〜によって indicates cause",
+		"translation": "Many houses collapsed due to the earthquake.",
+		"choices": [
+			{
+				"text": "によって",
+				"is_correct": true
+			},
+			{
+				"text": "に対して",
+				"is_correct": false
+			},
+			{
+				"text": "による",
+				"is_correct": false
+			},
+			{
+				"text": "に比べて",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-010",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "会議は三日間＿＿開かれた。",
+		"explanation": "〜にわたって means 'over a period'",
+		"translation": "The meeting was held over three days.",
+		"choices": [
+			{
+				"text": "にかけて",
+				"is_correct": false
+			},
+			{
+				"text": "にわたって",
+				"is_correct": true
+			},
+			{
+				"text": "によって",
+				"is_correct": false
+			},
+			{
+				"text": "に渡る",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-011",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼は入社＿＿引っ越した。",
+		"explanation": "〜を契機に means 'using as a trigger'",
+		"translation": "He moved on the occasion of joining the company.",
+		"choices": [
+			{
+				"text": "に先立って",
+				"is_correct": false
+			},
+			{
+				"text": "を契機に",
+				"is_correct": true
+			},
+			{
+				"text": "に伴って",
+				"is_correct": false
+			},
+			{
+				"text": "をきっかけに",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-012",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼をリーダー＿＿チームを組んだ。",
+		"explanation": "〜を〜として means 'as'",
+		"translation": "We formed a team with him as leader.",
+		"choices": [
+			{
+				"text": "にとって",
+				"is_correct": false
+			},
+			{
+				"text": "について",
+				"is_correct": false
+			},
+			{
+				"text": "として",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-013",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "私が知っている＿＿、彼は無実だ。",
+		"explanation": "〜限り means 'as far as'",
+		"translation": "As far as I know, he is innocent.",
+		"choices": [
+			{
+				"text": "うち",
+				"is_correct": false
+			},
+			{
+				"text": "ところ",
+				"is_correct": false
+			},
+			{
+				"text": "限り",
+				"is_correct": true
+			},
+			{
+				"text": "間",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-014",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "雨＿＿降らなければ、遠足に行ける。",
+		"explanation": "〜さえ〜ば means 'if only'",
+		"translation": "If only it doesn't rain, we can go on the excursion.",
+		"choices": [
+			{
+				"text": "でも",
+				"is_correct": false
+			},
+			{
+				"text": "さえ",
+				"is_correct": true
+			},
+			{
+				"text": "しか",
+				"is_correct": false
+			},
+			{
+				"text": "こそ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-015",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "あなた＿＿、私が探していた人です。",
+		"explanation": "〜こそ emphasizes the preceding word",
+		"translation": "You are exactly the person I was looking for.",
+		"choices": [
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "こそ",
+				"is_correct": true
+			},
+			{
+				"text": "は",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-016",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼女は美しくも＿＿、頭もいい。",
+		"explanation": "〜も〜ば〜も indicates 'both...and...'",
+		"translation": "She is both beautiful and smart.",
+		"choices": [
+			{
+				"text": "あれば",
+				"is_correct": true
+			},
+			{
+				"text": "あると",
+				"is_correct": false
+			},
+			{
+				"text": "あるなら",
+				"is_correct": false
+			},
+			{
+				"text": "あるから",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-017",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "年を取ると、目が悪くなる＿＿。",
+		"explanation": "〜ものだ expresses general truth",
+		"translation": "As you get older, your eyes get worse.",
+		"choices": [
+			{
+				"text": "ものだ",
+				"is_correct": true
+			},
+			{
+				"text": "ところだ",
+				"is_correct": false
+			},
+			{
+				"text": "はずだ",
+				"is_correct": false
+			},
+			{
+				"text": "ことだ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-018",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼は今日来る＿＿。",
+		"explanation": "〜はずだ expresses expectation",
+		"translation": "He is supposed to come today.",
+		"choices": [
+			{
+				"text": "つもりだ",
+				"is_correct": false
+			},
+			{
+				"text": "かもしれない",
+				"is_correct": false
+			},
+			{
+				"text": "だろう",
+				"is_correct": false
+			},
+			{
+				"text": "はずだ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-019",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "遅刻しない＿＿、早く出た。",
+		"explanation": "〜ように indicates purpose (negative/volitional)",
+		"translation": "I left early so as not to be late.",
+		"choices": [
+			{
+				"text": "ために",
+				"is_correct": false
+			},
+			{
+				"text": "ものだ",
+				"is_correct": false
+			},
+			{
+				"text": "つもりで",
+				"is_correct": false
+			},
+			{
+				"text": "ように",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-020",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "日本語が話せる＿＿。",
+		"explanation": "〜ようになる means 'came to be able to'",
+		"translation": "I came to be able to speak Japanese.",
+		"choices": [
+			{
+				"text": "ことになった",
+				"is_correct": false
+			},
+			{
+				"text": "ようになった",
+				"is_correct": true
+			},
+			{
+				"text": "ところになった",
+				"is_correct": false
+			},
+			{
+				"text": "になった",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-021",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "母は私に野菜を＿＿。",
+		"explanation": "〜させる is causative",
+		"translation": "My mother made me eat vegetables.",
+		"choices": [
+			{
+				"text": "食べさせられた",
+				"is_correct": false
+			},
+			{
+				"text": "食べられた",
+				"is_correct": false
+			},
+			{
+				"text": "食べた",
+				"is_correct": false
+			},
+			{
+				"text": "食べさせた",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-022",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "私は犬に手を＿＿。",
+		"explanation": "〜られる passive",
+		"translation": "My hand was bitten by a dog.",
+		"choices": [
+			{
+				"text": "噛まれた",
+				"is_correct": true
+			},
+			{
+				"text": "噛んだ",
+				"is_correct": false
+			},
+			{
+				"text": "噛ませた",
+				"is_correct": false
+			},
+			{
+				"text": "噛まさせた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-023",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "宿題を忘れて＿＿。",
+		"explanation": "〜てしまう expresses completion or regret",
+		"translation": "I forgot my homework.",
+		"choices": [
+			{
+				"text": "おいた",
+				"is_correct": false
+			},
+			{
+				"text": "あった",
+				"is_correct": false
+			},
+			{
+				"text": "しまった",
+				"is_correct": true
+			},
+			{
+				"text": "みた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-024",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "壁に絵がかけて＿＿。",
+		"explanation": "〜てある indicates resultant state",
+		"translation": "A picture is hung on the wall.",
+		"choices": [
+			{
+				"text": "いる",
+				"is_correct": false
+			},
+			{
+				"text": "ある",
+				"is_correct": true
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-025",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "明日のために、準備して＿＿。",
+		"explanation": "〜ておく means to do in advance",
+		"translation": "I'll prepare in advance for tomorrow.",
+		"choices": [
+			{
+				"text": "おく",
+				"is_correct": true
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "ある",
+				"is_correct": false
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-026",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "新しいレストランに行って＿＿。",
+		"explanation": "〜てみる means to try doing",
+		"translation": "I'll try going to the new restaurant.",
+		"choices": [
+			{
+				"text": "おく",
+				"is_correct": false
+			},
+			{
+				"text": "みる",
+				"is_correct": true
+			},
+			{
+				"text": "ある",
+				"is_correct": false
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-027",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "これからも頑張って＿＿。",
+		"explanation": "〜ていく shows future continuation",
+		"translation": "I will continue to do my best from now on.",
+		"choices": [
+			{
+				"text": "おく",
+				"is_correct": false
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "いく",
+				"is_correct": true
+			},
+			{
+				"text": "くる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-028",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "このペンは書き＿＿。",
+		"explanation": "〜やすい means easy to do",
+		"translation": "This pen is easy to write with.",
+		"choices": [
+			{
+				"text": "がちだ",
+				"is_correct": false
+			},
+			{
+				"text": "やすい",
+				"is_correct": true
+			},
+			{
+				"text": "すぎる",
+				"is_correct": false
+			},
+			{
+				"text": "にくい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-029",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "食べ＿＿お腹が痛い。",
+		"explanation": "〜すぎる means too much",
+		"translation": "I ate too much and my stomach hurts.",
+		"choices": [
+			{
+				"text": "すぎた",
+				"is_correct": false
+			},
+			{
+				"text": "すぎる",
+				"is_correct": false
+			},
+			{
+				"text": "すぎている",
+				"is_correct": false
+			},
+			{
+				"text": "すぎて",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-030",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼は知ってい＿＿、教えてくれなかった。",
+		"explanation": "〜ながら can mean 'although'",
+		"translation": "Although he knew, he didn't tell me.",
+		"choices": [
+			{
+				"text": "つつ",
+				"is_correct": false
+			},
+			{
+				"text": "ても",
+				"is_correct": false
+			},
+			{
+				"text": "のに",
+				"is_correct": false
+			},
+			{
+				"text": "ながら",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-031",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "一生懸命勉強した＿＿、試験に落ちた。",
+		"explanation": "〜のに expresses contrast/unexpected result",
+		"translation": "Although I studied hard, I failed the exam.",
+		"choices": [
+			{
+				"text": "のに",
+				"is_correct": true
+			},
+			{
+				"text": "から",
+				"is_correct": false
+			},
+			{
+				"text": "ので",
+				"is_correct": false
+			},
+			{
+				"text": "けど",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-032",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "風邪をひいた＿＿、休んだ。",
+		"explanation": "〜ので indicates reason",
+		"translation": "I had a cold, so I rested.",
+		"choices": [
+			{
+				"text": "から",
+				"is_correct": false
+			},
+			{
+				"text": "のに",
+				"is_correct": false
+			},
+			{
+				"text": "ので",
+				"is_correct": true
+			},
+			{
+				"text": "ながら",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-033",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "疲れた＿＿、早く寝よう。",
+		"explanation": "〜から indicates reason/cause",
+		"translation": "I'm tired, so let's go to bed early.",
+		"choices": [
+			{
+				"text": "のに",
+				"is_correct": false
+			},
+			{
+				"text": "から",
+				"is_correct": true
+			},
+			{
+				"text": "けど",
+				"is_correct": false
+			},
+			{
+				"text": "ので",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-034",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "明日は雨が＿＿。",
+		"explanation": "〜かもしれない expresses possibility",
+		"translation": "It may rain tomorrow.",
+		"choices": [
+			{
+				"text": "降るでしょう",
+				"is_correct": false
+			},
+			{
+				"text": "降るはずだ",
+				"is_correct": false
+			},
+			{
+				"text": "降るようだ",
+				"is_correct": false
+			},
+			{
+				"text": "降るかもしれない",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-035",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "来年は旅行に行く＿＿。",
+		"explanation": "〜つもり means intention",
+		"translation": "I intend to go on a trip next year.",
+		"choices": [
+			{
+				"text": "はずだ",
+				"is_correct": false
+			},
+			{
+				"text": "予定だ",
+				"is_correct": false
+			},
+			{
+				"text": "つもりだ",
+				"is_correct": true
+			},
+			{
+				"text": "かもしれない",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-036",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "私は友達に本を貸して＿＿。",
+		"explanation": "〜てもらう means to have someone do something",
+		"translation": "I had my friend lend me a book.",
+		"choices": [
+			{
+				"text": "やった",
+				"is_correct": false
+			},
+			{
+				"text": "くれた",
+				"is_correct": false
+			},
+			{
+				"text": "あげた",
+				"is_correct": false
+			},
+			{
+				"text": "もらった",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-037",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "子供の頃、野菜を＿＿。",
+		"explanation": "〜させられる means to be made to do",
+		"translation": "When I was a child, I was often made to eat vegetables.",
+		"choices": [
+			{
+				"text": "食べさせた",
+				"is_correct": false
+			},
+			{
+				"text": "食べた",
+				"is_correct": false
+			},
+			{
+				"text": "食べさせられた",
+				"is_correct": true
+			},
+			{
+				"text": "食べられた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-038",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "財布を落として＿＿。",
+		"explanation": "〜てしまう expresses unfortunate completion",
+		"translation": "I dropped my wallet.",
+		"choices": [
+			{
+				"text": "おいた",
+				"is_correct": false
+			},
+			{
+				"text": "しまった",
+				"is_correct": true
+			},
+			{
+				"text": "あった",
+				"is_correct": false
+			},
+			{
+				"text": "みた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-039",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼にもっと早く来て＿＿。",
+		"explanation": "〜てほしい means want someone to do",
+		"translation": "I want him to come earlier.",
+		"choices": [
+			{
+				"text": "ほしい",
+				"is_correct": true
+			},
+			{
+				"text": "もらいたい",
+				"is_correct": false
+			},
+			{
+				"text": "くれたい",
+				"is_correct": false
+			},
+			{
+				"text": "あげたい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-040",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "雨が降って＿＿、行く。",
+		"explanation": "〜ても means 'even if'",
+		"translation": "Even if it rains, I'll go.",
+		"choices": [
+			{
+				"text": "たら",
+				"is_correct": false
+			},
+			{
+				"text": "なら",
+				"is_correct": false
+			},
+			{
+				"text": "も",
+				"is_correct": true
+			},
+			{
+				"text": "でも",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-041",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "お茶＿＿飲みましょう。",
+		"explanation": "〜でも gives examples",
+		"translation": "Let's drink tea or something.",
+		"choices": [
+			{
+				"text": "でも",
+				"is_correct": true
+			},
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-042",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "ここにはバス＿＿ない。",
+		"explanation": "〜しか〜ない means 'nothing but'",
+		"translation": "There is only a bus here.",
+		"choices": [
+			{
+				"text": "しか",
+				"is_correct": true
+			},
+			{
+				"text": "まで",
+				"is_correct": false
+			},
+			{
+				"text": "だけ",
+				"is_correct": false
+			},
+			{
+				"text": "でも",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-043",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼＿＿優しい人はいない。",
+		"explanation": "〜ほど indicates extent",
+		"translation": "There is no one as kind as him.",
+		"choices": [
+			{
+				"text": "くらい",
+				"is_correct": false
+			},
+			{
+				"text": "さえ",
+				"is_correct": false
+			},
+			{
+				"text": "より",
+				"is_correct": false
+			},
+			{
+				"text": "ほど",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-044",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "山＿＿海が好きだ。",
+		"explanation": "〜より is comparison",
+		"translation": "I like the sea more than mountains.",
+		"choices": [
+			{
+				"text": "より",
+				"is_correct": true
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "ほど",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-045",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "去年＿＿今年は暖かい。",
+		"explanation": "〜に比べて means compared to",
+		"translation": "Compared to last year, this year is warm.",
+		"choices": [
+			{
+				"text": "に比べて",
+				"is_correct": true
+			},
+			{
+				"text": "ほど",
+				"is_correct": false
+			},
+			{
+				"text": "より",
+				"is_correct": false
+			},
+			{
+				"text": "に対して",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-046",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "この問題＿＿考えた。",
+		"explanation": "〜について means about",
+		"translation": "I thought about this problem.",
+		"choices": [
+			{
+				"text": "について",
+				"is_correct": true
+			},
+			{
+				"text": "によって",
+				"is_correct": false
+			},
+			{
+				"text": "に対して",
+				"is_correct": false
+			},
+			{
+				"text": "にとって",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-047",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "彼は親＿＿失礼だ。",
+		"explanation": "〜に対して means towards",
+		"translation": "He is rude to his parents.",
+		"choices": [
+			{
+				"text": "にとって",
+				"is_correct": false
+			},
+			{
+				"text": "によって",
+				"is_correct": false
+			},
+			{
+				"text": "について",
+				"is_correct": false
+			},
+			{
+				"text": "に対して",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-048",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "インターネット＿＿情報を得る。",
+		"explanation": "〜によって means by means of",
+		"translation": "I get information via the internet.",
+		"choices": [
+			{
+				"text": "に対して",
+				"is_correct": false
+			},
+			{
+				"text": "にとって",
+				"is_correct": false
+			},
+			{
+				"text": "について",
+				"is_correct": false
+			},
+			{
+				"text": "によって",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-049",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "本日＿＿この店は閉店します。",
+		"explanation": "〜をもって means 'as of'",
+		"translation": "This store will close as of today.",
+		"choices": [
+			{
+				"text": "において",
+				"is_correct": false
+			},
+			{
+				"text": "をもって",
+				"is_correct": true
+			},
+			{
+				"text": "に対して",
+				"is_correct": false
+			},
+			{
+				"text": "について",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-G-050",
+		"level": "N3",
+		"category": "Grammar",
+		"prompt": "社長＿＿、全員が参加した。",
+		"explanation": "〜をはじめ means 'including'",
+		"translation": "Including the president, everyone participated.",
+		"choices": [
+			{
+				"text": "に関して",
+				"is_correct": false
+			},
+			{
+				"text": "にとって",
+				"is_correct": false
+			},
+			{
+				"text": "をはじめ",
+				"is_correct": true
+			},
+			{
+				"text": "を中心に",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-001",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「この映画は時間が短い。」「短い」の読み方は？",
+		"explanation": "短い is read as みじかい",
+		"translation": "This movie is short in time.",
+		"choices": [
+			{
+				"text": "みじかい",
+				"is_correct": true
+			},
+			{
+				"text": "たんい",
+				"is_correct": false
+			},
+			{
+				"text": "ちいさい",
+				"is_correct": false
+			},
+			{
+				"text": "しょう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-002",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「彼は話を続ける。」「続ける」の読み方は？",
+		"explanation": "続ける is read as つづける",
+		"translation": "He continues talking.",
+		"choices": [
+			{
+				"text": "つずける",
+				"is_correct": false
+			},
+			{
+				"text": "つづく",
+				"is_correct": false
+			},
+			{
+				"text": "ぞくける",
+				"is_correct": false
+			},
+			{
+				"text": "つづける",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-003",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「人口が減っている。」「減って」の読み方は？",
+		"explanation": "減る is read as へる, 減って is へって",
+		"translation": "The population is decreasing.",
+		"choices": [
+			{
+				"text": "やって",
+				"is_correct": false
+			},
+			{
+				"text": "げって",
+				"is_correct": false
+			},
+			{
+				"text": "けって",
+				"is_correct": false
+			},
+			{
+				"text": "へって",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-004",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「収入が増えた。」「増えた」の読み方は？",
+		"explanation": "増える is read as ふえる",
+		"translation": "Income increased.",
+		"choices": [
+			{
+				"text": "ました",
+				"is_correct": false
+			},
+			{
+				"text": "ふえた",
+				"is_correct": true
+			},
+			{
+				"text": "ぞうえた",
+				"is_correct": false
+			},
+			{
+				"text": "こうえた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-005",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「ルールを改める。」「改める」の読み方は？",
+		"explanation": "改める is read as あらためる",
+		"translation": "I revise the rules.",
+		"choices": [
+			{
+				"text": "あらためる",
+				"is_correct": true
+			},
+			{
+				"text": "かいめる",
+				"is_correct": false
+			},
+			{
+				"text": "なおる",
+				"is_correct": false
+			},
+			{
+				"text": "かえる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-006",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「状況が変わった。」「変わった」の読み方は？",
+		"explanation": "変わる is read as かわる",
+		"translation": "The situation changed.",
+		"choices": [
+			{
+				"text": "かわった",
+				"is_correct": true
+			},
+			{
+				"text": "こわった",
+				"is_correct": false
+			},
+			{
+				"text": "へんかった",
+				"is_correct": false
+			},
+			{
+				"text": "たがった",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-007",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「二つの数を比べる。」「比べる」の読み方は？",
+		"explanation": "比べる is read as くらべる",
+		"translation": "Compare two numbers.",
+		"choices": [
+			{
+				"text": "ひべる",
+				"is_correct": false
+			},
+			{
+				"text": "たとえる",
+				"is_correct": false
+			},
+			{
+				"text": "くらべる",
+				"is_correct": true
+			},
+			{
+				"text": "ならべる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-008",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「両者には相違がある。」「相違」の読み方は？",
+		"explanation": "相違 is read as そうい",
+		"translation": "There is a difference between the two.",
+		"choices": [
+			{
+				"text": "そうち",
+				"is_correct": false
+			},
+			{
+				"text": "あいい",
+				"is_correct": false
+			},
+			{
+				"text": "そうい",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-009",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「試験を受ける。」「試験」の読み方は？",
+		"explanation": "試験 is read as しけん",
+		"translation": "Take an exam.",
+		"choices": [
+			{
+				"text": "しけん",
+				"is_correct": true
+			},
+			{
+				"text": "てすと",
+				"is_correct": false
+			},
+			{
+				"text": "じけん",
+				"is_correct": false
+			},
+			{
+				"text": "しげん",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-010",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「実験を行う。」「実験」の読み方は？",
+		"explanation": "実験 is read as じっけん",
+		"translation": "Conduct an experiment.",
+		"choices": [
+			{
+				"text": "じっけん",
+				"is_correct": true
+			},
+			{
+				"text": "しっけん",
+				"is_correct": false
+			},
+			{
+				"text": "じけん",
+				"is_correct": false
+			},
+			{
+				"text": "じつけん",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-011",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「技術が進歩した。」「技術」の読み方は？",
+		"explanation": "技術 is read as ぎじゅつ",
+		"translation": "Technology advanced.",
+		"choices": [
+			{
+				"text": "ぎじつ",
+				"is_correct": false
+			},
+			{
+				"text": "ぎちゅつ",
+				"is_correct": false
+			},
+			{
+				"text": "ぎじゅつ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-012",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「研究を続ける。」「研究」の読み方は？",
+		"explanation": "研究 is read as けんきゅう",
+		"translation": "Continue research.",
+		"choices": [
+			{
+				"text": "けんきょう",
+				"is_correct": false
+			},
+			{
+				"text": "けんぎょう",
+				"is_correct": false
+			},
+			{
+				"text": "けんぎゅう",
+				"is_correct": false
+			},
+			{
+				"text": "けんきゅう",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-013",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「製品を製造する。」「製造」の読み方は？",
+		"explanation": "製造 is read as せいぞう",
+		"translation": "Manufacture products.",
+		"choices": [
+			{
+				"text": "せいぞう",
+				"is_correct": true
+			},
+			{
+				"text": "せいそう",
+				"is_correct": false
+			},
+			{
+				"text": "せいぞ",
+				"is_correct": false
+			},
+			{
+				"text": "しせい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-014",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「工場で働く。」「工場」の読み方は？",
+		"explanation": "工場 is read as こうじょう",
+		"translation": "Work at a factory.",
+		"choices": [
+			{
+				"text": "こうじょう",
+				"is_correct": true
+			},
+			{
+				"text": "こうば",
+				"is_correct": false
+			},
+			{
+				"text": "くうじょう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-015",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「都市に住む。」「都市」の読み方は？",
+		"explanation": "都市 is read as とし",
+		"translation": "Live in a city.",
+		"choices": [
+			{
+				"text": "とし",
+				"is_correct": true
+			},
+			{
+				"text": "ちし",
+				"is_correct": false
+			},
+			{
+				"text": "つし",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-016",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「道路を渡る。」「道路」の読み方は？",
+		"explanation": "道路 is read as どうろ",
+		"translation": "Cross the road.",
+		"choices": [
+			{
+				"text": "どうろ",
+				"is_correct": true
+			},
+			{
+				"text": "どろ",
+				"is_correct": false
+			},
+			{
+				"text": "とうろ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-017",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「橋を渡る。」「橋」の読み方は？",
+		"explanation": "橋 is read as はし",
+		"translation": "Cross a bridge.",
+		"choices": [
+			{
+				"text": "ばし",
+				"is_correct": false
+			},
+			{
+				"text": "きょう",
+				"is_correct": false
+			},
+			{
+				"text": "はし",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-018",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「川で泳ぐ。」「川」の読み方は？",
+		"explanation": "川 is read as かわ",
+		"translation": "Swim in the river.",
+		"choices": [
+			{
+				"text": "せん",
+				"is_correct": false
+			},
+			{
+				"text": "かわ",
+				"is_correct": true
+			},
+			{
+				"text": "がわ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-019",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「山に登る。」「山」の読み方は？",
+		"explanation": "山 is read as やま",
+		"translation": "Climb a mountain.",
+		"choices": [
+			{
+				"text": "ざん",
+				"is_correct": false
+			},
+			{
+				"text": "さん",
+				"is_correct": false
+			},
+			{
+				"text": "やま",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-020",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「海を見る。」「海」の読み方は？",
+		"explanation": "海 is read as うみ",
+		"translation": "Look at the sea.",
+		"choices": [
+			{
+				"text": "わ",
+				"is_correct": false
+			},
+			{
+				"text": "うみ",
+				"is_correct": true
+			},
+			{
+				"text": "かい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-021",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「空気がきれいだ。」「空気」の読み方は？",
+		"explanation": "空気 is read as くうき",
+		"translation": "The air is clean.",
+		"choices": [
+			{
+				"text": "くうき",
+				"is_correct": true
+			},
+			{
+				"text": "そらき",
+				"is_correct": false
+			},
+			{
+				"text": "くき",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-022",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「台風が来た。」「台風」の読み方は？",
+		"explanation": "台風 is read as たいふう",
+		"translation": "A typhoon came.",
+		"choices": [
+			{
+				"text": "だいふう",
+				"is_correct": false
+			},
+			{
+				"text": "たふう",
+				"is_correct": false
+			},
+			{
+				"text": "たいふう",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-023",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「雪が降る。」「雪」の読み方は？",
+		"explanation": "雪 is read as ゆき",
+		"translation": "Snow falls.",
+		"choices": [
+			{
+				"text": "せつ",
+				"is_correct": false
+			},
+			{
+				"text": "ゆう",
+				"is_correct": false
+			},
+			{
+				"text": "ゆき",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-024",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「雨が降る。」「雨」の読み方は？",
+		"explanation": "雨 is read as あめ",
+		"translation": "Rain falls.",
+		"choices": [
+			{
+				"text": "う",
+				"is_correct": false
+			},
+			{
+				"text": "あめ",
+				"is_correct": true
+			},
+			{
+				"text": "さめ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-025",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「春が来た。」「春」の読み方は？",
+		"explanation": "春 is read as はる",
+		"translation": "Spring came.",
+		"choices": [
+			{
+				"text": "しゅん",
+				"is_correct": false
+			},
+			{
+				"text": "はる",
+				"is_correct": true
+			},
+			{
+				"text": "はり",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-K-031",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「夜遅くまで勉強する。」「夜」の読み方は？",
+		"explanation": "夜 is read as よる",
+		"translation": "Study until late at night.",
+		"choices": [
+			{
+				"text": "よる",
+				"is_correct": true
+			},
+			{
+				"text": "よ",
+				"is_correct": false
+			},
+			{
+				"text": "や",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-001",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この本の＿＿はとても面白い。",
+		"explanation": "内容 means 'content'",
+		"translation": "The content of this book is very interesting.",
+		"choices": [
+			{
+				"text": "内容",
+				"is_correct": true
+			},
+			{
+				"text": "内地",
+				"is_correct": false
+			},
+			{
+				"text": "内蔵",
+				"is_correct": false
+			},
+			{
+				"text": "内用",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-002",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "旅行の＿＿をしている。",
+		"explanation": "準備 means 'preparation'",
+		"translation": "I am preparing for the trip.",
+		"choices": [
+			{
+				"text": "準備",
+				"is_correct": true
+			},
+			{
+				"text": "準平",
+				"is_correct": false
+			},
+			{
+				"text": "準便",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-003",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼は多くの＿＿を持っている。",
+		"explanation": "経験 means 'experience'",
+		"translation": "He has a lot of experience.",
+		"choices": [
+			{
+				"text": "経験",
+				"is_correct": true
+			},
+			{
+				"text": "実験",
+				"is_correct": false
+			},
+			{
+				"text": "研修",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-004",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "時間が＿＿ので、急ごう。",
+		"explanation": "不足 means 'lack/insufficient'",
+		"translation": "We are short of time, so let's hurry.",
+		"choices": [
+			{
+				"text": "不足",
+				"is_correct": true
+			},
+			{
+				"text": "無駄",
+				"is_correct": false
+			},
+			{
+				"text": "不十分",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-005",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼女は＿＿に優しい。",
+		"explanation": "性格 means 'character/personality'",
+		"translation": "She has a kind personality.",
+		"choices": [
+			{
+				"text": "性別",
+				"is_correct": false
+			},
+			{
+				"text": "性格",
+				"is_correct": true
+			},
+			{
+				"text": "性能",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-006",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この計画は＿＿な結果をもたらした。",
+		"explanation": "十分 means 'enough/sufficient'",
+		"translation": "This plan brought sufficient results.",
+		"choices": [
+			{
+				"text": "太分",
+				"is_correct": false
+			},
+			{
+				"text": "充分",
+				"is_correct": false
+			},
+			{
+				"text": "十分",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-007",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "周りの＿＿を見て行動する。",
+		"explanation": "様子 means 'state/situation'",
+		"translation": "Act while watching the surrounding situation.",
+		"choices": [
+			{
+				"text": "様式",
+				"is_correct": false
+			},
+			{
+				"text": "様子",
+				"is_correct": true
+			},
+			{
+				"text": "洋子",
+				"is_correct": false
+			},
+			{
+				"text": "様相",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-009",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿を求めて留学した。",
+		"explanation": "知識 means 'knowledge'",
+		"translation": "He went abroad to seek knowledge.",
+		"choices": [
+			{
+				"text": "資質",
+				"is_correct": false
+			},
+			{
+				"text": "知識",
+				"is_correct": true
+			},
+			{
+				"text": "知恵",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-010",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この商品の＿＿は安全です。",
+		"explanation": "品質 means 'quality'",
+		"translation": "The quality of this product is safe.",
+		"choices": [
+			{
+				"text": "品数",
+				"is_correct": false
+			},
+			{
+				"text": "品質",
+				"is_correct": true
+			},
+			{
+				"text": "品位",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-011",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼の説明は＿＿が足りない。",
+		"explanation": "具体性 means 'concreteness'",
+		"translation": "His explanation lacks concreteness.",
+		"choices": [
+			{
+				"text": "具現性",
+				"is_correct": false
+			},
+			{
+				"text": "具体性",
+				"is_correct": true
+			},
+			{
+				"text": "具体数",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-012",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "毎日＿＿を心がけている。",
+		"explanation": "健康 means 'health'",
+		"translation": "I try to maintain health every day.",
+		"choices": [
+			{
+				"text": "健康",
+				"is_correct": true
+			},
+			{
+				"text": "健在",
+				"is_correct": false
+			},
+			{
+				"text": "建康",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-013",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この仕事には＿＿が必要だ。",
+		"explanation": "責任 means 'responsibility'",
+		"translation": "This job requires responsibility.",
+		"choices": [
+			{
+				"text": "責任",
+				"is_correct": true
+			},
+			{
+				"text": "任責",
+				"is_correct": false
+			},
+			{
+				"text": "重量",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-014",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿な問題が発生した。",
+		"explanation": "重大 means 'serious/grave'",
+		"translation": "A serious problem occurred.",
+		"choices": [
+			{
+				"text": "重要",
+				"is_correct": false
+			},
+			{
+				"text": "重点",
+				"is_correct": false
+			},
+			{
+				"text": "重大",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-015",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼の＿＿に驚いた。",
+		"explanation": "態度 means 'attitude'",
+		"translation": "I was surprised by his attitude.",
+		"choices": [
+			{
+				"text": "耐度",
+				"is_correct": false
+			},
+			{
+				"text": "態度",
+				"is_correct": true
+			},
+			{
+				"text": "台度",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-016",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿をしなければならない。",
+		"explanation": "連絡 means 'contact/communication'",
+		"translation": "I must make contact.",
+		"choices": [
+			{
+				"text": "連絡",
+				"is_correct": true
+			},
+			{
+				"text": "連楽",
+				"is_correct": false
+			},
+			{
+				"text": "連落",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-017",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この機械の＿＿を説明してください。",
+		"explanation": "操作 means 'operation'",
+		"translation": "Please explain the operation of this machine.",
+		"choices": [
+			{
+				"text": "操作",
+				"is_correct": true
+			},
+			{
+				"text": "操業",
+				"is_correct": false
+			},
+			{
+				"text": "操演",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-020",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を達成するために頑張る。",
+		"explanation": "目標 means 'goal'",
+		"translation": "I will work hard to achieve the goal.",
+		"choices": [
+			{
+				"text": "目安",
+				"is_correct": false
+			},
+			{
+				"text": "目印",
+				"is_correct": false
+			},
+			{
+				"text": "目標",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-021",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿は古い習慣だ。",
+		"explanation": "地域 means 'region'",
+		"translation": "This region has old customs.",
+		"choices": [
+			{
+				"text": "地元",
+				"is_correct": false
+			},
+			{
+				"text": "地域",
+				"is_correct": true
+			},
+			{
+				"text": "地区",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-023",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿はすぐに変わった。",
+		"explanation": "状況 means 'situation'",
+		"translation": "The situation changed quickly.",
+		"choices": [
+			{
+				"text": "情状",
+				"is_correct": false
+			},
+			{
+				"text": "状況",
+				"is_correct": true
+			},
+			{
+				"text": "状態",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-025",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿な影響を与えた。",
+		"explanation": "大きな means 'big/great'",
+		"translation": "It had a great influence.",
+		"choices": [
+			{
+				"text": "大きい",
+				"is_correct": false
+			},
+			{
+				"text": "大い",
+				"is_correct": false
+			},
+			{
+				"text": "大きな",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-027",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿を研究している。",
+		"explanation": "歴史 means 'history'",
+		"translation": "He is researching history.",
+		"choices": [
+			{
+				"text": "歴代",
+				"is_correct": false
+			},
+			{
+				"text": "歴程",
+				"is_correct": false
+			},
+			{
+				"text": "歴史",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-028",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿な問題を解決した。",
+		"explanation": "複雑 means 'complex'",
+		"translation": "We solved a complex problem.",
+		"choices": [
+			{
+				"text": "複雑",
+				"is_correct": true
+			},
+			{
+				"text": "複数",
+				"is_correct": false
+			},
+			{
+				"text": "復雑",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-030",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿が必要だ。",
+		"explanation": "勇気 means 'courage'",
+		"translation": "Courage is necessary.",
+		"choices": [
+			{
+				"text": "勇敢",
+				"is_correct": false
+			},
+			{
+				"text": "勇気",
+				"is_correct": true
+			},
+			{
+				"text": "勇者",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-031",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼女は＿＿が豊かだ。",
+		"explanation": "感性 means 'sensibility'",
+		"translation": "She has rich sensibility.",
+		"choices": [
+			{
+				"text": "感性",
+				"is_correct": true
+			},
+			{
+				"text": "敢性",
+				"is_correct": false
+			},
+			{
+				"text": "幹性",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-032",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿の向上を目指す。",
+		"explanation": "効率 means 'efficiency'",
+		"translation": "Aim to improve efficiency.",
+		"choices": [
+			{
+				"text": "効率",
+				"is_correct": true
+			},
+			{
+				"text": "効能",
+				"is_correct": false
+			},
+			{
+				"text": "功績",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-033",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿は美しい。",
+		"explanation": "風景 means 'scenery'",
+		"translation": "This scenery is beautiful.",
+		"choices": [
+			{
+				"text": "風土",
+				"is_correct": false
+			},
+			{
+				"text": "風情",
+				"is_correct": false
+			},
+			{
+				"text": "風景",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-034",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を感じた。",
+		"explanation": "危機 means 'crisis'",
+		"translation": "I felt a crisis.",
+		"choices": [
+			{
+				"text": "危機",
+				"is_correct": true
+			},
+			{
+				"text": "危惧",
+				"is_correct": false
+			},
+			{
+				"text": "危険",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-035",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿は大きい。",
+		"explanation": "可能性 means 'possibility'",
+		"translation": "This possibility is high.",
+		"choices": [
+			{
+				"text": "可能",
+				"is_correct": false
+			},
+			{
+				"text": "可動",
+				"is_correct": false
+			},
+			{
+				"text": "可能性",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-036",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を払ってください。",
+		"explanation": "注意 means 'attention'",
+		"translation": "Please pay attention.",
+		"choices": [
+			{
+				"text": "注意",
+				"is_correct": true
+			},
+			{
+				"text": "注文",
+				"is_correct": false
+			},
+			{
+				"text": "注目",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-037",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を始めた。",
+		"explanation": "活動 means 'activity'",
+		"translation": "I started an activity.",
+		"choices": [
+			{
+				"text": "活躍",
+				"is_correct": false
+			},
+			{
+				"text": "生活",
+				"is_correct": false
+			},
+			{
+				"text": "活動",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-038",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼の＿＿は正しい。",
+		"explanation": "判断 means 'judgment'",
+		"translation": "His judgment is correct.",
+		"choices": [
+			{
+				"text": "判定",
+				"is_correct": false
+			},
+			{
+				"text": "判別",
+				"is_correct": false
+			},
+			{
+				"text": "判断",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-039",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿は便利だ。",
+		"explanation": "システム means 'system'",
+		"translation": "This system is convenient.",
+		"choices": [
+			{
+				"text": "システマ",
+				"is_correct": false
+			},
+			{
+				"text": "システム",
+				"is_correct": true
+			},
+			{
+				"text": "シスタム",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-040",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を促進する。",
+		"explanation": "発展 means 'development'",
+		"translation": "Promote development.",
+		"choices": [
+			{
+				"text": "発達",
+				"is_correct": false
+			},
+			{
+				"text": "発展",
+				"is_correct": true
+			},
+			{
+				"text": "発生",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-041",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿は重要だ。",
+		"explanation": "要素 means 'element'",
+		"translation": "This element is important.",
+		"choices": [
+			{
+				"text": "要素",
+				"is_correct": true
+			},
+			{
+				"text": "用件",
+				"is_correct": false
+			},
+			{
+				"text": "要因",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-042",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿が早い。",
+		"explanation": "理解 means 'understanding'",
+		"translation": "He understands quickly.",
+		"choices": [
+			{
+				"text": "理屈",
+				"is_correct": false
+			},
+			{
+				"text": "理想",
+				"is_correct": false
+			},
+			{
+				"text": "理解",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-043",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "このプロジェクトには＿＿が必要だ。",
+		"explanation": "資金 means 'funds'",
+		"translation": "This project requires funds.",
+		"choices": [
+			{
+				"text": "資金",
+				"is_correct": true
+			},
+			{
+				"text": "資材",
+				"is_correct": false
+			},
+			{
+				"text": "資源",
+				"is_correct": false
+			},
+			{
+				"text": "資格",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-045",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿を解決する必要がある。",
+		"explanation": "課題 means 'issue/task'",
+		"translation": "We need to solve this issue.",
+		"choices": [
+			{
+				"text": "課税",
+				"is_correct": false
+			},
+			{
+				"text": "課外",
+				"is_correct": false
+			},
+			{
+				"text": "課金",
+				"is_correct": false
+			},
+			{
+				"text": "課題",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-046",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を考える。",
+		"explanation": "対策 means 'countermeasure'",
+		"translation": "Think about countermeasures.",
+		"choices": [
+			{
+				"text": "対策",
+				"is_correct": true
+			},
+			{
+				"text": "対応",
+				"is_correct": false
+			},
+			{
+				"text": "対処",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-047",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿に従う。",
+		"explanation": "基準 means 'standard'",
+		"translation": "Follow this standard.",
+		"choices": [
+			{
+				"text": "基礎",
+				"is_correct": false
+			},
+			{
+				"text": "基盤",
+				"is_correct": false
+			},
+			{
+				"text": "基準",
+				"is_correct": true
+			},
+			{
+				"text": "基本",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-048",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿を応用する。",
+		"explanation": "理論 means 'theory'",
+		"translation": "Apply the theory.",
+		"choices": [
+			{
+				"text": "論理",
+				"is_correct": false
+			},
+			{
+				"text": "理論",
+				"is_correct": true
+			},
+			{
+				"text": "論点",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-049",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿を果たした。",
+		"explanation": "役割 means 'role'",
+		"translation": "He fulfilled his role.",
+		"choices": [
+			{
+				"text": "役割",
+				"is_correct": true
+			},
+			{
+				"text": "役者",
+				"is_correct": false
+			},
+			{
+				"text": "役職",
+				"is_correct": false
+			},
+			{
+				"text": "役目",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N3-V-050",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿が足りないと感じる。",
+		"explanation": "動機 means 'motivation'",
+		"translation": "I feel a lack of motivation.",
+		"choices": [
+			{
+				"text": "動力",
+				"is_correct": false
+			},
+			{
+				"text": "動態",
+				"is_correct": false
+			},
+			{
+				"text": "動機",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-003",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "窓が開けて＿＿。",
+		"explanation": "〜てある indicates resultant state",
+		"translation": "The window is open.",
+		"choices": [
+			{
+				"text": "おく",
+				"is_correct": false
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "ある",
+				"is_correct": true
+			},
+			{
+				"text": "いる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-004",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "このケーキを食べて＿＿。",
+		"explanation": "〜てみる means to try doing",
+		"translation": "Try this cake.",
+		"choices": [
+			{
+				"text": "みる",
+				"is_correct": true
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "ある",
+				"is_correct": false
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-005",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "この荷物を持って＿＿。",
+		"explanation": "〜ていく shows going away from the speaker",
+		"translation": "Carry this luggage (going).",
+		"choices": [
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			},
+			{
+				"text": "くる",
+				"is_correct": false
+			},
+			{
+				"text": "いく",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-006",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "ここで写真を撮って＿＿か。",
+		"explanation": "〜てもいい means 'may'",
+		"translation": "May I take a picture here?",
+		"choices": [
+			{
+				"text": "はだめ",
+				"is_correct": false
+			},
+			{
+				"text": "はならない",
+				"is_correct": false
+			},
+			{
+				"text": "はいけない",
+				"is_correct": false
+			},
+			{
+				"text": "もいい",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-007",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "ここでタバコを吸って＿＿。",
+		"explanation": "〜てはいけない means 'must not'",
+		"translation": "You must not smoke here.",
+		"choices": [
+			{
+				"text": "はいけない",
+				"is_correct": true
+			},
+			{
+				"text": "はならない",
+				"is_correct": false
+			},
+			{
+				"text": "はだめ",
+				"is_correct": false
+			},
+			{
+				"text": "もいい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-008",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "明日は早く起き＿＿ならない。",
+		"explanation": "〜なければならない means 'must'",
+		"translation": "I must wake up early tomorrow.",
+		"choices": [
+			{
+				"text": "なきゃ",
+				"is_correct": false
+			},
+			{
+				"text": "ないと",
+				"is_correct": false
+			},
+			{
+				"text": "なければ",
+				"is_correct": true
+			},
+			{
+				"text": "なくては",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-009",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "明日は晴れる＿＿。",
+		"explanation": "〜だろう expresses speculation",
+		"translation": "It will be sunny tomorrow.",
+		"choices": [
+			{
+				"text": "つもりだ",
+				"is_correct": false
+			},
+			{
+				"text": "かもしれない",
+				"is_correct": false
+			},
+			{
+				"text": "だろう",
+				"is_correct": true
+			},
+			{
+				"text": "はずだ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-010",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "明日は雨が降る＿＿。",
+		"explanation": "〜かもしれない expresses possibility",
+		"translation": "It may rain tomorrow.",
+		"choices": [
+			{
+				"text": "はずだ",
+				"is_correct": false
+			},
+			{
+				"text": "つもりだ",
+				"is_correct": false
+			},
+			{
+				"text": "かもしれない",
+				"is_correct": true
+			},
+			{
+				"text": "だろう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-011",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "来年は海外に旅行に行く＿＿。",
+		"explanation": "〜つもり means 'intend to'",
+		"translation": "I intend to travel abroad next year.",
+		"choices": [
+			{
+				"text": "だろう",
+				"is_correct": false
+			},
+			{
+				"text": "つもりだ",
+				"is_correct": true
+			},
+			{
+				"text": "かもしれない",
+				"is_correct": false
+			},
+			{
+				"text": "はずだ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-013",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "音楽を聴き＿＿勉強する。",
+		"explanation": "〜ながら means 'while'",
+		"translation": "I study while listening to music.",
+		"choices": [
+			{
+				"text": "ても",
+				"is_correct": false
+			},
+			{
+				"text": "ながら",
+				"is_correct": true
+			},
+			{
+				"text": "のに",
+				"is_correct": false
+			},
+			{
+				"text": "つつ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-014",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "寒い＿＿窓を閉めた。",
+		"explanation": "〜ので indicates reason",
+		"translation": "It was cold, so I closed the window.",
+		"choices": [
+			{
+				"text": "ので",
+				"is_correct": true
+			},
+			{
+				"text": "のに",
+				"is_correct": false
+			},
+			{
+				"text": "から",
+				"is_correct": false
+			},
+			{
+				"text": "けど",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-015",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "暇だ＿＿手伝う。",
+		"explanation": "〜から indicates reason/cause",
+		"translation": "I'm free, so I'll help.",
+		"choices": [
+			{
+				"text": "けど",
+				"is_correct": false
+			},
+			{
+				"text": "から",
+				"is_correct": true
+			},
+			{
+				"text": "のに",
+				"is_correct": false
+			},
+			{
+				"text": "ので",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-016",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "急いだ＿＿間に合わなかった。",
+		"explanation": "〜のに expresses contrast/unexpected result",
+		"translation": "Although I hurried, I didn't make it.",
+		"choices": [
+			{
+				"text": "けど",
+				"is_correct": false
+			},
+			{
+				"text": "から",
+				"is_correct": false
+			},
+			{
+				"text": "のに",
+				"is_correct": true
+			},
+			{
+				"text": "ので",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-017",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "遅れない＿＿早く出る。",
+		"explanation": "〜ように indicates purpose (negative)",
+		"translation": "I leave early so as not to be late.",
+		"choices": [
+			{
+				"text": "ものだ",
+				"is_correct": false
+			},
+			{
+				"text": "ために",
+				"is_correct": false
+			},
+			{
+				"text": "つもりで",
+				"is_correct": false
+			},
+			{
+				"text": "ように",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-019",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "母は弟に勉強を＿＿。",
+		"explanation": "〜させる is causative",
+		"translation": "My mother made my younger brother study.",
+		"choices": [
+			{
+				"text": "させた",
+				"is_correct": true
+			},
+			{
+				"text": "した",
+				"is_correct": false
+			},
+			{
+				"text": "された",
+				"is_correct": false
+			},
+			{
+				"text": "させられた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-020",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "友達に＿＿。",
+		"explanation": "〜られる passive",
+		"translation": "I was scolded by my friend.",
+		"choices": [
+			{
+				"text": "叱った",
+				"is_correct": false
+			},
+			{
+				"text": "叱らせた",
+				"is_correct": false
+			},
+			{
+				"text": "叱られた",
+				"is_correct": true
+			},
+			{
+				"text": "叱らせられた",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-021",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "助けて＿＿。",
+		"explanation": "〜てほしい means 'want someone to do'",
+		"translation": "I want you to help me.",
+		"choices": [
+			{
+				"text": "くれたい",
+				"is_correct": false
+			},
+			{
+				"text": "ほしい",
+				"is_correct": true
+			},
+			{
+				"text": "もらいたい",
+				"is_correct": false
+			},
+			{
+				"text": "あげたい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-022",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "早く寝た＿＿いい。",
+		"explanation": "〜たほうがいい means 'better to do'",
+		"translation": "You should go to bed early.",
+		"choices": [
+			{
+				"text": "ほど",
+				"is_correct": false
+			},
+			{
+				"text": "くらい",
+				"is_correct": false
+			},
+			{
+				"text": "より",
+				"is_correct": false
+			},
+			{
+				"text": "ほうが",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-023",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "あまり食べない＿＿いい。",
+		"explanation": "〜ないほうがいい means 'better not to do'",
+		"translation": "You'd better not eat too much.",
+		"choices": [
+			{
+				"text": "より",
+				"is_correct": false
+			},
+			{
+				"text": "ほど",
+				"is_correct": false
+			},
+			{
+				"text": "ほうが",
+				"is_correct": true
+			},
+			{
+				"text": "くらい",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-024",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "来月、転勤することに＿＿。",
+		"explanation": "〜ことになる means 'it has been decided'",
+		"translation": "It has been decided that I will be transferred next month.",
+		"choices": [
+			{
+				"text": "なった",
+				"is_correct": true
+			},
+			{
+				"text": "なっている",
+				"is_correct": false
+			},
+			{
+				"text": "している",
+				"is_correct": false
+			},
+			{
+				"text": "した",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-025",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "明日、休むことに＿＿。",
+		"explanation": "〜ことにする means 'decide to do'",
+		"translation": "I decided to take a day off tomorrow.",
+		"choices": [
+			{
+				"text": "している",
+				"is_correct": false
+			},
+			{
+				"text": "した",
+				"is_correct": true
+			},
+			{
+				"text": "なった",
+				"is_correct": false
+			},
+			{
+				"text": "なっている",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-026",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "健康の＿＿運動する。",
+		"explanation": "〜ために means 'for the sake of'",
+		"translation": "I exercise for my health.",
+		"choices": [
+			{
+				"text": "ように",
+				"is_correct": false
+			},
+			{
+				"text": "つもりで",
+				"is_correct": false
+			},
+			{
+				"text": "ほど",
+				"is_correct": false
+			},
+			{
+				"text": "ために",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-028",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "行く＿＿分からない。",
+		"explanation": "〜かどうか means 'whether or not'",
+		"translation": "I don't know whether I'll go.",
+		"choices": [
+			{
+				"text": "のか",
+				"is_correct": false
+			},
+			{
+				"text": "どうか",
+				"is_correct": false
+			},
+			{
+				"text": "か",
+				"is_correct": false
+			},
+			{
+				"text": "かどうか",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-029",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "田中さん＿＿人は知っていますか。",
+		"explanation": "〜という is used to introduce a name or definition",
+		"translation": "Do you know a person called Tanaka?",
+		"choices": [
+			{
+				"text": "といった",
+				"is_correct": false
+			},
+			{
+				"text": "という",
+				"is_correct": true
+			},
+			{
+				"text": "といって",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-030",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "果物＿＿好きです。",
+		"explanation": "〜など means 'etc.'",
+		"translation": "I like fruits and such.",
+		"choices": [
+			{
+				"text": "とか",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "や",
+				"is_correct": false
+			},
+			{
+				"text": "など",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-031",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "3時間＿＿待った。",
+		"explanation": "〜くらい indicates approximate amount",
+		"translation": "I waited about three hours.",
+		"choices": [
+			{
+				"text": "くらい",
+				"is_correct": true
+			},
+			{
+				"text": "ぐらい",
+				"is_correct": false
+			},
+			{
+				"text": "より",
+				"is_correct": false
+			},
+			{
+				"text": "ほど",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-032",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "今日は昨日＿＿寒くない。",
+		"explanation": "〜ほど in negative comparison means 'not as ... as'",
+		"translation": "Today is not as cold as yesterday.",
+		"choices": [
+			{
+				"text": "ほど",
+				"is_correct": true
+			},
+			{
+				"text": "で",
+				"is_correct": false
+			},
+			{
+				"text": "くらい",
+				"is_correct": false
+			},
+			{
+				"text": "より",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-033",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "今日は昨日＿＿暖かい。",
+		"explanation": "〜より is used for comparison",
+		"translation": "Today is warmer than yesterday.",
+		"choices": [
+			{
+				"text": "で",
+				"is_correct": false
+			},
+			{
+				"text": "より",
+				"is_correct": true
+			},
+			{
+				"text": "くらい",
+				"is_correct": false
+			},
+			{
+				"text": "ほど",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-034",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "時間に間に合う。",
+		"explanation": "〜に indicates specific point in time",
+		"translation": "I make it on time.",
+		"choices": [
+			{
+				"text": "に",
+				"is_correct": true
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "で",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-035",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "彼女＿＿来た。",
+		"explanation": "〜が marks subject with new information",
+		"translation": "She came.",
+		"choices": [
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "は",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-036",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "本＿＿読む。",
+		"explanation": "〜を marks direct object",
+		"translation": "Read a book.",
+		"choices": [
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": true
+			},
+			{
+				"text": "で",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-037",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "バス＿＿行く。",
+		"explanation": "〜で indicates means",
+		"translation": "Go by bus.",
+		"choices": [
+			{
+				"text": "で",
+				"is_correct": true
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-038",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "学校＿＿行く。",
+		"explanation": "〜へ indicates direction",
+		"translation": "Go to school.",
+		"choices": [
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "へ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-039",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "友達＿＿話す。",
+		"explanation": "〜と indicates companion/reciprocal",
+		"translation": "Talk with a friend.",
+		"choices": [
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "と",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-040",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "9時＿＿始まる。",
+		"explanation": "〜から indicates starting point",
+		"translation": "It starts from 9 o'clock.",
+		"choices": [
+			{
+				"text": "を",
+				"is_correct": false
+			},
+			{
+				"text": "で",
+				"is_correct": false
+			},
+			{
+				"text": "から",
+				"is_correct": true
+			},
+			{
+				"text": "に",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-041",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "5時＿＿働く。",
+		"explanation": "〜まで indicates end point",
+		"translation": "Work until 5 o'clock.",
+		"choices": [
+			{
+				"text": "から",
+				"is_correct": false
+			},
+			{
+				"text": "まで",
+				"is_correct": true
+			},
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "で",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-042",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "私の本。",
+		"explanation": "〜の indicates possession",
+		"translation": "My book.",
+		"choices": [
+			{
+				"text": "の",
+				"is_correct": true
+			},
+			{
+				"text": "に",
+				"is_correct": false
+			},
+			{
+				"text": "が",
+				"is_correct": false
+			},
+			{
+				"text": "を",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-043",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "今、勉強して＿＿。",
+		"explanation": "〜ている indicates ongoing action",
+		"translation": "I am studying now.",
+		"choices": [
+			{
+				"text": "ある",
+				"is_correct": false
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "いる",
+				"is_correct": true
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-044",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "ドアが開けて＿＿。",
+		"explanation": "〜てある indicates resultant state",
+		"translation": "The door is open.",
+		"choices": [
+			{
+				"text": "いる",
+				"is_correct": false
+			},
+			{
+				"text": "ある",
+				"is_correct": true
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-045",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "電気を消して＿＿。",
+		"explanation": "〜ておく means to do in advance",
+		"translation": "I'll turn off the lights.",
+		"choices": [
+			{
+				"text": "おく",
+				"is_correct": true
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "ある",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-046",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "忘れて＿＿。",
+		"explanation": "〜てしまう expresses completion/regret",
+		"translation": "I forgot (and regret it).",
+		"choices": [
+			{
+				"text": "ある",
+				"is_correct": false
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "しまう",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-047",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "持って＿＿。",
+		"explanation": "〜てくる means to bring toward speaker",
+		"translation": "Bring (it).",
+		"choices": [
+			{
+				"text": "くる",
+				"is_correct": true
+			},
+			{
+				"text": "しまう",
+				"is_correct": false
+			},
+			{
+				"text": "いく",
+				"is_correct": false
+			},
+			{
+				"text": "おく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-048",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "雨が降って＿＿行く。",
+		"explanation": "〜ても means 'even if'",
+		"translation": "Even if it rains, I'll go.",
+		"choices": [
+			{
+				"text": "なら",
+				"is_correct": false
+			},
+			{
+				"text": "でも",
+				"is_correct": false
+			},
+			{
+				"text": "たら",
+				"is_correct": false
+			},
+			{
+				"text": "も",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-049",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "この本は読み＿＿。",
+		"explanation": "〜やすい means easy to do",
+		"translation": "This book is easy to read.",
+		"choices": [
+			{
+				"text": "がちだ",
+				"is_correct": false
+			},
+			{
+				"text": "にくい",
+				"is_correct": false
+			},
+			{
+				"text": "やすい",
+				"is_correct": true
+			},
+			{
+				"text": "すぎる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-G-050",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "この問題は＿＿。",
+		"explanation": "〜だ ends a sentence for na-adjective",
+		"translation": "This problem is easy.",
+		"choices": [
+			{
+				"text": "簡単な",
+				"is_correct": false
+			},
+			{
+				"text": "簡単で",
+				"is_correct": false
+			},
+			{
+				"text": "簡単だ",
+				"is_correct": true
+			},
+			{
+				"text": "簡単に",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-001",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「ご飯を食べる。」「食べる」の読み方は？",
+		"explanation": "食べる is read as たべる",
+		"translation": "Eat a meal.",
+		"choices": [
+			{
+				"text": "きく",
+				"is_correct": false
+			},
+			{
+				"text": "たべる",
+				"is_correct": true
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "のむ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-002",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「水を飲む。」「飲む」の読み方は？",
+		"explanation": "飲む is read as のむ",
+		"translation": "Drink water.",
+		"choices": [
+			{
+				"text": "よむ",
+				"is_correct": false
+			},
+			{
+				"text": "のむ",
+				"is_correct": true
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "たべる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-003",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「学校に行く。」「行く」の読み方は？",
+		"explanation": "行く is read as いく",
+		"translation": "Go to school.",
+		"choices": [
+			{
+				"text": "いく",
+				"is_correct": true
+			},
+			{
+				"text": "あるく",
+				"is_correct": false
+			},
+			{
+				"text": "くる",
+				"is_correct": false
+			},
+			{
+				"text": "かえる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-004",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「家に来る。」「来る」の読み方は？",
+		"explanation": "来る is read as くる",
+		"translation": "Come home.",
+		"choices": [
+			{
+				"text": "あるく",
+				"is_correct": false
+			},
+			{
+				"text": "くる",
+				"is_correct": true
+			},
+			{
+				"text": "いく",
+				"is_correct": false
+			},
+			{
+				"text": "かえる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-005",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「テレビを見る。」「見る」の読み方は？",
+		"explanation": "見る is read as みる",
+		"translation": "Watch TV.",
+		"choices": [
+			{
+				"text": "かく",
+				"is_correct": false
+			},
+			{
+				"text": "みる",
+				"is_correct": true
+			},
+			{
+				"text": "よむ",
+				"is_correct": false
+			},
+			{
+				"text": "きく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-006",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「音を聞く。」「聞く」の読み方は？",
+		"explanation": "聞く is read as きく",
+		"translation": "Listen to the sound.",
+		"choices": [
+			{
+				"text": "きく",
+				"is_correct": true
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "よむ",
+				"is_correct": false
+			},
+			{
+				"text": "かく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-007",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「手紙を書く。」「書く」の読み方は？",
+		"explanation": "書く is read as かく",
+		"translation": "Write a letter.",
+		"choices": [
+			{
+				"text": "はなす",
+				"is_correct": false
+			},
+			{
+				"text": "よむ",
+				"is_correct": false
+			},
+			{
+				"text": "きく",
+				"is_correct": false
+			},
+			{
+				"text": "かく",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-008",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「本を読む。」「読む」の読み方は？",
+		"explanation": "読む is read as よむ",
+		"translation": "Read a book.",
+		"choices": [
+			{
+				"text": "かく",
+				"is_correct": false
+			},
+			{
+				"text": "みる",
+				"is_correct": false
+			},
+			{
+				"text": "きく",
+				"is_correct": false
+			},
+			{
+				"text": "よむ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-009",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「パンを買う。」「買う」の読み方は？",
+		"explanation": "買う is read as かう",
+		"translation": "Buy bread.",
+		"choices": [
+			{
+				"text": "かく",
+				"is_correct": false
+			},
+			{
+				"text": "うる",
+				"is_correct": false
+			},
+			{
+				"text": "かう",
+				"is_correct": true
+			},
+			{
+				"text": "よむ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-010",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「日本語を話す。」「話す」の読み方は？",
+		"explanation": "話す is read as はなす",
+		"translation": "Speak Japanese.",
+		"choices": [
+			{
+				"text": "かたる",
+				"is_correct": false
+			},
+			{
+				"text": "ものがたる",
+				"is_correct": false
+			},
+			{
+				"text": "はなす",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-011",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「ありがとうと言う。」「言う」の読み方は？",
+		"explanation": "言う is read as いう",
+		"translation": "Say thank you.",
+		"choices": [
+			{
+				"text": "のべる",
+				"is_correct": false
+			},
+			{
+				"text": "かたる",
+				"is_correct": false
+			},
+			{
+				"text": "はなす",
+				"is_correct": false
+			},
+			{
+				"text": "いう",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-012",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「彼のことを思う。」「思う」の読み方は？",
+		"explanation": "思う is read as おもう",
+		"translation": "Think of him.",
+		"choices": [
+			{
+				"text": "しる",
+				"is_correct": false
+			},
+			{
+				"text": "かんがえる",
+				"is_correct": false
+			},
+			{
+				"text": "おもう",
+				"is_correct": true
+			},
+			{
+				"text": "わかる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-013",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「彼の名前を知る。」「知る」の読み方は？",
+		"explanation": "知る is read as しる",
+		"translation": "Know his name.",
+		"choices": [
+			{
+				"text": "おもう",
+				"is_correct": false
+			},
+			{
+				"text": "かんがえる",
+				"is_correct": false
+			},
+			{
+				"text": "わかる",
+				"is_correct": false
+			},
+			{
+				"text": "しる",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-014",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「公園を歩く。」「歩く」の読み方は？",
+		"explanation": "歩く is read as あるく",
+		"translation": "Walk in the park.",
+		"choices": [
+			{
+				"text": "かえる",
+				"is_correct": false
+			},
+			{
+				"text": "あるく",
+				"is_correct": true
+			},
+			{
+				"text": "いく",
+				"is_correct": false
+			},
+			{
+				"text": "はしる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-015",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「駅まで走る。」「走る」の読み方は？",
+		"explanation": "走る is read as はしる",
+		"translation": "Run to the station.",
+		"choices": [
+			{
+				"text": "かえる",
+				"is_correct": false
+			},
+			{
+				"text": "はしる",
+				"is_correct": true
+			},
+			{
+				"text": "いく",
+				"is_correct": false
+			},
+			{
+				"text": "あるく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-016",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「バスを待つ。」「待つ」の読み方は？",
+		"explanation": "待つ is read as まつ",
+		"translation": "Wait for the bus.",
+		"choices": [
+			{
+				"text": "まつ",
+				"is_correct": true
+			},
+			{
+				"text": "すわる",
+				"is_correct": false
+			},
+			{
+				"text": "たつ",
+				"is_correct": false
+			},
+			{
+				"text": "あるく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-017",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「本を出す。」「出す」の読み方は？",
+		"explanation": "出す is read as だす",
+		"translation": "Take out a book.",
+		"choices": [
+			{
+				"text": "いれる",
+				"is_correct": false
+			},
+			{
+				"text": "でる",
+				"is_correct": false
+			},
+			{
+				"text": "だす",
+				"is_correct": true
+			},
+			{
+				"text": "はいる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-018",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「部屋に入れる。」「入れる」の読み方は？",
+		"explanation": "入れる is read as いれる",
+		"translation": "Put into the room.",
+		"choices": [
+			{
+				"text": "いれる",
+				"is_correct": true
+			},
+			{
+				"text": "だす",
+				"is_correct": false
+			},
+			{
+				"text": "でる",
+				"is_correct": false
+			},
+			{
+				"text": "はいる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-019",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「部屋を出る。」「出る」の読み方は？",
+		"explanation": "出る is read as でる",
+		"translation": "Leave the room.",
+		"choices": [
+			{
+				"text": "はいる",
+				"is_correct": false
+			},
+			{
+				"text": "でる",
+				"is_correct": true
+			},
+			{
+				"text": "いれる",
+				"is_correct": false
+			},
+			{
+				"text": "だす",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-020",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「部屋に入る。」「入る」の読み方は？",
+		"explanation": "入る is read as はいる",
+		"translation": "Enter the room.",
+		"choices": [
+			{
+				"text": "いれる",
+				"is_correct": false
+			},
+			{
+				"text": "はいる",
+				"is_correct": true
+			},
+			{
+				"text": "だす",
+				"is_correct": false
+			},
+			{
+				"text": "でる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-021",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「朝起きる。」「起きる」の読み方は？",
+		"explanation": "起きる is read as おきる",
+		"translation": "Wake up in the morning.",
+		"choices": [
+			{
+				"text": "ねる",
+				"is_correct": false
+			},
+			{
+				"text": "たつ",
+				"is_correct": false
+			},
+			{
+				"text": "すわる",
+				"is_correct": false
+			},
+			{
+				"text": "おきる",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-022",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「夜寝る。」「寝る」の読み方は？",
+		"explanation": "寝る is read as ねる",
+		"translation": "Sleep at night.",
+		"choices": [
+			{
+				"text": "すわる",
+				"is_correct": false
+			},
+			{
+				"text": "ねる",
+				"is_correct": true
+			},
+			{
+				"text": "おきる",
+				"is_correct": false
+			},
+			{
+				"text": "たつ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-023",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「コートを着る。」「着る」の読み方は？",
+		"explanation": "着る is read as きる",
+		"translation": "Wear a coat.",
+		"choices": [
+			{
+				"text": "はく",
+				"is_correct": false
+			},
+			{
+				"text": "きる",
+				"is_correct": true
+			},
+			{
+				"text": "ぬぐ",
+				"is_correct": false
+			},
+			{
+				"text": "かぶる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-024",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「靴を脱ぐ。」「脱ぐ」の読み方は？",
+		"explanation": "脱ぐ is read as ぬぐ",
+		"translation": "Take off shoes.",
+		"choices": [
+			{
+				"text": "かぶる",
+				"is_correct": false
+			},
+			{
+				"text": "ぬぐ",
+				"is_correct": true
+			},
+			{
+				"text": "はく",
+				"is_correct": false
+			},
+			{
+				"text": "きる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-025",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「パソコンを使う。」「使う」の読み方は？",
+		"explanation": "使う is read as つかう",
+		"translation": "Use a computer.",
+		"choices": [
+			{
+				"text": "もつ",
+				"is_correct": false
+			},
+			{
+				"text": "つかう",
+				"is_correct": true
+			},
+			{
+				"text": "あう",
+				"is_correct": false
+			},
+			{
+				"text": "つくる",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-026",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「食事を作る。」「作る」の読み方は？",
+		"explanation": "作る is read as つくる",
+		"translation": "Make a meal.",
+		"choices": [
+			{
+				"text": "のむ",
+				"is_correct": false
+			},
+			{
+				"text": "たべる",
+				"is_correct": false
+			},
+			{
+				"text": "つかう",
+				"is_correct": false
+			},
+			{
+				"text": "つくる",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-027",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「東京に住む。」「住む」の読み方は？",
+		"explanation": "住む is read as すむ",
+		"translation": "Live in Tokyo.",
+		"choices": [
+			{
+				"text": "たべる",
+				"is_correct": false
+			},
+			{
+				"text": "のむ",
+				"is_correct": false
+			},
+			{
+				"text": "いきる",
+				"is_correct": false
+			},
+			{
+				"text": "すむ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-K-028",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「日本語を習う。」「習う」の読み方は？",
+		"explanation": "習う is read as ならう",
+		"translation": "Learn Japanese.",
+		"choices": [
+			{
+				"text": "よむ",
+				"is_correct": false
+			},
+			{
+				"text": "まなぶ",
+				"is_correct": false
+			},
+			{
+				"text": "おしえる",
+				"is_correct": false
+			},
+			{
+				"text": "ならう",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-001",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この町には人が＿＿。",
+		"explanation": "多い means 'many'",
+		"translation": "There are many people in this town.",
+		"choices": [
+			{
+				"text": "多い",
+				"is_correct": true
+			},
+			{
+				"text": "多く",
+				"is_correct": false
+			},
+			{
+				"text": "多",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-002",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "今日は客が＿＿。",
+		"explanation": "少ない means 'few'",
+		"translation": "There are few customers today.",
+		"choices": [
+			{
+				"text": "少な",
+				"is_correct": false
+			},
+			{
+				"text": "少ない",
+				"is_correct": true
+			},
+			{
+				"text": "少",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-003",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この箱はとても＿＿。",
+		"explanation": "大きい means 'big'",
+		"translation": "This box is very big.",
+		"choices": [
+			{
+				"text": "大き",
+				"is_correct": false
+			},
+			{
+				"text": "大きい",
+				"is_correct": true
+			},
+			{
+				"text": "大きく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-004",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "その問題は＿＿。",
+		"explanation": "小さい means 'small'",
+		"translation": "That problem is small.",
+		"choices": [
+			{
+				"text": "小さい",
+				"is_correct": true
+			},
+			{
+				"text": "小さく",
+				"is_correct": false
+			},
+			{
+				"text": "小さ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-005",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この建物は＿＿。",
+		"explanation": "高い means 'high/expensive'",
+		"translation": "This building is tall.",
+		"choices": [
+			{
+				"text": "高",
+				"is_correct": false
+			},
+			{
+				"text": "高い",
+				"is_correct": true
+			},
+			{
+				"text": "高く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-006",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この服は＿＿。",
+		"explanation": "安い means 'cheap'",
+		"translation": "This clothes is cheap.",
+		"choices": [
+			{
+				"text": "安",
+				"is_correct": false
+			},
+			{
+				"text": "安い",
+				"is_correct": true
+			},
+			{
+				"text": "安く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-007",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この線は＿＿。",
+		"explanation": "長い means 'long'",
+		"translation": "This line is long.",
+		"choices": [
+			{
+				"text": "長",
+				"is_correct": false
+			},
+			{
+				"text": "長い",
+				"is_correct": true
+			},
+			{
+				"text": "長く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-008",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この鉛筆は＿＿。",
+		"explanation": "短い means 'short'",
+		"translation": "This pencil is short.",
+		"choices": [
+			{
+				"text": "短",
+				"is_correct": false
+			},
+			{
+				"text": "短い",
+				"is_correct": true
+			},
+			{
+				"text": "短く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-009",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この荷物は＿＿。",
+		"explanation": "重い means 'heavy'",
+		"translation": "This luggage is heavy.",
+		"choices": [
+			{
+				"text": "重く",
+				"is_correct": false
+			},
+			{
+				"text": "重い",
+				"is_correct": true
+			},
+			{
+				"text": "重",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-010",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この箱は＿＿。",
+		"explanation": "軽い means 'light'",
+		"translation": "This box is light.",
+		"choices": [
+			{
+				"text": "軽い",
+				"is_correct": true
+			},
+			{
+				"text": "軽く",
+				"is_correct": false
+			},
+			{
+				"text": "軽",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-011",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "ここは駅から＿＿。",
+		"explanation": "遠い means 'far'",
+		"translation": "It is far from the station.",
+		"choices": [
+			{
+				"text": "遠く",
+				"is_correct": false
+			},
+			{
+				"text": "遠",
+				"is_correct": false
+			},
+			{
+				"text": "遠い",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-012",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "コンビニは＿＿。",
+		"explanation": "近い means 'near'",
+		"translation": "The convenience store is near.",
+		"choices": [
+			{
+				"text": "近",
+				"is_correct": false
+			},
+			{
+				"text": "近い",
+				"is_correct": true
+			},
+			{
+				"text": "近く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-013",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "朝は＿＿起きる。",
+		"explanation": "早く is adverb form of 早い",
+		"translation": "Wake up early in the morning.",
+		"choices": [
+			{
+				"text": "早い",
+				"is_correct": false
+			},
+			{
+				"text": "早く",
+				"is_correct": true
+			},
+			{
+				"text": "早",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-014",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "今日は＿＿起きた。",
+		"explanation": "遅く is adverb form",
+		"translation": "I got up late today.",
+		"choices": [
+			{
+				"text": "遅",
+				"is_correct": false
+			},
+			{
+				"text": "遅く",
+				"is_correct": true
+			},
+			{
+				"text": "遅い",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-015",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "夏はとても＿＿。",
+		"explanation": "暑い means 'hot (weather)'",
+		"translation": "Summer is very hot.",
+		"choices": [
+			{
+				"text": "暑",
+				"is_correct": false
+			},
+			{
+				"text": "暑く",
+				"is_correct": false
+			},
+			{
+				"text": "暑い",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-016",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "冬はとても＿＿。",
+		"explanation": "寒い means 'cold (weather)'",
+		"translation": "Winter is very cold.",
+		"choices": [
+			{
+				"text": "寒い",
+				"is_correct": true
+			},
+			{
+				"text": "寒",
+				"is_correct": false
+			},
+			{
+				"text": "寒く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-017",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "このスープは＿＿。",
+		"explanation": "熱い means 'hot (to touch/drink)'",
+		"translation": "This soup is hot.",
+		"choices": [
+			{
+				"text": "熱い",
+				"is_correct": true
+			},
+			{
+				"text": "熱",
+				"is_correct": false
+			},
+			{
+				"text": "熱く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-018",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この水は＿＿。",
+		"explanation": "冷たい means 'cold (to touch)'",
+		"translation": "This water is cold.",
+		"choices": [
+			{
+				"text": "冷たく",
+				"is_correct": false
+			},
+			{
+				"text": "冷た",
+				"is_correct": false
+			},
+			{
+				"text": "冷たい",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-019",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "今日は＿＿。",
+		"explanation": "忙しい means 'busy'",
+		"translation": "I am busy today.",
+		"choices": [
+			{
+				"text": "忙しく",
+				"is_correct": false
+			},
+			{
+				"text": "忙し",
+				"is_correct": false
+			},
+			{
+				"text": "忙しい",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-020",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "週末は＿＿。",
+		"explanation": "暇 means 'free (time)'",
+		"translation": "I am free on weekends.",
+		"choices": [
+			{
+				"text": "暇で",
+				"is_correct": false
+			},
+			{
+				"text": "暇な",
+				"is_correct": false
+			},
+			{
+				"text": "暇だ",
+				"is_correct": true
+			},
+			{
+				"text": "暇",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-021",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "このアプリはとても＿＿。",
+		"explanation": "便利 means 'convenient'",
+		"translation": "This app is very convenient.",
+		"choices": [
+			{
+				"text": "便利な",
+				"is_correct": false
+			},
+			{
+				"text": "便利で",
+				"is_correct": false
+			},
+			{
+				"text": "便利",
+				"is_correct": false
+			},
+			{
+				"text": "便利だ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-022",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "ここは＿＿だ。",
+		"explanation": "不便 means 'inconvenient'",
+		"translation": "This place is inconvenient.",
+		"choices": [
+			{
+				"text": "不便な",
+				"is_correct": false
+			},
+			{
+				"text": "不便だ",
+				"is_correct": true
+			},
+			{
+				"text": "不便で",
+				"is_correct": false
+			},
+			{
+				"text": "不便",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-023",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼女は＿＿だ。",
+		"explanation": "好き means 'like' (na-adjective)",
+		"translation": "I like her.",
+		"choices": [
+			{
+				"text": "好きで",
+				"is_correct": false
+			},
+			{
+				"text": "好きな",
+				"is_correct": false
+			},
+			{
+				"text": "好き",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-024",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "私は＿＿だ。",
+		"explanation": "嫌い means 'dislike'",
+		"translation": "I dislike it.",
+		"choices": [
+			{
+				"text": "嫌いな",
+				"is_correct": false
+			},
+			{
+				"text": "嫌いで",
+				"is_correct": false
+			},
+			{
+				"text": "嫌い",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-025",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼は絵が＿＿。",
+		"explanation": "上手 means 'skilled'",
+		"translation": "He is good at drawing.",
+		"choices": [
+			{
+				"text": "上手",
+				"is_correct": false
+			},
+			{
+				"text": "上手で",
+				"is_correct": false
+			},
+			{
+				"text": "上手な",
+				"is_correct": false
+			},
+			{
+				"text": "上手だ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-026",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "私は歌が＿＿。",
+		"explanation": "下手 means 'unskilled'",
+		"translation": "I am bad at singing.",
+		"choices": [
+			{
+				"text": "下手",
+				"is_correct": false
+			},
+			{
+				"text": "下手で",
+				"is_correct": false
+			},
+			{
+				"text": "下手な",
+				"is_correct": false
+			},
+			{
+				"text": "下手だ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-028",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この試験は＿＿。",
+		"explanation": "難しい means 'difficult'",
+		"translation": "This exam is difficult.",
+		"choices": [
+			{
+				"text": "難し",
+				"is_correct": false
+			},
+			{
+				"text": "難しく",
+				"is_correct": false
+			},
+			{
+				"text": "難しい",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-029",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "このスマホは＿＿。",
+		"explanation": "新しい means 'new'",
+		"translation": "This smartphone is new.",
+		"choices": [
+			{
+				"text": "新し",
+				"is_correct": false
+			},
+			{
+				"text": "新しく",
+				"is_correct": false
+			},
+			{
+				"text": "新しい",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-030",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この本は＿＿。",
+		"explanation": "古い means 'old'",
+		"translation": "This book is old.",
+		"choices": [
+			{
+				"text": "古い",
+				"is_correct": true
+			},
+			{
+				"text": "古",
+				"is_correct": false
+			},
+			{
+				"text": "古く",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-033",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この地域は＿＿。",
+		"explanation": "安全 means 'safe'",
+		"translation": "This area is safe.",
+		"choices": [
+			{
+				"text": "安全な",
+				"is_correct": false
+			},
+			{
+				"text": "安全だ",
+				"is_correct": true
+			},
+			{
+				"text": "安全で",
+				"is_correct": false
+			},
+			{
+				"text": "安全",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-034",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この道は＿＿。",
+		"explanation": "危険 means 'dangerous'",
+		"translation": "This road is dangerous.",
+		"choices": [
+			{
+				"text": "危険",
+				"is_correct": false
+			},
+			{
+				"text": "危険だ",
+				"is_correct": true
+			},
+			{
+				"text": "危険な",
+				"is_correct": false
+			},
+			{
+				"text": "危険で",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-035",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この店は＿＿高い。",
+		"explanation": "少し means 'a little'",
+		"translation": "This shop is a little expensive.",
+		"choices": [
+			{
+				"text": "少なく",
+				"is_correct": false
+			},
+			{
+				"text": "少し",
+				"is_correct": true
+			},
+			{
+				"text": "少ない",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-036",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿親切だ。",
+		"explanation": "とても means 'very'",
+		"translation": "He is very kind.",
+		"choices": [
+			{
+				"text": "とても",
+				"is_correct": true
+			},
+			{
+				"text": "たいへん",
+				"is_correct": false
+			},
+			{
+				"text": "すごく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-037",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "＿＿行きましょう。",
+		"explanation": "一緒に means 'together'",
+		"translation": "Let's go together.",
+		"choices": [
+			{
+				"text": "一団",
+				"is_correct": false
+			},
+			{
+				"text": "一緒",
+				"is_correct": false
+			},
+			{
+				"text": "一斉に",
+				"is_correct": false
+			},
+			{
+				"text": "一緒に",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-038",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この仕事は＿＿終わった。",
+		"explanation": "もう means 'already'",
+		"translation": "This work has already finished.",
+		"choices": [
+			{
+				"text": "まだ",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": false
+			},
+			{
+				"text": "よく",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-039",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "＿＿来ていない。",
+		"explanation": "まだ means 'not yet'",
+		"translation": "He hasn't come yet.",
+		"choices": [
+			{
+				"text": "とても",
+				"is_correct": false
+			},
+			{
+				"text": "よく",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "まだ",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-040",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この本は＿＿面白い。",
+		"explanation": "とても means 'very'",
+		"translation": "This book is very interesting.",
+		"choices": [
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "すごく",
+				"is_correct": false
+			},
+			{
+				"text": "たいへん",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-041",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿来る。",
+		"explanation": "すぐ means 'soon'",
+		"translation": "He will come soon.",
+		"choices": [
+			{
+				"text": "まだ",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "すぐ",
+				"is_correct": true
+			},
+			{
+				"text": "よく",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-042",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "その話は＿＿知っている。",
+		"explanation": "よく means 'well' or 'often'",
+		"translation": "I know that story well.",
+		"choices": [
+			{
+				"text": "よく",
+				"is_correct": true
+			},
+			{
+				"text": "まだ",
+				"is_correct": false
+			},
+			{
+				"text": "すぐ",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-043",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この問題は＿＿難しい。",
+		"explanation": "とても means 'very'",
+		"translation": "This problem is very difficult.",
+		"choices": [
+			{
+				"text": "すぐ",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": true
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "まだ",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-044",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼女は＿＿美しい。",
+		"explanation": "とても means 'very'",
+		"translation": "She is very beautiful.",
+		"choices": [
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": true
+			},
+			{
+				"text": "すごく",
+				"is_correct": false
+			},
+			{
+				"text": "たいへん",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-045",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "このレストランは＿＿美味しい。",
+		"explanation": "とても means 'very'",
+		"translation": "This restaurant is very delicious.",
+		"choices": [
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "すぐ",
+				"is_correct": false
+			},
+			{
+				"text": "まだ",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-046",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "明日は＿＿雨が降る。",
+		"explanation": "たぶん means 'probably'",
+		"translation": "It will probably rain tomorrow.",
+		"choices": [
+			{
+				"text": "たぶん",
+				"is_correct": true
+			},
+			{
+				"text": "ぜひ",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "きっと",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-047",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿来るだろう。",
+		"explanation": "きっと means 'surely'",
+		"translation": "He will surely come.",
+		"choices": [
+			{
+				"text": "たぶん",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "ぜひ",
+				"is_correct": false
+			},
+			{
+				"text": "きっと",
+				"is_correct": true
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-048",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "ぜひ＿＿ください。",
+		"explanation": "ぜひ means 'by all means'",
+		"translation": "Please do come by all means.",
+		"choices": [
+			{
+				"text": "来た",
+				"is_correct": false
+			},
+			{
+				"text": "来ない",
+				"is_correct": false
+			},
+			{
+				"text": "来て",
+				"is_correct": true
+			},
+			{
+				"text": "来る",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-049",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この店は＿＿安い。",
+		"explanation": "とても means 'very'",
+		"translation": "This shop is very cheap.",
+		"choices": [
+			{
+				"text": "すぐ",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": true
+			},
+			{
+				"text": "まだ",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			}
+		]
+	},
+	{
+		"source_id": "N4-V-050",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "彼は＿＿優しい。",
+		"explanation": "とても means 'very'",
+		"translation": "He is very kind.",
+		"choices": [
+			{
+				"text": "すぐ",
+				"is_correct": false
+			},
+			{
+				"text": "もう",
+				"is_correct": false
+			},
+			{
+				"text": "とても",
+				"is_correct": true
+			},
+			{
+				"text": "まだ",
+				"is_correct": false
+			}
+		]
+	}
+]

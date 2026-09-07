@@ -21,6 +21,7 @@
 		"db:migrate:local": "wrangler d1 migrations apply DB --local",
 		"db:migrate:prod": "wrangler d1 migrations apply DB --remote",
 		"db:studio": "drizzle-kit studio",
+		"db:seed:clean": "node src/lib/server/db/seed/clean.ts",
 		"gen": "wrangler types"
 	},
 	"devDependencies": {
