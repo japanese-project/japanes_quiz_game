@@ -16,6 +16,7 @@
 		{
 			"binding": "DB",
 			"database_name": "quiz-game",
+			"database_id": "c52e019e-40bd-4536-a307-b62248338fdb",
 			"migrations_dir": "./drizzle",
 		},
 	],
