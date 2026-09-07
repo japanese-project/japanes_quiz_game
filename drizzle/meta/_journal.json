@@ -15,6 +15,13 @@
       "when": 1788711177624,
       "tag": "0001_fresh_selene",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1788750152140,
+      "tag": "0005_skinny_rhino",
+      "breakpoints": true
     }
   ]
 }
