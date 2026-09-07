@@ -14,6 +14,7 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			user: { id: string; username: string } | null
+			session: { id: string; expiresAt: Date } | null
 		}
 		// interface PageData {}
 		// interface PageState {}
