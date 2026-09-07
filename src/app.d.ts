@@ -3,7 +3,9 @@
 declare global {
 	namespace App {
 		interface Platform {
-			env: Env
+			env: {
+				DB: D1Database
+			}
 			ctx: ExecutionContext
 			caches: CacheStorage
 			cf?: IncomingRequestCfProperties
@@ -11,7 +13,7 @@ declare global {
 
 		// interface Error {}
 		interface Locals {
-			user: { id: string; username: string } | null;
+			user: { id: string; username: string } | null
 		}
 		// interface PageData {}
 		// interface PageState {}

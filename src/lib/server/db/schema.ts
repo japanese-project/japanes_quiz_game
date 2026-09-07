@@ -1,75 +1,81 @@
 import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core'
 
-export const user = sqliteTable('user', {
+// --- Users ---
+export const users = sqliteTable('users', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
 	username: text('username').notNull().unique(),
-	// uncomment the below line if you want to add password field
-	//   password: text('password').notNull()
+	// password: text('password').notNull() // optional
 })
 
-export const level = sqliteTable('level', {
+// --- Levels ---
+export const levels = sqliteTable('levels', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
 	name: text('name').notNull().unique(), // 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
-	sortOrder: integer('sort_order').notNull(),
+	sort_order: integer('sort_order').notNull(),
 })
 
-export const category = sqliteTable('category', {
+// --- Categories ---
+export const categories = sqliteTable('categories', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
 	name: text('name').notNull().unique(), // 'Vocabulary' | 'Grammar' | 'Kanji'
 })
 
-export const quiz = sqliteTable('quiz', {
+// --- Quizzes ---
+export const quizzes = sqliteTable('quizzes', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
-	levelId: integer('level_id')
+	level_id: integer('level_id')
 		.notNull()
-		.references(() => level.id),
-	categoryId: integer('category_id')
+		.references(() => levels.id),
+	category_id: integer('category_id')
 		.notNull()
-		.references(() => category.id),
+		.references(() => categories.id),
 	title: text('title').notNull(),
 	description: text('description'),
 })
 
-export const question = sqliteTable('question', {
+// --- Questions ---
+export const questions = sqliteTable('questions', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
-	quizId: text('quiz_id')
+	quiz_id: text('quiz_id')
 		.notNull()
-		.references(() => quiz.id, { onDelete: 'cascade' }),
+		.references(() => quizzes.id, { onDelete: 'cascade' }),
 	prompt: text('prompt').notNull(),
-	orderIndex: integer('order_index').notNull().default(0),
+	order_index: integer('order_index').notNull().default(0),
 })
 
-export const choice = sqliteTable('choice', {
+// --- Choices ---
+export const choices = sqliteTable('choices', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
-	questionId: text('question_id')
+	question_id: text('question_id')
 		.notNull()
-		.references(() => question.id, { onDelete: 'cascade' }),
+		.references(() => questions.id, { onDelete: 'cascade' }),
 	text: text('text').notNull(),
-	isCorrect: integer('is_correct', { mode: 'boolean' }).notNull().default(false),
+	is_correct: integer('is_correct', { mode: 'boolean' }).notNull().default(false),
 })
 
-export const quizAttempt = sqliteTable('quiz_attempt', {
+// --- Quiz Attempts ---
+export const quiz_attempts = sqliteTable('quiz_attempts', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
-	userId: text('user_id')
+	user_id: text('user_id')
 		.notNull()
-		.references(() => user.id, { onDelete: 'cascade' }),
-	quizId: text('quiz_id')
+		.references(() => users.id, { onDelete: 'cascade' }),
+	quiz_id: text('quiz_id')
 		.notNull()
-		.references(() => quiz.id, { onDelete: 'cascade' }),
+		.references(() => quizzes.id, { onDelete: 'cascade' }),
 	score: integer('score').notNull(),
-	correctCount: integer('correct_count').notNull(),
-	totalQuestions: integer('total_questions').notNull(),
-	completedAt: integer('completed_at', { mode: 'timestamp' })
+	correct_count: integer('correct_count').notNull(),
+	total_questions: integer('total_questions').notNull(),
+	completed_at: integer('completed_at', { mode: 'timestamp' })
 		.notNull()
 		.$defaultFn(() => new Date()),
 })
