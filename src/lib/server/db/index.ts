@@ -6,8 +6,8 @@ export interface Env {
 	DB: D1Database
 }
 
-export const get_db = (env) => {
-	if (!env.DB) {
+export const get_db = (env?: Env) => {
+	if (!env?.DB) {
 		throw new Error('Database not found in environment variables')
 	}
 

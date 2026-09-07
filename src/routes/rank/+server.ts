@@ -7,6 +7,6 @@ export const GET: RequestHandler = async ({ platform }) => {
 
     const ranks = await db.select().from(users);
 
-    console.log("ranks", ranks)s
+    console.log("ranks", ranks)
     return json("hello")
 }
