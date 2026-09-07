@@ -1,7 +1,7 @@
 import { eq } from 'drizzle-orm'
 import { error, json } from '@sveltejs/kit'
-import { getDb } from '$lib/server/db'
-import { user } from '$lib/server/db/schema'
+import { get_db } from '$lib/server/db'
+import { users } from '$lib/server/db/schema'
 import { createSession, invalidateSession, setSessionCookie } from '$lib/server/auth'
 import type { RequestHandler } from './$types'
 
@@ -20,12 +20,12 @@ export const POST: RequestHandler = async ({ request, cookies, locals, platform 
 		error(400, `Username must be ${MAX_USERNAME_LENGTH} characters or fewer.`)
 	}
 
-	const db = getDb(platform!.env.DB)
+	const db = get_db(platform?.env)
 	const account =
-		(await db.query.user.findFirst({ where: eq(user.username, username) })) ??
-		(await db.insert(user).values({ username }).onConflictDoNothing().returning()).at(0) ??
+		(await db.query.users.findFirst({ where: eq(users.username, username) })) ??
+		(await db.insert(users).values({ username }).onConflictDoNothing().returning()).at(0) ??
 		// `username` is unique: a concurrent signup can win the race between the select and insert.
-		(await db.query.user.findFirst({ where: eq(user.username, username) }))
+		(await db.query.users.findFirst({ where: eq(users.username, username) }))
 
 	if (!account) {
 		error(500, 'Could not sign in. Please try again.')

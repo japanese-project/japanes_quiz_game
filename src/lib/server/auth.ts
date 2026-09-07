@@ -1,10 +1,10 @@
 import { eq } from 'drizzle-orm'
 import { dev } from '$app/environment'
 import type { Cookies } from '@sveltejs/kit'
-import type { getDb } from './db'
-import { session, user } from './db/schema'
+import type { get_db } from './db'
+import { session, users } from './db/schema'
 
-type Db = ReturnType<typeof getDb>
+type Db = ReturnType<typeof get_db>
 
 export const SESSION_COOKIE = 'session'
 
@@ -39,10 +39,10 @@ export async function validateSession(db: Db, token: string) {
 		.select({
 			sessionId: session.id,
 			expiresAt: session.expiresAt,
-			user: { id: user.id, username: user.username },
+			user: { id: users.id, username: users.username },
 		})
 		.from(session)
-		.innerJoin(user, eq(session.userId, user.id))
+		.innerJoin(users, eq(session.userId, users.id))
 		.where(eq(session.id, id))
 		.limit(1)
 
