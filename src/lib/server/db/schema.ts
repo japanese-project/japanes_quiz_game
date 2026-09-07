@@ -46,7 +46,13 @@ export const questions = sqliteTable('questions', {
 		.notNull()
 		.references(() => quizzes.id, { onDelete: 'cascade' }),
 	prompt: text('prompt').notNull(),
-	order_index: integer('order_index').notNull().default(0),
+	orderIndex: integer('order_index').notNull().default(0),
+	explanation: text('explanation'),
+	translation: text('translation'),
+	image: text('image'),
+	// Stable key from the upstream dataset (e.g. 'N3-G-001'); lets a re-import update
+	// a question instead of inserting a duplicate. Null for questions authored in-app.
+	source_id: text('source_id').unique(),
 })
 
 // --- Choices ---

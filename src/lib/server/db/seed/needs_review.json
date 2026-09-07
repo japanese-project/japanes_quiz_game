@@ -1,0 +1,810 @@
+[
+	{
+		"id": "N3-K-026",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「夏は暑い。」「夏」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"か",
+			"なつ",
+			"なつ",
+			"なつ"
+		],
+		"answer": "なつ"
+	},
+	{
+		"id": "N3-K-027",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「秋は紅葉がきれい。」「秋」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"しゅう",
+			"あき",
+			"あき",
+			"あき"
+		],
+		"answer": "あき"
+	},
+	{
+		"id": "N3-K-028",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「冬は寒い。」「冬」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"とう",
+			"ふゆ",
+			"ふゆ",
+			"ふゆ"
+		],
+		"answer": "ふゆ"
+	},
+	{
+		"id": "N3-K-029",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「朝起きる。」「朝」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ちょう",
+			"あさ",
+			"あさ",
+			"あさ"
+		],
+		"answer": "あさ"
+	},
+	{
+		"id": "N3-K-030",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「昼ご飯を食べる。」「昼」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ちゅう",
+			"ひる",
+			"ひる",
+			"ひる"
+		],
+		"answer": "ひる"
+	},
+	{
+		"id": "N3-K-032",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「今日は何曜日ですか？」「曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ようじつ",
+			"ようび",
+			"ようび",
+			"ようび"
+		],
+		"answer": "ようび"
+	},
+	{
+		"id": "N3-K-033",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「一週間後に会う。」「週」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"しゅう",
+			"しゅう",
+			"しゅ",
+			"しゅう"
+		],
+		"answer": "しゅう"
+	},
+	{
+		"id": "N3-K-034",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「月曜日は忙しい。」「月曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"がつようび",
+			"げつようび",
+			"げつようび",
+			"げつようび"
+		],
+		"answer": "げつようび"
+	},
+	{
+		"id": "N3-K-035",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「火曜日に会う。」「火曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ひようび",
+			"かようび",
+			"かようび",
+			"かようび"
+		],
+		"answer": "かようび"
+	},
+	{
+		"id": "N3-K-036",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「水曜日は休みだ。」「水曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"みずようび",
+			"すいようび",
+			"すいようび",
+			"すいようび"
+		],
+		"answer": "すいようび"
+	},
+	{
+		"id": "N3-K-037",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「木曜日にテストがある。」「木曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"きようび",
+			"もくようび",
+			"もくようび",
+			"もくようび"
+		],
+		"answer": "もくようび"
+	},
+	{
+		"id": "N3-K-038",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「金曜日にパーティーがある。」「金曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"かねようび",
+			"きんようび",
+			"きんようび",
+			"きんようび"
+		],
+		"answer": "きんようび"
+	},
+	{
+		"id": "N3-K-039",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「土曜日に買い物に行く。」「土曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"つちようび",
+			"どようび",
+			"どようび",
+			"どようび"
+		],
+		"answer": "どようび"
+	},
+	{
+		"id": "N3-K-040",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「日曜日は休む。」「日曜日」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ひようび",
+			"にちようび",
+			"にちようび",
+			"にちようび"
+		],
+		"answer": "にちようび"
+	},
+	{
+		"id": "N3-K-041",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「朝ごはんを食べる。」「朝ごはん」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ちょうごはん",
+			"あさごはん",
+			"あさごはん",
+			"あさごはん"
+		],
+		"answer": "あさごはん"
+	},
+	{
+		"id": "N3-K-042",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「昼ごはんはどこで食べる？」「昼ごはん」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ちゅうごはん",
+			"ひるごはん",
+			"ひるごはん",
+			"ひるごはん"
+		],
+		"answer": "ひるごはん"
+	},
+	{
+		"id": "N3-K-043",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「晩ごはんは何時？」「晩ごはん」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ゆうごはん",
+			"ばんごはん",
+			"ばんごはん",
+			"ばんごはん"
+		],
+		"answer": "ばんごはん"
+	},
+	{
+		"id": "N3-K-044",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「一週間前に来た。」「一週間」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"いちしゅうかん",
+			"いっしゅうかん",
+			"いっしゅうかん",
+			"いっしゅうかん"
+		],
+		"answer": "いっしゅうかん"
+	},
+	{
+		"id": "N3-K-045",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「半年ぶりに会う。」「半年」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"はんねん",
+			"はんとし",
+			"はんとし",
+			"はんとし"
+		],
+		"answer": "はんとし"
+	},
+	{
+		"id": "N3-K-046",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「今月は忙しい。」「今月」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"こんげつ",
+			"いまげつ",
+			"こんげつ",
+			"こんげつ"
+		],
+		"answer": "こんげつ"
+	},
+	{
+		"id": "N3-K-047",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「来月旅行に行く。」「来月」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"こげつ",
+			"らいげつ",
+			"らいげつ",
+			"らいげつ"
+		],
+		"answer": "らいげつ"
+	},
+	{
+		"id": "N3-K-048",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「先月引っ越した。」「先月」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"さきげつ",
+			"せんげつ",
+			"せんげつ",
+			"せんげつ"
+		],
+		"answer": "せんげつ"
+	},
+	{
+		"id": "N3-K-049",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「来年には卒業する。」「来年」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"きねん",
+			"らいねん",
+			"らいねん",
+			"らいねん"
+		],
+		"answer": "らいねん"
+	},
+	{
+		"id": "N3-K-050",
+		"level": "N3",
+		"category": "Kanji",
+		"prompt": "「去年の夏は暑かった。」「去年」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"こねん",
+			"きょねん",
+			"きょねん",
+			"きょねん"
+		],
+		"answer": "きょねん"
+	},
+	{
+		"id": "N3-V-008",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "明日の都合を＿＿してください。",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"確認",
+			"確実",
+			"確認",
+			"確認"
+		],
+		"answer": "確認"
+	},
+	{
+		"id": "N3-V-018",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿の改善が必要だ。",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"環境",
+			"境遇",
+			"環境",
+			"環境"
+		],
+		"answer": "環境"
+	},
+	{
+		"id": "N3-V-019",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼の＿＿は優秀だ。",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"能力",
+			"能率",
+			"能力",
+			"能力"
+		],
+		"answer": "能力"
+	},
+	{
+		"id": "N3-V-022",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "＿＿な話を聞いた。",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"興味ある",
+			"興味深い",
+			"興味深い",
+			"興味深い"
+		],
+		"answer": "興味深い"
+	},
+	{
+		"id": "N3-V-024",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼の＿＿は素晴らしい。",
+		"reason": "same prompt as N3-V-024, N3-V-044 but a different correct answer — prompt is ambiguous",
+		"answer": "技術"
+	},
+	{
+		"id": "N3-V-026",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿は長い間続いた。",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"傾向",
+			"傾倒",
+			"傾向",
+			"傾向"
+		],
+		"answer": "傾向"
+	},
+	{
+		"id": "N3-V-029",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "この＿＿を守ってください。",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"規則",
+			"規格",
+			"規則",
+			"規則"
+		],
+		"answer": "規則"
+	},
+	{
+		"id": "N3-V-044",
+		"level": "N3",
+		"category": "Vocabulary",
+		"prompt": "彼の＿＿は素晴らしい。",
+		"reason": "same prompt as N3-V-024, N3-V-044 but a different correct answer — prompt is ambiguous",
+		"answer": "成果"
+	},
+	{
+		"id": "N4-G-001",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "宿題を忘れて＿＿。",
+		"reason": "duplicate prompt of N3-G-023",
+		"answer": "しまった"
+	},
+	{
+		"id": "N4-G-002",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "明日のために、準備して＿＿。",
+		"reason": "duplicate prompt of N3-G-025",
+		"answer": "おく"
+	},
+	{
+		"id": "N4-G-012",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "食べ＿＿お腹が痛い。",
+		"reason": "duplicate prompt of N3-G-029",
+		"answer": "すぎて"
+	},
+	{
+		"id": "N4-G-018",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "彼は今日来る＿＿。",
+		"reason": "duplicate prompt of N3-G-018",
+		"answer": "はずだ"
+	},
+	{
+		"id": "N4-G-027",
+		"level": "N4",
+		"category": "Grammar",
+		"prompt": "日本語が話せる＿＿。",
+		"reason": "duplicate prompt of N3-G-020",
+		"answer": "ようになった"
+	},
+	{
+		"id": "N4-K-029",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「勉強する。」「勉強」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"べんきょう",
+			"べんきょう",
+			"べんきょう",
+			"べんきょう"
+		],
+		"answer": "べんきょう"
+	},
+	{
+		"id": "N4-K-030",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「学校に行く。」「学校」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"がっこう",
+			"がっこう",
+			"がっこう",
+			"がっこう"
+		],
+		"answer": "がっこう"
+	},
+	{
+		"id": "N4-K-031",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「先生が教える。」「先生」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"せんせい",
+			"せんせい",
+			"せんせい",
+			"せんせい"
+		],
+		"answer": "せんせい"
+	},
+	{
+		"id": "N4-K-032",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「学生です。」「学生」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"がくせい",
+			"がくせい",
+			"がくせい",
+			"がくせい"
+		],
+		"answer": "がくせい"
+	},
+	{
+		"id": "N4-K-033",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「本を読む。」「本」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ほん",
+			"ほん",
+			"ほん",
+			"ほん"
+		],
+		"answer": "ほん"
+	},
+	{
+		"id": "N4-K-034",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「雑誌を買う。」「雑誌」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ざっし",
+			"ざっし",
+			"ざっし",
+			"ざっし"
+		],
+		"answer": "ざっし"
+	},
+	{
+		"id": "N4-K-035",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「新聞を読む。」「新聞」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"しんぶん",
+			"しんぶん",
+			"しんぶん",
+			"しんぶん"
+		],
+		"answer": "しんぶん"
+	},
+	{
+		"id": "N4-K-036",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「手紙を書く。」「手紙」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"てがみ",
+			"てがみ",
+			"てがみ",
+			"てがみ"
+		],
+		"answer": "てがみ"
+	},
+	{
+		"id": "N4-K-037",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「電車に乗る。」「電車」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"でんしゃ",
+			"でんしゃ",
+			"でんしゃ",
+			"でんしゃ"
+		],
+		"answer": "でんしゃ"
+	},
+	{
+		"id": "N4-K-038",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「バスで行く。」「バス」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"バス",
+			"バス",
+			"バス",
+			"バス"
+		],
+		"answer": "バス"
+	},
+	{
+		"id": "N4-K-039",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「空港に着く。」「空港」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"くうこう",
+			"くうこう",
+			"くうこう",
+			"くうこう"
+		],
+		"answer": "くうこう"
+	},
+	{
+		"id": "N4-K-040",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「病院に行く。」「病院」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"びょういん",
+			"びょういん",
+			"びょういん",
+			"びょういん"
+		],
+		"answer": "びょういん"
+	},
+	{
+		"id": "N4-K-041",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「薬を飲む。」「薬」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"くすり",
+			"くすり",
+			"くすり",
+			"くすり"
+		],
+		"answer": "くすり"
+	},
+	{
+		"id": "N4-K-042",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「銀行に行く。」「銀行」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ぎんこう",
+			"ぎんこう",
+			"ぎんこう",
+			"ぎんこう"
+		],
+		"answer": "ぎんこう"
+	},
+	{
+		"id": "N4-K-043",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「郵便局に行く。」「郵便局」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"ゆうびんきょく",
+			"ゆうびんきょく",
+			"ゆうびんきょく",
+			"ゆうびんきょく"
+		],
+		"answer": "ゆうびんきょく"
+	},
+	{
+		"id": "N4-K-044",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「図書館で本を借りる。」「図書館」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"としょかん",
+			"としょかん",
+			"としょかん",
+			"としょかん"
+		],
+		"answer": "としょかん"
+	},
+	{
+		"id": "N4-K-045",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「市役所に行く。」「市役所」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"しやくしょ",
+			"しやくしょ",
+			"しやくしょ",
+			"しやくしょ"
+		],
+		"answer": "しやくしょ"
+	},
+	{
+		"id": "N4-K-046",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「警察に届ける。」「警察」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"けいさつ",
+			"けいさつ",
+			"けいさつ",
+			"けいさつ"
+		],
+		"answer": "けいさつ"
+	},
+	{
+		"id": "N4-K-047",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「火事が起こった。」「火事」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"かじ",
+			"かじ",
+			"かじ",
+			"かじ"
+		],
+		"answer": "かじ"
+	},
+	{
+		"id": "N4-K-048",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「お金を払う。」「お金」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"おかね",
+			"おかね",
+			"おかね",
+			"おかね"
+		],
+		"answer": "おかね"
+	},
+	{
+		"id": "N4-K-049",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「時間がない。」「時間」の読み方は？",
+		"reason": "only 1 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"じかん",
+			"じかん",
+			"じかん",
+			"じかん"
+		],
+		"answer": "じかん"
+	},
+	{
+		"id": "N4-K-050",
+		"level": "N4",
+		"category": "Kanji",
+		"prompt": "「一年に一度旅行する。」「年」の読み方は？",
+		"reason": "only 2 unique choice(s) after removing duplicates",
+		"original_choices": [
+			"とし",
+			"ねん",
+			"とし",
+			"ねん"
+		],
+		"answer": "ねん"
+	},
+	{
+		"id": "N4-V-027",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この問題は＿＿。",
+		"reason": "duplicate prompt of N4-G-050",
+		"answer": "簡単だ"
+	},
+	{
+		"id": "N4-V-031",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この部屋は＿＿。",
+		"reason": "same prompt as N4-V-031, N4-V-032 but a different correct answer — prompt is ambiguous",
+		"answer": "明るい"
+	},
+	{
+		"id": "N4-V-032",
+		"level": "N4",
+		"category": "Vocabulary",
+		"prompt": "この部屋は＿＿。",
+		"reason": "same prompt as N4-V-031, N4-V-032 but a different correct answer — prompt is ambiguous",
+		"answer": "暗い"
+	}
+]
