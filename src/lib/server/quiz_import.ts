@@ -1,9 +1,9 @@
 import { eq, inArray } from 'drizzle-orm'
-import type { getDb } from './db'
-import { category, choice, level, question, quiz } from './db/schema'
+import type { get_db } from './db'
+import { categories, choices, levels, questions, quizzes } from './db/schema'
 import { LEVEL_SORT_ORDER, type ImportRecord } from './quiz_records'
 
-type Db = ReturnType<typeof getDb>
+type Db = ReturnType<typeof get_db>
 
 // Bound-parameter and batch limits mean large payloads have to be split.
 const CHUNK = 50
@@ -15,14 +15,14 @@ function chunk<T>(items: T[], size = CHUNK) {
 }
 
 async function ensure_levels(db: Db, names: string[]) {
-	const existing = await db.select().from(level)
+	const existing = await db.select().from(levels)
 	const by_name = new Map(existing.map((row) => [row.name, row.id]))
 	const missing = names.filter((name) => !by_name.has(name))
 
 	if (missing.length) {
 		const inserted = await db
-			.insert(level)
-			.values(missing.map((name) => ({ name, sortOrder: LEVEL_SORT_ORDER[name] })))
+			.insert(levels)
+			.values(missing.map((name) => ({ name, sort_order: LEVEL_SORT_ORDER[name] })))
 			.returning()
 		for (const row of inserted) by_name.set(row.name, row.id)
 	}
@@ -31,13 +31,13 @@ async function ensure_levels(db: Db, names: string[]) {
 }
 
 async function ensure_categories(db: Db, names: string[]) {
-	const existing = await db.select().from(category)
+	const existing = await db.select().from(categories)
 	const by_name = new Map(existing.map((row) => [row.name, row.id]))
 	const missing = names.filter((name) => !by_name.has(name))
 
 	if (missing.length) {
 		const inserted = await db
-			.insert(category)
+			.insert(categories)
 			.values(missing.map((name) => ({ name })))
 			.returning()
 		for (const row of inserted) by_name.set(row.name, row.id)
@@ -46,17 +46,17 @@ async function ensure_categories(db: Db, names: string[]) {
 	return { ids: by_name, created: missing }
 }
 
-type QuizSpec = { levelId: number; categoryId: number; title: string }
+type QuizSpec = { level_id: number; category_id: number; title: string }
 
 async function ensure_quizzes(db: Db, specs: QuizSpec[]) {
-	const existing = await db.select().from(quiz)
+	const existing = await db.select().from(quizzes)
 	const key = (level_id: number, category_id: number) => `${level_id}:${category_id}`
-	const by_key = new Map(existing.map((row) => [key(row.levelId, row.categoryId), row.id]))
-	const missing = specs.filter((spec) => !by_key.has(key(spec.levelId, spec.categoryId)))
+	const by_key = new Map(existing.map((row) => [key(row.level_id, row.category_id), row.id]))
+	const missing = specs.filter((spec) => !by_key.has(key(spec.level_id, spec.category_id)))
 
 	if (missing.length) {
-		const inserted = await db.insert(quiz).values(missing).returning()
-		for (const row of inserted) by_key.set(key(row.levelId, row.categoryId), row.id)
+		const inserted = await db.insert(quizzes).values(missing).returning()
+		for (const row of inserted) by_key.set(key(row.level_id, row.category_id), row.id)
 	}
 
 	return { ids: by_key, created: missing.map((spec) => spec.title) }
@@ -72,8 +72,8 @@ export async function import_questions(db: Db, records: ImportRecord[]) {
 	const specs = new Map<string, QuizSpec>()
 	for (const record of records) {
 		specs.set(quiz_key(record), {
-			levelId: levels.ids.get(record.level)!,
-			categoryId: categories.ids.get(record.category)!,
+			level_id: levels.ids.get(record.level)!,
+			category_id: categories.ids.get(record.category)!,
 			title: `${record.level} ${record.category}`,
 		})
 	}
@@ -82,9 +82,9 @@ export async function import_questions(db: Db, records: ImportRecord[]) {
 	const existing_questions = new Map<string, string>()
 	for (const batch of chunk(records.map((r) => r.source_id))) {
 		const rows = await db
-			.select({ id: question.id, source_id: question.source_id })
-			.from(question)
-			.where(inArray(question.source_id, batch))
+			.select({ id: questions.id, source_id: questions.source_id })
+			.from(questions)
+			.where(inArray(questions.source_id, batch))
 		for (const row of rows) if (row.source_id) existing_questions.set(row.source_id, row.id)
 	}
 
@@ -108,7 +108,7 @@ export async function import_questions(db: Db, records: ImportRecord[]) {
 			const question_id = existing_id ?? crypto.randomUUID()
 
 			const values = {
-				quizId: quizzes.ids.get(quiz_key(record))!,
+				quiz_id: quizzes.ids.get(quiz_key(record))!,
 				prompt: record.prompt,
 				orderIndex: order_indexes.get(record.source_id) ?? 0,
 				explanation: record.explanation ?? null,
@@ -118,21 +118,21 @@ export async function import_questions(db: Db, records: ImportRecord[]) {
 
 			if (existing_id) {
 				updated++
-				statements.push(db.update(question).set(values).where(eq(question.id, existing_id)))
-				statements.push(db.delete(choice).where(eq(choice.questionId, existing_id)))
+				statements.push(db.update(questions).set(values).where(eq(questions.id, existing_id)))
+				statements.push(db.delete(choices).where(eq(choices.question_id, existing_id)))
 			} else {
 				created++
 				statements.push(
-					db.insert(question).values({ id: question_id, source_id: record.source_id, ...values }),
+					db.insert(questions).values({ id: question_id, source_id: record.source_id, ...values }),
 				)
 			}
 
 			statements.push(
-				db.insert(choice).values(
+				db.insert(choices).values(
 					record.choices.map((c) => ({
-						questionId: question_id,
+						question_id,
 						text: c.text,
-						isCorrect: c.is_correct,
+						is_correct: c.is_correct,
 					})),
 				),
 			)
