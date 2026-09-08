@@ -2,10 +2,13 @@
 	import { onMount } from 'svelte'
 	import Dashboard from '$lib/components/Dashboard.svelte'
 	import LoginScreen from '$lib/components/LoginScreen.svelte'
+	import CategoryScreen from '$lib/components/CategoryScreen.svelte'
+	import ModeScreen from '$lib/components/ModeScreen.svelte'
 	import QuizScreen from '$lib/components/QuizScreen.svelte'
 	import ResultScreen from '$lib/components/ResultScreen.svelte'
-	import { questions } from '$lib/data/questions'
-	import type { Level, Screen, UserProgress } from '$lib/types'
+	import { fetch_quiz, fetch_quizzes } from '$lib/api/quizzes'
+	import { round_size, type RoundMode } from '$lib/quiz_config'
+	import type { Level, Quiz, QuizSummary, Screen, UserProgress } from '$lib/types'
 	import type { PageData } from './$types'
 
 	let { data }: { data: PageData } = $props()
@@ -24,7 +27,12 @@
 	let progress = $state<UserProgress>(emptyProgress())
 	let profiles = $state<UserProfiles>({})
 	let ready = $state(false)
-	let activeQuestions = $derived(questions.filter((question) => question.level === selectedLevel))
+	let level_quizzes = $state<QuizSummary[]>([])
+	let active_quiz = $state<Quiz | null>(null)
+	let selected_quiz = $state<QuizSummary | null>(null)
+	let active_round = $state<{ quiz_id: string; limit: number } | null>(null)
+	let loading = $state(false)
+	let load_error = $state('')
 	let rankings = $derived(
 		Object.entries(profiles)
 			.map(([name, userProgress]) => {
@@ -98,9 +106,50 @@
 		screen = 'login'
 	}
 
-	function startQuiz(level: Level) {
+	async function startQuiz(level: Level) {
 		selectedLevel = level
-		screen = 'quiz'
+		loading = true
+		load_error = ''
+
+		try {
+			level_quizzes = await fetch_quizzes(level)
+			screen = 'category'
+		} catch (thrown) {
+			load_error = thrown instanceof Error ? thrown.message : 'Could not load quizzes.'
+		} finally {
+			loading = false
+		}
+	}
+
+	function select_quiz(quiz: QuizSummary) {
+		selected_quiz = quiz
+		screen = 'mode'
+	}
+
+	async function start_round(mode: RoundMode) {
+		if (!selected_quiz) return
+		await load_quiz(selected_quiz.id, round_size(mode, selected_quiz.question_count))
+	}
+
+	// Refetches rather than replaying the cached questions, so a retry draws a new sample
+	// at the same length the player originally chose.
+	async function retry_quiz() {
+		if (active_round) await load_quiz(active_round.quiz_id, active_round.limit)
+	}
+
+	async function load_quiz(quiz_id: string, limit: number) {
+		loading = true
+		load_error = ''
+
+		try {
+			active_quiz = await fetch_quiz(quiz_id, limit)
+			active_round = { quiz_id, limit }
+			screen = 'quiz'
+		} catch (thrown) {
+			load_error = thrown instanceof Error ? thrown.message : 'Could not load that quiz.'
+		} finally {
+			loading = false
+		}
 	}
 
 	function finishQuiz(score: number) {
@@ -109,7 +158,7 @@
 			...progress,
 			[selectedLevel]: {
 				score: oldLevel.score + score,
-				answered: oldLevel.answered + activeQuestions.length,
+				answered: oldLevel.answered + (active_quiz?.questions.length ?? 0),
 				best: Math.max(oldLevel.best, score),
 			},
 		}
@@ -134,18 +183,44 @@
 	{:else}
 		{#if screen === 'dashboard'}
 			<Dashboard {username} {rankings} onStart={startQuiz} onLogout={logout} />
-		{:else if screen === 'quiz'}
-			<QuizScreen
+		{:else if screen === 'category'}
+			<CategoryScreen
 				level={selectedLevel}
-				questions={activeQuestions}
-				onFinish={finishQuiz}
-				onExit={() => (screen = 'dashboard')}
+				quizzes={level_quizzes}
+				on_select={select_quiz}
+				on_back={() => (screen = 'dashboard')}
+			/>
+		{:else if screen === 'mode' && selected_quiz}
+			<ModeScreen
+				quiz={selected_quiz}
+				on_start={start_round}
+				on_back={() => (screen = 'category')}
+			/>
+		{:else if screen === 'quiz' && active_quiz}
+			<QuizScreen
+				quiz={active_quiz}
+				on_finish={finishQuiz}
+				on_exit={() => (screen = 'dashboard')}
 			/>
 		{:else}
 			<ResultScreen
 				onDashboard={() => (screen = 'dashboard')}
-				onRetry={() => startQuiz(selectedLevel)}
+				onRetry={() => (active_round ? retry_quiz() : startQuiz(selectedLevel))}
 			/>
+		{/if}
+
+		{#if loading}
+			<div class="fixed inset-0 grid place-items-center bg-[#071e3b]/70">
+				<div class="size-8 animate-spin rounded-full border-4 border-white/20 border-t-white"></div>
+			</div>
+		{/if}
+
+		{#if load_error}
+			<div
+				class="fixed inset-x-0 bottom-6 mx-auto w-fit rounded-xl border border-red-400/40 bg-red-500 px-5 py-3 text-sm font-bold text-white shadow-lg"
+			>
+				{load_error}
+			</div>
 		{/if}
 	{/if}
 {:else}
