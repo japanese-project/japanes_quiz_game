@@ -1,11 +1,11 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "96ce0d69-5125-484e-9549-a968c8614918",
-  "prevId": "5052dee2-8500-4a67-a1fc-8e48d320e6a5",
+  "id": "5312b102-311d-4e52-b0f9-18a2874f5e10",
+  "prevId": "fb9e55d7-1a71-4077-bec9-0a8de3db19b7",
   "tables": {
-    "category": {
-      "name": "category",
+    "categories": {
+      "name": "categories",
       "columns": {
         "id": {
           "name": "id",
@@ -23,8 +23,8 @@
         }
       },
       "indexes": {
-        "category_name_unique": {
-          "name": "category_name_unique",
+        "categories_name_unique": {
+          "name": "categories_name_unique",
           "columns": [
             "name"
           ],
@@ -36,8 +36,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "choice": {
-      "name": "choice",
+    "choices": {
+      "name": "choices",
       "columns": {
         "id": {
           "name": "id",
@@ -71,10 +71,10 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "choice_question_id_question_id_fk": {
-          "name": "choice_question_id_question_id_fk",
-          "tableFrom": "choice",
-          "tableTo": "question",
+        "choices_question_id_questions_id_fk": {
+          "name": "choices_question_id_questions_id_fk",
+          "tableFrom": "choices",
+          "tableTo": "questions",
           "columnsFrom": [
             "question_id"
           ],
@@ -89,8 +89,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "level": {
-      "name": "level",
+    "levels": {
+      "name": "levels",
       "columns": {
         "id": {
           "name": "id",
@@ -115,8 +115,8 @@
         }
       },
       "indexes": {
-        "level_name_unique": {
-          "name": "level_name_unique",
+        "levels_name_unique": {
+          "name": "levels_name_unique",
           "columns": [
             "name"
           ],
@@ -128,8 +128,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "question": {
-      "name": "question",
+    "questions": {
+      "name": "questions",
       "columns": {
         "id": {
           "name": "id",
@@ -159,14 +159,50 @@
           "notNull": true,
           "autoincrement": false,
           "default": 0
+        },
+        "explanation": {
+          "name": "explanation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "translation": {
+          "name": "translation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "source_id": {
+          "name": "source_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
         }
       },
-      "indexes": {},
+      "indexes": {
+        "questions_source_id_unique": {
+          "name": "questions_source_id_unique",
+          "columns": [
+            "source_id"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {
-        "question_quiz_id_quiz_id_fk": {
-          "name": "question_quiz_id_quiz_id_fk",
-          "tableFrom": "question",
-          "tableTo": "quiz",
+        "questions_quiz_id_quizzes_id_fk": {
+          "name": "questions_quiz_id_quizzes_id_fk",
+          "tableFrom": "questions",
+          "tableTo": "quizzes",
           "columnsFrom": [
             "quiz_id"
           ],
@@ -181,80 +217,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "quiz": {
-      "name": "quiz",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "text",
-          "primaryKey": true,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "level_id": {
-          "name": "level_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "category_id": {
-          "name": "category_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "title": {
-          "name": "title",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "description": {
-          "name": "description",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        }
-      },
-      "indexes": {},
-      "foreignKeys": {
-        "quiz_level_id_level_id_fk": {
-          "name": "quiz_level_id_level_id_fk",
-          "tableFrom": "quiz",
-          "tableTo": "level",
-          "columnsFrom": [
-            "level_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        },
-        "quiz_category_id_category_id_fk": {
-          "name": "quiz_category_id_category_id_fk",
-          "tableFrom": "quiz",
-          "tableTo": "category",
-          "columnsFrom": [
-            "category_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
-    "quiz_attempt": {
-      "name": "quiz_attempt",
+    "quiz_attempts": {
+      "name": "quiz_attempts",
       "columns": {
         "id": {
           "name": "id",
@@ -308,10 +272,10 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "quiz_attempt_user_id_user_id_fk": {
-          "name": "quiz_attempt_user_id_user_id_fk",
-          "tableFrom": "quiz_attempt",
-          "tableTo": "user",
+        "quiz_attempts_user_id_users_id_fk": {
+          "name": "quiz_attempts_user_id_users_id_fk",
+          "tableFrom": "quiz_attempts",
+          "tableTo": "users",
           "columnsFrom": [
             "user_id"
           ],
@@ -321,10 +285,10 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "quiz_attempt_quiz_id_quiz_id_fk": {
-          "name": "quiz_attempt_quiz_id_quiz_id_fk",
-          "tableFrom": "quiz_attempt",
-          "tableTo": "quiz",
+        "quiz_attempts_quiz_id_quizzes_id_fk": {
+          "name": "quiz_attempts_quiz_id_quizzes_id_fk",
+          "tableFrom": "quiz_attempts",
+          "tableTo": "quizzes",
           "columnsFrom": [
             "quiz_id"
           ],
@@ -339,8 +303,132 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "user": {
-      "name": "user",
+    "quizzes": {
+      "name": "quizzes",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "level_id": {
+          "name": "level_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "category_id": {
+          "name": "category_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "quizzes_level_id_levels_id_fk": {
+          "name": "quizzes_level_id_levels_id_fk",
+          "tableFrom": "quizzes",
+          "tableTo": "levels",
+          "columnsFrom": [
+            "level_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "quizzes_category_id_categories_id_fk": {
+          "name": "quizzes_category_id_categories_id_fk",
+          "tableFrom": "quizzes",
+          "tableTo": "categories",
+          "columnsFrom": [
+            "category_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "session": {
+      "name": "session",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "session_user_id_users_id_fk": {
+          "name": "session_user_id_users_id_fk",
+          "tableFrom": "session",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "users": {
+      "name": "users",
       "columns": {
         "id": {
           "name": "id",
@@ -358,8 +446,8 @@
         }
       },
       "indexes": {
-        "user_username_unique": {
-          "name": "user_username_unique",
+        "users_username_unique": {
+          "name": "users_username_unique",
           "columns": [
             "username"
           ],
@@ -376,7 +464,15 @@
   "enums": {},
   "_meta": {
     "schemas": {},
-    "tables": {},
+    "tables": {
+      "\"category\"": "\"categories\"",
+      "\"choice\"": "\"choices\"",
+      "\"level\"": "\"levels\"",
+      "\"question\"": "\"questions\"",
+      "\"quiz_attempt\"": "\"quiz_attempts\"",
+      "\"quiz\"": "\"quizzes\"",
+      "\"user\"": "\"users\""
+    },
     "columns": {}
   },
   "internal": {

@@ -1,19 +1,22 @@
 <script lang="ts">
-	import Icon from './Icon.svelte';
-	import patternBackground from '$lib/assets/pattern1.png';
+	import Icon from './Icon.svelte'
+	import patternBackground from '$lib/assets/pattern1.png'
 
-	let { onLogin }: { onLogin: (username: string) => void } = $props();
-	let username = $state('');
-	let error = $state('');
+	let { onLogin }: { onLogin: (username: string) => Promise<string | null> } = $props()
+	let username = $state('')
+	let error = $state('')
+	let pending = $state(false)
 
-	function submit(event: SubmitEvent) {
-		event.preventDefault();
-		const cleanName = username.trim();
+	async function submit(event: SubmitEvent) {
+		event.preventDefault()
+		const cleanName = username.trim()
 		if (cleanName.length < 2) {
-			error = 'Please enter a username with at least 2 characters.';
-			return;
+			error = 'Please enter a username with at least 2 characters.'
+			return
 		}
-		onLogin(cleanName);
+		pending = true
+		error = (await onLogin(cleanName)) ?? ''
+		pending = false
 	}
 </script>
 
@@ -60,6 +63,7 @@
 					<input
 						bind:value={username}
 						oninput={() => (error = '')}
+						disabled={pending}
 						maxlength="24"
 						autocomplete="username"
 						placeholder="e.g. Sakura"
@@ -73,8 +77,9 @@
 			</label>
 			<button
 				type="submit"
-				class="mt-4 flex h-14 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#d52b45] text-sm font-black text-white shadow-lg shadow-black/20 transition hover:bg-[#bd2038]"
-				>Start Learning <Icon name="arrow" size={18} /></button
+				disabled={pending}
+				class="mt-4 flex h-14 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#d52b45] text-sm font-black text-white shadow-lg shadow-black/20 transition hover:bg-[#bd2038] disabled:cursor-not-allowed disabled:opacity-70"
+				>{pending ? 'Signing in...' : 'Start Learning'} <Icon name="arrow" size={18} /></button
 			>
 		</form>
 

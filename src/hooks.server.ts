@@ -1,18 +1,34 @@
-import type { Handle } from '@sveltejs/kit';
-import { eq } from 'drizzle-orm';
-import { getDb } from '$lib/server/db';
-import { user } from '$lib/server/db/schema';
+import type { Handle } from '@sveltejs/kit'
+import { get_db } from '$lib/server/db'
+import {
+	SESSION_COOKIE,
+	clearSessionCookie,
+	setSessionCookie,
+	validateSession,
+} from '$lib/server/auth'
 
 export const handle: Handle = async ({ event, resolve }) => {
-	const userId = event.cookies.get('user_id');
+	const token = event.cookies.get(SESSION_COOKIE)
 
-	if (userId) {
-		const db = getDb(event.platform!.env.DB);
-		const found = await db.query.user.findFirst({ where: eq(user.id, userId) });
-		event.locals.user = found ?? null;
+	if (token) {
+		const db = get_db(event.platform!.env)
+		const result = await validateSession(db, token)
+
+		if (result) {
+			if (result.renewed) {
+				setSessionCookie(event.cookies, token, result.session.expiresAt)
+			}
+			event.locals.user = result.user
+			event.locals.session = result.session
+		} else {
+			clearSessionCookie(event.cookies)
+			event.locals.user = null
+			event.locals.session = null
+		}
 	} else {
-		event.locals.user = null;
+		event.locals.user = null
+		event.locals.session = null
 	}
 
-	return resolve(event);
-};
+	return resolve(event)
+}

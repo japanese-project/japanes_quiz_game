@@ -1,7 +1,7 @@
 import { eq } from 'drizzle-orm';
 import { fail, redirect } from '@sveltejs/kit';
-import { getDb } from '$lib/server/db';
-import { user } from '$lib/server/db/schema';
+import { get_db } from '$lib/server/db';
+import { users } from '$lib/server/db/schema';
 import type { Actions, PageServerLoad } from './$types';
 
 const USER_ID_COOKIE = 'user_id';
@@ -20,11 +20,11 @@ export const actions: Actions = {
 			return fail(400, { error: 'Please enter a username.' });
 		}
 
-		const db = getDb(platform!.env.DB);
-		let existing = await db.query.user.findFirst({ where: eq(user.username, username) });
+		const db = get_db(platform!.env);
+		let existing = await db.query.users.findFirst({ where: eq(users.username, username) });
 
 		if (!existing) {
-			[existing] = await db.insert(user).values({ username }).returning();
+			[existing] = await db.insert(users).values({ username }).returning();
 		}
 
 		cookies.set(USER_ID_COOKIE, existing.id, {
