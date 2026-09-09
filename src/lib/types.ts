@@ -20,5 +20,3 @@ export type LevelProgress = {
 };
 
 export type UserProgress = Record<Level, LevelProgress>;
-
-export type Screen = 'login' | 'dashboard' | 'quiz' | 'result';
