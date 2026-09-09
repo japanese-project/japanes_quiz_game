@@ -96,7 +96,7 @@
 			<div class="mb-8 flex items-center justify-between gap-5">
 				<div>
 					<h2 class="text-2xl font-black tracking-tight text-white">Choose a level</h2>
-					<p class="mt-2 text-sm text-blue-100/65">Each quiz contains 6 mixed questions</p>
+					<p class="mt-2 text-sm text-blue-100/65">Pick a level, then choose a category</p>
 				</div>
 				<span
 					class="hidden rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm font-bold text-blue-100/75 backdrop-blur-sm sm:inline-flex"
@@ -138,7 +138,7 @@
 									>{/each}
 							</div>
 							<div class="mt-auto flex items-center justify-between border-t border-white/15 pt-6">
-								<span class="text-sm font-medium text-blue-100/65">6 questions</span>
+								<span class="text-sm font-medium text-blue-100/65">Easy, Medium or Hard</span>
 								<button
 									onclick={() => onStart(item.level)}
 									class="flex cursor-pointer items-center gap-3 rounded-full bg-[#e52f46] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#f13b51] hover:shadow-lg"

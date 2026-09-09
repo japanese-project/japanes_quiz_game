@@ -1,7 +1,9 @@
 /** Validation for imported quiz records. Deliberately free of database imports so it can
  *  run under plain node (the seed cleaner) as well as in the worker. */
 
-export const LEVEL_SORT_ORDER: Record<string, number> = { N5: 1, N4: 2, N3: 3, N2: 4, N1: 5 }
+// The app ships N4 and N3 only; anything else is rejected at import rather than
+// creating a level row nothing can play.
+export const LEVEL_SORT_ORDER: Record<string, number> = { N4: 1, N3: 2 }
 
 const MIN_CHOICES = 3
 
