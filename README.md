@@ -14,7 +14,7 @@ pnpm dlx sv create my-app
 To recreate this project with the same configuration:
 
 ```sh
-# recreate this project
+# recreate this projecdadasdat
 pnpm dlx sv@0.17.0 create --template minimal --types ts --add prettier eslint vitest="usages:unit,component" playwright tailwindcss="plugins:typography" drizzle="database:d1" --install pnpm japanese-quiz-game
 ```
 

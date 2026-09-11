@@ -45,6 +45,4 @@ export type LevelProgress = {
 	best: number
 }
 
-export type UserProgress = Record<Level, LevelProgress>
-
-export type Screen = 'login' | 'dashboard' | 'category' | 'mode' | 'quiz' | 'result'
+export type UserProgress = Record<Level, LevelProgress>;
