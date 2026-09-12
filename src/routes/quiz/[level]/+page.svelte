@@ -4,7 +4,7 @@
 	import { resolve } from '$app/paths'
 	import LoadingScreen from '$lib/components/LoadingScreen.svelte'
 	import QuizScreen from '$lib/components/QuizScreen.svelte'
-	import { fetch_quizzes, fetch_quiz } from '$lib/api/quizzes'
+	import { fetch_quizzes, fetch_quiz, submit_attempt } from '$lib/api/quizzes'
 	import { saveQuizResult } from '$lib/client/progress'
 	import type { Quiz } from '$lib/types'
 	import type { PageData } from './$types'
@@ -31,14 +31,17 @@
 		}
 	})
 
-	function finish(score: number, correct: number) {
+	async function finish(score: number, correct: number) {
 		if (data.user && quiz) {
+			// Save locally (for the result screen display)
 			saveQuizResult(data.user.username, {
 				level: data.level,
 				score,
 				correct,
 				total: quiz.questions.length,
 			})
+			// Persist to the server so it counts on the leaderboard
+			await submit_attempt(quiz.id, score, correct, quiz.questions.length)
 		}
 		void goto(resolve('/result'))
 	}
