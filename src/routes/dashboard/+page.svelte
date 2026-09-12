@@ -1,27 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import { goto } from '$app/navigation'
 	import { resolve } from '$app/paths'
 	import Dashboard from '$lib/components/Dashboard.svelte'
-	import LoadingScreen from '$lib/components/LoadingScreen.svelte'
-	import { getSession, signOut } from '$lib/client/progress'
 	import type { Level } from '$lib/types'
+	import type { PageData } from './$types'
 
-	let ready = $state(false)
-	let username = $state('')
+	let { data }: { data: PageData } = $props()
 
-	onMount(() => {
-		const session = getSession()
-		if (!session.username) {
-			void goto(resolve('/'), { replaceState: true })
-			return
-		}
-		username = session.username
-		ready = true
-	})
-
-	function logout() {
-		signOut()
+	async function logout() {
+		await fetch('/api/auth/logout', { method: 'POST' }).catch(() => null)
 		void goto(resolve('/'))
 	}
 
@@ -32,8 +19,6 @@
 
 <svelte:head><title>Dashboard | Japanese Quest</title></svelte:head>
 
-{#if ready}
-	<Dashboard {username} onStart={startQuiz} onLogout={logout} />
-{:else}
-	<LoadingScreen />
+{#if data.user}
+	<Dashboard username={data.user.username} onStart={startQuiz} onLogout={logout} />
 {/if}
