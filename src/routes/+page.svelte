@@ -1,24 +1,37 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import { goto } from '$app/navigation'
 	import { resolve } from '$app/paths'
 	import LoginScreen from '$lib/components/LoginScreen.svelte'
-	import LoadingScreen from '$lib/components/LoadingScreen.svelte'
-	import { getSession, signIn } from '$lib/client/progress'
+	import { signIn } from '$lib/client/progress'
+	import type { PageData } from './$types'
 
-	let ready = $state(false)
+	let { data }: { data: PageData } = $props()
 
-	onMount(() => {
-		if (getSession().username) {
+	// If already logged in (server says so), redirect immediately.
+	$effect(() => {
+		if (data.user) {
 			void goto(resolve('/dashboard'), { replaceState: true })
-			return
 		}
-		ready = true
 	})
 
-	function login(username: string) {
-		signIn(username)
-		void goto(resolve('/dashboard'))
+	async function login(username: string): Promise<string | null> {
+		try {
+			const res = await fetch('/api/auth/login', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ username }),
+			})
+			if (!res.ok) {
+				const text = await res.text()
+				return text || 'Could not sign in. Please try again.'
+			}
+			// Keep localStorage in sync so other pages that read it still work.
+			signIn(username)
+			void goto(resolve('/dashboard'))
+			return null
+		} catch {
+			return 'Network error. Please check your connection and try again.'
+		}
 	}
 </script>
 
@@ -30,8 +43,6 @@
 	/>
 </svelte:head>
 
-{#if ready}
+{#if !data.user}
 	<LoginScreen onLogin={login} />
-{:else}
-	<LoadingScreen />
 {/if}

@@ -4,16 +4,14 @@
 	import { resolve } from '$app/paths'
 	import LoadingScreen from '$lib/components/LoadingScreen.svelte'
 	import ResultScreen from '$lib/components/ResultScreen.svelte'
-	import { getLastResult, getSession, type QuizResult } from '$lib/client/progress'
+	import { getLastResult, type QuizResult } from '$lib/client/progress'
+	import type { PageData } from './$types'
 
+	let { data }: { data: PageData } = $props()
 	let ready = $state(false)
 	let result = $state<QuizResult | null>(null)
 
 	onMount(() => {
-		if (!getSession().username) {
-			void goto(resolve('/'), { replaceState: true })
-			return
-		}
 		result = getLastResult()
 		if (!result) {
 			void goto(resolve('/dashboard'), { replaceState: true })
