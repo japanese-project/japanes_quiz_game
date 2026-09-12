@@ -1,44 +1,55 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte'
 	import patternBackground from '$lib/assets/pattern1.png'
-	import type { Level, Question } from '$lib/types'
+	import type { AnswerResult, Level, Quiz } from '$lib/types'
+	import { submit_answer } from '$lib/api/quizzes'
 	import AnswerOption from './AnswerOption.svelte'
 
 	let {
 		level,
-		questions,
+		quiz,
 		onFinish,
 		onExit,
 	}: {
 		level: Level
-		questions: Question[]
+		quiz: Quiz
 		onFinish: (score: number, correct: number) => void
 		onExit: () => void
 	} = $props()
-	let index = $state(0)
-	let selected = $state<number | null>(null)
-	let submitted = $state(false)
-	let correct = $state(0)
-	let advanceTimer: ReturnType<typeof setTimeout> | undefined
-	let current = $derived(questions[index])
-	let progress = $derived(Math.round(((index + (submitted ? 1 : 0)) / questions.length) * 100))
 
-	function selectAnswer(choiceIndex: number) {
-		if (submitted) return
-		selected = choiceIndex
-		submitted = true
-		if (choiceIndex === current.answer) correct += 1
-		advanceTimer = setTimeout(next, 1000)
+	let index = $state(0)
+	let selected = $state<string | null>(null)   // selected choice id
+	let result = $state<AnswerResult | null>(null) // from API after submitting
+	let checking = $state(false)                   // waiting for API response
+	let correctCount = $state(0)
+	let advanceTimer: ReturnType<typeof setTimeout> | undefined
+
+	let current = $derived(quiz.questions[index])
+	let progress = $derived(Math.round(((index + (result ? 1 : 0)) / quiz.questions.length) * 100))
+
+	async function selectAnswer(choice_id: string) {
+		if (result || checking) return
+		selected = choice_id
+		checking = true
+		try {
+			result = await submit_answer(quiz.id, choice_id)
+			if (result.is_correct) correctCount += 1
+		} catch {
+			// If the API call fails, treat the answer as wrong and continue
+			result = { is_correct: false, correct_choice_id: null, explanation: null }
+		}
+		checking = false
+		advanceTimer = setTimeout(next, 1500)
 	}
 
 	function next() {
-		if (index === questions.length - 1) {
-			onFinish(correct * 10, correct)
+		if (index === quiz.questions.length - 1) {
+			onFinish(correctCount * 10, correctCount)
 			return
 		}
 		index += 1
 		selected = null
-		submitted = false
+		result = null
 	}
 
 	onDestroy(() => {
@@ -60,7 +71,7 @@
 			<span class="rounded-full bg-[#e52f46] px-3 py-1.5 text-xs font-black text-white"
 				>{level}</span
 			><span class="text-sm font-bold text-blue-100/70"
-				>Question {index + 1} / {questions.length}</span
+				>Question {index + 1} / {quiz.questions.length}</span
 			>
 		</div>
 	</div>
@@ -86,37 +97,43 @@
 				</div>{/if}
 			<h1 class="mt-7 text-lg leading-8 font-black text-blue-50 sm:text-xl">{current.prompt}</h1>
 			<div class="mt-7 grid gap-3 sm:grid-cols-2">
-				{#each current.choices as choice, choiceIndex (`${current.id}-${choiceIndex}`)}
+				{#each current.choices as choice, choiceIndex (choice.id)}
 					<AnswerOption
 						{choice}
 						index={choiceIndex}
-						answer={current.answer}
-						{selected}
-						{submitted}
+						selected={selected}
+						correct_choice_id={result?.correct_choice_id ?? null}
+						submitted={!!result}
+						{checking}
 						onSelect={selectAnswer}
 					/>
 				{/each}
 			</div>
 
-			{#if submitted}
+			{#if checking}
+				<div class="mt-6 flex items-center gap-2 text-sm font-bold text-blue-100/50">
+					<span class="size-4 animate-spin rounded-full border-2 border-current border-t-transparent"></span>
+					Checking…
+				</div>
+			{:else if result}
 				<div
-					class="mt-6 rounded-xl border p-4 {selected === current.answer
+					class="mt-6 rounded-xl border p-4 {result.is_correct
 						? 'border-emerald-400/40 bg-emerald-400/10'
 						: 'border-amber-300/40 bg-amber-300/10'}"
 				>
 					<p
-						class="text-sm font-black {selected === current.answer
-							? 'text-emerald-300'
-							: 'text-amber-300'}"
+						class="text-sm font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}"
 					>
-						{selected === current.answer ? 'Correct!' : 'Not quite. Review the correct answer.'}
+						{result.is_correct ? 'Correct!' : 'Not quite. Review the correct answer.'}
 					</p>
-					<p class="mt-1 text-sm leading-6 text-blue-100/70">{current.explanation}</p>
+					{#if result.explanation}
+						<p class="mt-1 text-sm leading-6 text-blue-100/70">{result.explanation}</p>
+					{/if}
 				</div>
 			{/if}
 
 			<div class="mt-auto min-h-8 pt-8 text-right text-xs font-bold text-blue-100/45">
-				{#if submitted}Continuing automatically…{/if}
+				{#if result}Continuing automatically…{/if}
 			</div>
 		</div>
 	</section>
