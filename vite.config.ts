@@ -19,6 +19,11 @@ export default defineConfig({
         runes: ({ filename }) =>
           filename.split(/[/\\]/).includes('node_modules') ? undefined : true,
       },
+
+      experimental: {
+        remoteFunctions: true
+      },
+
       typescript: {
         config: (config) => {
           config.include.push('../drizzle.config.ts')
