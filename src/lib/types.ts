@@ -45,4 +45,9 @@ export type LevelProgress = {
 	best: number
 }
 
-export type UserProgress = Record<Level, LevelProgress>;
+export type UserProgress = Record<Level, LevelProgress>
+
+export type LeaderboardEntry = {
+	username: string
+	totalScore: number
+}
