@@ -9,9 +9,7 @@ import type { RequestHandler } from './$types'
 const DEFAULT_LIMIT = 10
 const MAX_LIMIT = 50
 
-// Query parameters are client input: fall back to a sane default when a value is
-// missing or not a whole number, and clamp the result so a single bad value can't
-// request an unbounded page.
+
 function int_param(raw: string | null, fallback: number) {
 	const parsed = raw === null || raw === '' ? NaN : Number(raw)
 	return Number.isInteger(parsed) ? parsed : fallback
@@ -20,8 +18,6 @@ function int_param(raw: string | null, fallback: number) {
 export const POST: RequestHandler = async ({ request, platform }) => {
 	const expected = platform!.env.IMPORT_TOKEN
 
-	// Fail closed: an unset token must not leave the endpoint open, since anyone who
-	// reached it could otherwise replace every question in the game.
 	if (!expected) {
 		error(503, 'Import is not configured. Set the IMPORT_TOKEN secret.')
 	}
