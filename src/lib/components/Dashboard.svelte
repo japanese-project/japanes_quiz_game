@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Level } from '$lib/types'
+	import { QUESTIONS_PER_ROUND } from '$lib/quiz_config'
 	import AppShell from './AppShell.svelte'
 	import LevelCard from './LevelCard.svelte'
 
@@ -43,7 +44,7 @@
 	<div class="mb-8 flex items-center justify-between gap-5">
 		<div>
 			<h1 class="text-2xl font-black tracking-tight text-white">Choose a level</h1>
-			<p class="mt-2 text-sm text-blue-100/65">Each quiz contains 6 mixed questions</p>
+			<p class="mt-2 text-sm text-blue-100/65">Each quiz contains {QUESTIONS_PER_ROUND} mixed questions</p>
 		</div>
 		<span
 			class="hidden rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm font-bold text-blue-100/75 backdrop-blur-sm sm:inline-flex"

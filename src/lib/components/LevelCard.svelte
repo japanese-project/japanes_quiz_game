@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Level } from '$lib/types'
 	import Icon from './Icon.svelte'
+	import { QUESTIONS_PER_ROUND } from '$lib/quiz_config'
 
 	let {
 		level,
@@ -54,7 +55,7 @@
 			{/each}
 		</div>
 		<div class="mt-auto flex items-center justify-between border-t border-white/15 pt-6">
-			<span class="text-sm font-medium text-blue-100/65">6 questions</span>
+			<span class="text-sm font-medium text-blue-100/65">{QUESTIONS_PER_ROUND} questions</span>
 			<button
 				onclick={() => onStart(level)}
 				class="flex cursor-pointer items-center gap-3 rounded-full bg-[#e52f46] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#f13b51] hover:shadow-lg"
