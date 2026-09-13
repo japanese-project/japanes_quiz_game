@@ -12,7 +12,7 @@
 		children,
 	}: {
 		username: string
-		active: 'quizzes' | 'leaderboard'
+		active: 'quizzes' | 'leaderboard' | 'credits'
 		onLogout: () => void
 		children: Snippet
 	} = $props()
@@ -49,6 +49,15 @@
 							? 'bg-[#e52f46] text-white shadow-sm'
 							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
 						><Icon name="trophy" size={18} /> Leaderboard</a
+					>
+					<a
+						href={resolve('/credits')}
+						aria-current={active === 'credits' ? 'page' : undefined}
+						class="flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-black transition sm:px-7 {active ===
+						'credits'
+							? 'bg-[#e52f46] text-white shadow-sm'
+							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
+						><Icon name="users" size={18} /> <span class="hidden md:inline">Credits</span></a
 					>
 				</nav>
 				<button
