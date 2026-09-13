@@ -1,0 +1,80 @@
+[
+	{
+		"id": 3,
+		"name": "チャムナンさん",
+		"role": "PR Reviewer & Backend Developer",
+		"image": "Chamnan Kheng.png",
+		"tasks": [
+			"Built reusable Svelte components for the application.",
+			"Implemented the interactive quiz and progress flows.",
+			"Connected the frontend screens to application APIs."
+		],
+		"skills": ["Svelte", "TypeScript", "Tailwind"],
+		"color": "#22d3ee"
+	},
+	{
+		"id": 4,
+		"name": "チュンヘンさん",
+		"role": "Database",
+		"image": "Chhunheng Oung.png",
+		"tasks": [
+			"Created the interface wireframes and visual direction.",
+			"Designed the dashboard, quiz, and results screens.",
+			"Improved responsive behavior and accessibility."
+		],
+		"skills": ["Figma", "UI Design", "Accessibility"],
+		"color": "#fb7185"
+	},
+	{
+		"id": 1,
+		"name": "ソチェットさん",
+		"role": "Team Leader & Project Lead",
+		"image": "Socheat Cheng.png",
+		"tasks": [
+			"Planned the project roadmap and team milestones.",
+			"Defined the quiz experience and core requirements.",
+			"Coordinated reviews and the final project delivery."
+		],
+		"skills": ["Leadership", "Planning", "QA"],
+		"color": "#fbbf24"
+	},
+	{
+		"id": 2,
+		"name": "サムナンさん",
+		"role": "Deputy Team Leader",
+		"image": "Somnang Kong.png",
+		"tasks": [
+			"Designed the D1 database schema and migrations.",
+			"Created authentication, quiz, and ranking APIs.",
+			"Implemented secure answer checking and score storage."
+		],
+		"skills": ["Leadership", "Cloudflare", "D1"],
+		"color": "#a78bfa"
+	},
+	{
+		"id": 5,
+		"name": "ホールさん",
+		"role": "UXUI & Frontend Developer",
+		"image": "Sreanghour Hy.png",
+		"tasks": [
+			"Prepared JLPT N4 and N3 practice questions.",
+			"Reviewed translations, choices, and explanations.",
+			"Organized quiz content by level and category."
+		],
+		"skills": ["Japanese", "JLPT", "Content"],
+		"color": "#34d399"
+	},
+	{
+		"id": 6,
+		"name": "スレンさん",
+		"role": "Backend Developer",
+		"image": "",
+		"tasks": [
+			"Tested login, quiz, results, and leaderboard journeys.",
+			"Added automated browser and component tests.",
+			"Reported defects and verified fixes across devices."
+		],
+		"skills": ["Testing", "Playwright", "Automation"],
+		"color": "#60a5fa"
+	}
+]
