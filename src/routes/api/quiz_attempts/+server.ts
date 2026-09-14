@@ -2,54 +2,17 @@ import { error, json } from '@sveltejs/kit'
 import { count, countDistinct, desc, eq, max, sum } from 'drizzle-orm'
 import { get_db } from '$lib/server/db'
 import { quiz_attempts } from '$lib/server/db/schema'
-import { import_questions } from '$lib/server/quiz_import'
-import { validate_records } from '$lib/server/quiz_records'
 import type { RequestHandler } from './$types'
 
 const DEFAULT_LIMIT = 10
 const MAX_LIMIT = 50
-
 
 function int_param(raw: string | null, fallback: number) {
 	const parsed = raw === null || raw === '' ? NaN : Number(raw)
 	return Number.isInteger(parsed) ? parsed : fallback
 }
 
-export const POST: RequestHandler = async ({ request, platform }) => {
-	const expected = platform!.env.IMPORT_TOKEN
-
-	if (!expected) {
-		error(503, 'Import is not configured. Set the IMPORT_TOKEN secret.')
-	}
-
-	const provided = request.headers.get('authorization')?.replace(/^Bearer /, '')
-	if (provided !== expected) {
-		error(401, 'Invalid or missing import token.')
-	}
-
-	const body = await request.json().catch(() => null)
-	const { valid, skipped, fatal } = validate_records(body)
-
-	if (fatal) {
-		error(400, fatal)
-	}
-
-	const result = valid.length
-		? await import_questions(get_db(platform!.env), valid)
-		: { created: 0, updated: 0, levels_created: [], categories_created: [], quizzes_created: [] }
-
-	return json({
-		received: valid.length + skipped.length,
-		imported: result.created,
-		updated: result.updated,
-		skipped,
-		levels_created: result.levels_created,
-		categories_created: result.categories_created,
-		quizzes_created: result.quizzes_created,
-	})
-}
-
-/* GET /api/quiz?page=1&limit=10 — the signed-in user's quiz attempt history, most recent first.*/
+/* GET /api/quiz_attempts?page=1&limit=10 — the signed-in user's quiz attempt history, most recent first.*/
 export const GET: RequestHandler = async ({ url, locals, platform }) => {
 	const db = get_db(platform!.env)
 

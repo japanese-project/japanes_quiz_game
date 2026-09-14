@@ -21,9 +21,18 @@
 	})
 
 	function retry() {
-		if (result) {
-			void goto(resolve('/quiz/[level]', { level: result.level.toLowerCase() }))
+		if (!result) return
+		const level = result.level.toLowerCase()
+
+		// Results saved by older builds carry no round, so those start from the category list.
+		if (!result.quiz_id || !result.mode) {
+			void goto(resolve('/quiz/[level]', { level }))
+			return
 		}
+
+		// Replays the same category at the same length.
+		const round = new URLSearchParams({ quiz: result.quiz_id, mode: result.mode })
+		void goto(resolve(`/quiz/[level]?${round}`, { level }))
 	}
 </script>
 

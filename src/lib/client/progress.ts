@@ -1,3 +1,4 @@
+import type { RoundModeId } from '$lib/quiz_config'
 import type { Level, UserProgress } from '$lib/types'
 
 const USERNAME_KEY = 'jq-username'
@@ -6,7 +7,15 @@ const RESULT_KEY = 'jq-last-result'
 const LEGACY_PROGRESS_KEY = 'jq-progress'
 
 export type UserProfiles = Record<string, UserProgress>
-export type QuizResult = { level: Level; score: number; correct: number; total: number }
+export type QuizResult = {
+	level: Level
+	score: number
+	correct: number
+	total: number
+	/** Lets "Try Again" replay the same round. Missing on results saved by older builds. */
+	quiz_id?: string
+	mode?: RoundModeId
+}
 export type Ranking = {
 	username: string
 	totalScore: number
