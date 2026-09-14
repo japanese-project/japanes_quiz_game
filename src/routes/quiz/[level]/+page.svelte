@@ -2,43 +2,68 @@
 	import { onMount } from 'svelte'
 	import { goto } from '$app/navigation'
 	import { resolve } from '$app/paths'
+	import { page } from '$app/state'
+	import CategoryScreen from '$lib/components/CategoryScreen.svelte'
 	import LoadingScreen from '$lib/components/LoadingScreen.svelte'
+	import ModeScreen from '$lib/components/ModeScreen.svelte'
 	import QuizScreen from '$lib/components/QuizScreen.svelte'
 	import { fetch_quizzes, fetch_quiz, submit_attempt } from '$lib/api/quizzes'
 	import { saveQuizResult } from '$lib/client/progress'
-	import type { Quiz } from '$lib/types'
+	import { ROUND_MODES, round_size, type RoundMode } from '$lib/quiz_config'
+	import type { Quiz, QuizSummary } from '$lib/types'
 	import type { PageData } from './$types'
 
 	let { data }: { data: PageData } = $props()
 
+	// A round is built in steps on this page: pick a category, then a length, then play.
+	let quizzes = $state<QuizSummary[] | null>(null)
+	let selected_quiz = $state<QuizSummary | null>(null)
+	let selected_mode = $state<RoundMode | null>(null)
 	let quiz = $state<Quiz | null>(null)
-	let loadError = $state<string | null>(null)
+	let load_error = $state<string | null>(null)
+
+	const to_dashboard = () => void goto(resolve('/dashboard'))
 
 	onMount(async () => {
 		try {
-			// 1. Fetch list of quizzes for this level
-			const quizzes = await fetch_quizzes(data.level)
-			if (!quizzes.length) {
-				loadError = `No quizzes available for level ${data.level} yet.`
-				return
-			}
-			// 2. Pick a random quiz from the list
-			const summary = quizzes[Math.floor(Math.random() * quizzes.length)]
-			// 3. Fetch the full quiz with questions
-			quiz = await fetch_quiz(summary.id)
-		} catch (err) {
-			loadError = err instanceof Error ? err.message : 'Failed to load quiz. Please try again.'
+			quizzes = await fetch_quizzes(data.level)
+		} catch (thrown) {
+			load_error = thrown instanceof Error ? thrown.message : 'Could not load quizzes.'
+			return
+		}
+
+		// "Try Again" links back with ?quiz=&mode= so the same round replays without
+		// making the player pick it again. Unknown values fall through to the category list.
+		const params = page.url.searchParams
+		const retry_quiz = quizzes.find((item) => item.id === params.get('quiz'))
+		const retry_mode = ROUND_MODES.find((mode) => mode.id === params.get('mode'))
+		if (retry_quiz && retry_mode) {
+			selected_quiz = retry_quiz
+			await start_round(retry_mode)
 		}
 	})
 
+	async function start_round(mode: RoundMode) {
+		if (!selected_quiz) return
+		selected_mode = mode
+
+		try {
+			quiz = await fetch_quiz(selected_quiz.id, round_size(mode, selected_quiz.question_count))
+		} catch (thrown) {
+			load_error = thrown instanceof Error ? thrown.message : 'Could not load that quiz.'
+		}
+	}
+
 	async function finish(score: number, correct: number) {
-		if (data.user && quiz) {
+		if (data.user && quiz && selected_mode) {
 			// Save locally (for the result screen display)
 			saveQuizResult(data.user.username, {
 				level: data.level,
 				score,
 				correct,
 				total: quiz.questions.length,
+				quiz_id: quiz.id,
+				mode: selected_mode.id,
 			})
 			// Persist to the server so it counts on the leaderboard
 			await submit_attempt(quiz.id, score, correct, quiz.questions.length)
@@ -49,22 +74,27 @@
 
 <svelte:head><title>{data.level} Quiz | Japanese Quest</title></svelte:head>
 
-{#if loadError}
+{#if load_error}
 	<main class="grid min-h-screen place-items-center bg-[#071e3b] px-5 text-center text-blue-50">
 		<div>
-			<p class="text-lg font-black text-red-400">{loadError}</p>
+			<p class="text-lg font-black text-red-400">{load_error}</p>
 			<button
-				onclick={() => void goto(resolve('/dashboard'))}
+				onclick={to_dashboard}
 				class="mt-6 cursor-pointer rounded-full bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20"
-			>← Back to Dashboard</button>
+				>← Back to Dashboard</button
+			>
 		</div>
 	</main>
 {:else if quiz && data.user}
-	<QuizScreen
+	<QuizScreen level={data.level} {quiz} on_finish={finish} on_exit={to_dashboard} />
+{:else if selected_quiz && !selected_mode}
+	<ModeScreen quiz={selected_quiz} on_start={start_round} on_back={() => (selected_quiz = null)} />
+{:else if quizzes && !selected_quiz}
+	<CategoryScreen
 		level={data.level}
-		{quiz}
-		onFinish={finish}
-		onExit={() => void goto(resolve('/dashboard'))}
+		{quizzes}
+		on_select={(item) => (selected_quiz = item)}
+		on_back={to_dashboard}
 	/>
 {:else}
 	<LoadingScreen />

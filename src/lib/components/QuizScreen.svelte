@@ -8,52 +8,61 @@
 	let {
 		level,
 		quiz,
-		onFinish,
-		onExit,
+		on_finish,
+		on_exit,
 	}: {
 		level: Level
 		quiz: Quiz
-		onFinish: (score: number, correct: number) => void
-		onExit: () => void
+		on_finish: (score: number, correct: number) => void
+		on_exit: () => void
 	} = $props()
 
 	let index = $state(0)
-	let selected = $state<string | null>(null)   // selected choice id
-	let result = $state<AnswerResult | null>(null) // from API after submitting
-	let checking = $state(false)                   // waiting for API response
-	let correctCount = $state(0)
-	let advanceTimer: ReturnType<typeof setTimeout> | undefined
+	let selected_choice_id = $state<string | null>(null)
+	let result = $state<AnswerResult | null>(null)
+	let checking = $state(false)
+	let error = $state('')
+	let correct_count = $state(0)
+	let advance_timer: ReturnType<typeof setTimeout> | undefined
 
 	let current = $derived(quiz.questions[index])
 	let progress = $derived(Math.round(((index + (result ? 1 : 0)) / quiz.questions.length) * 100))
 
-	async function selectAnswer(choice_id: string) {
+	async function select_answer(choice_id: string) {
 		if (result || checking) return
-		selected = choice_id
+		selected_choice_id = choice_id
 		checking = true
+		error = ''
+
 		try {
+			// The server decides: the answer never reaches the browser before this call.
 			result = await submit_answer(quiz.id, choice_id)
-			if (result.is_correct) correctCount += 1
-		} catch {
-			// If the API call fails, treat the answer as wrong and continue
-			result = { is_correct: false, correct_choice_id: null, explanation: null }
+		} catch (thrown) {
+			// An unchecked answer is not a wrong one: let the player pick again rather than
+			// cost them the point for a network failure.
+			selected_choice_id = null
+			error = thrown instanceof Error ? thrown.message : 'Could not check that answer.'
+			return
+		} finally {
+			checking = false
 		}
-		checking = false
-		advanceTimer = setTimeout(next, 1500)
+
+		if (result.is_correct) correct_count += 1
+		advance_timer = setTimeout(next, 1500)
 	}
 
 	function next() {
 		if (index === quiz.questions.length - 1) {
-			onFinish(correctCount * 10, correctCount)
+			on_finish(correct_count * 10, correct_count)
 			return
 		}
 		index += 1
-		selected = null
+		selected_choice_id = null
 		result = null
 	}
 
 	onDestroy(() => {
-		if (advanceTimer) clearTimeout(advanceTimer)
+		if (advance_timer) clearTimeout(advance_timer)
 	})
 </script>
 
@@ -63,7 +72,7 @@
 >
 	<div class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-5 py-5 sm:px-8">
 		<button
-			onclick={onExit}
+			onclick={on_exit}
 			class="cursor-pointer text-sm font-bold text-blue-100/70 transition hover:text-white"
 			>← Dashboard</button
 		>
@@ -97,33 +106,39 @@
 				</div>{/if}
 			<h1 class="mt-7 text-lg leading-8 font-black text-blue-50 sm:text-xl">{current.prompt}</h1>
 			<div class="mt-7 grid gap-3 sm:grid-cols-2">
-				{#each current.choices as choice, choiceIndex (choice.id)}
+				{#each current.choices as choice, choice_index (choice.id)}
 					<AnswerOption
 						{choice}
-						index={choiceIndex}
-						selected={selected}
+						index={choice_index}
+						selected={selected_choice_id}
 						correct_choice_id={result?.correct_choice_id ?? null}
 						submitted={!!result}
 						{checking}
-						onSelect={selectAnswer}
+						onSelect={select_answer}
 					/>
 				{/each}
 			</div>
 
 			{#if checking}
 				<div class="mt-6 flex items-center gap-2 text-sm font-bold text-blue-100/50">
-					<span class="size-4 animate-spin rounded-full border-2 border-current border-t-transparent"></span>
+					<span
+						class="size-4 animate-spin rounded-full border-2 border-current border-t-transparent"
+					></span>
 					Checking…
 				</div>
+			{:else if error}
+				<p
+					class="mt-6 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm font-bold text-red-200"
+				>
+					{error}
+				</p>
 			{:else if result}
 				<div
 					class="mt-6 rounded-xl border p-4 {result.is_correct
 						? 'border-emerald-400/40 bg-emerald-400/10'
 						: 'border-amber-300/40 bg-amber-300/10'}"
 				>
-					<p
-						class="text-sm font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}"
-					>
+					<p class="text-sm font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}">
 						{result.is_correct ? 'Correct!' : 'Not quite. Review the correct answer.'}
 					</p>
 					{#if result.explanation}
