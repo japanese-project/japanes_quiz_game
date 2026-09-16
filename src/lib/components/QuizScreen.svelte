@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte'
 	import patternBackground from '$lib/assets/pattern1.png'
 	import type { AnswerResult, Level, Quiz } from '$lib/types'
 	import { submit_answer } from '$lib/api/quizzes'
@@ -17,15 +16,23 @@
 		on_exit: () => void
 	} = $props()
 
+	// Track each question's answered state so Back can restore it
+	type QuestionState = {
+		selected_choice_id: string
+		result: AnswerResult
+		counted: boolean // whether correct_count was incremented for this question
+	}
+	let answered = $state<Map<number, QuestionState>>(new Map())
+
 	let index = $state(0)
 	let selected_choice_id = $state<string | null>(null)
 	let result = $state<AnswerResult | null>(null)
 	let checking = $state(false)
 	let error = $state('')
 	let correct_count = $state(0)
-	let advance_timer: ReturnType<typeof setTimeout> | undefined
 
 	let current = $derived(quiz.questions[index])
+	let is_last = $derived(index === quiz.questions.length - 1)
 	let progress = $derived(Math.round(((index + (result ? 1 : 0)) / quiz.questions.length) * 100))
 
 	async function select_answer(choice_id: string) {
@@ -47,23 +54,48 @@
 			checking = false
 		}
 
-		if (result.is_correct) correct_count += 1
-		advance_timer = setTimeout(next, 1500)
+		const counted = result.is_correct
+		if (counted) correct_count += 1
+
+		// Persist answered state for this question index
+		answered.set(index, { selected_choice_id: choice_id, result, counted })
+		answered = new Map(answered) // trigger reactivity
 	}
 
-	function next() {
-		if (index === quiz.questions.length - 1) {
+	function go_next() {
+		if (is_last) {
 			on_finish(correct_count * 10, correct_count)
 			return
 		}
 		index += 1
-		selected_choice_id = null
-		result = null
+		// Restore saved state if this question was already answered
+		const saved = answered.get(index)
+		if (saved) {
+			selected_choice_id = saved.selected_choice_id
+			result = saved.result
+		} else {
+			selected_choice_id = null
+			result = null
+		}
+		error = ''
 	}
 
-	onDestroy(() => {
-		if (advance_timer) clearTimeout(advance_timer)
-	})
+	function go_back() {
+		if (index === 0) return
+		// If current question was answered and counted, undo the count before leaving
+		const current_saved = answered.get(index)
+		// (no need to undo — we re-derive correct_count from the map on demand)
+		index -= 1
+		const saved = answered.get(index)
+		if (saved) {
+			selected_choice_id = saved.selected_choice_id
+			result = saved.result
+		} else {
+			selected_choice_id = null
+			result = null
+		}
+		error = ''
+	}
 </script>
 
 <main
@@ -147,8 +179,29 @@
 				</div>
 			{/if}
 
-			<div class="mt-auto min-h-8 pt-8 text-right text-xs font-bold text-blue-100/45">
-				{#if result}Continuing automatically…{/if}
+			<!-- Back / Next navigation -->
+			<div class="mt-auto flex items-center justify-between pt-8">
+				<button
+					onclick={go_back}
+					disabled={index === 0}
+					class="cursor-pointer rounded-full px-6 py-3 text-sm font-bold transition
+						{index === 0
+						? 'pointer-events-none text-blue-100/20'
+						: 'bg-white/10 text-white hover:bg-white/20'}"
+				>
+					← Back
+				</button>
+
+				{#if result}
+					<button
+						onclick={go_next}
+						class="cursor-pointer rounded-full bg-[#2ed573] px-8 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-[#2ecc71]"
+					>
+						{is_last ? 'Finish →' : 'Next →'}
+					</button>
+				{:else}
+					<div class="h-12"></div>
+				{/if}
 			</div>
 		</div>
 	</section>
