@@ -9,6 +9,7 @@
 	import QuizScreen from '$lib/components/QuizScreen.svelte'
 	import { fetch_quizzes, fetch_quiz, submit_attempt } from '$lib/api/quizzes'
 	import { saveQuizResult } from '$lib/client/progress'
+	import { playThemeMusic } from '$lib/client/audio'
 	import { ROUND_MODES, round_size, type RoundMode } from '$lib/quiz_config'
 	import type { Quiz, QuizSummary } from '$lib/types'
 	import type { PageData } from './$types'
@@ -25,6 +26,7 @@
 	const to_dashboard = () => void goto(resolve('/dashboard'))
 
 	onMount(async () => {
+		playThemeMusic()
 		try {
 			quizzes = await fetch_quizzes(data.level)
 		} catch (thrown) {

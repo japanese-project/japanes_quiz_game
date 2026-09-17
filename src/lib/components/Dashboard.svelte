@@ -1,14 +1,17 @@
 <script lang="ts">
+	import { formatScore } from '$lib/scoring'
 	import type { Level } from '$lib/types'
 	import AppShell from './AppShell.svelte'
 	import LevelCard from './LevelCard.svelte'
 
 	let {
 		username,
+		totalScore,
 		onStart,
 		onLogout,
 	}: {
 		username: string
+		totalScore: number
 		onStart: (level: Level) => void
 		onLogout: () => void
 	} = $props()
@@ -45,10 +48,16 @@
 			<h1 class="text-2xl font-black tracking-tight text-white">Choose a level</h1>
 			<p class="mt-2 text-sm text-blue-100/65">Pick a level, then choose a category</p>
 		</div>
-		<span
-			class="hidden rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm font-bold text-blue-100/75 backdrop-blur-sm sm:inline-flex"
-			>JLPT Practice</span
-		>
+		<div class="flex items-center gap-3">
+			<span
+				class="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2.5 text-sm font-black text-cyan-200"
+				>Total {formatScore(totalScore)}</span
+			>
+			<span
+				class="hidden rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm font-bold text-blue-100/75 backdrop-blur-sm sm:inline-flex"
+				>JLPT Practice</span
+			>
+		</div>
 	</div>
 
 	<section class="grid items-stretch gap-7 lg:grid-cols-2">

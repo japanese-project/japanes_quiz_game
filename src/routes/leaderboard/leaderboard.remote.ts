@@ -3,6 +3,7 @@ import { getRequestEvent, query } from '$app/server'
 import { countDistinct, desc, eq, sum } from 'drizzle-orm'
 import { get_db } from '$lib/server/db'
 import { quiz_attempts, users } from '$lib/server/db/schema'
+import { roundScore } from '$lib/scoring'
 import type { LeaderboardEntry } from '$lib/types'
 
 const PAGE_SIZE = 10
@@ -48,7 +49,7 @@ async function read_leaderboard_page(db: ReturnType<typeof get_db>, requested_pa
 	return {
 		items: rows.map(({ username, totalScore }) => ({
 			username,
-			totalScore: Number(totalScore ?? 0),
+			totalScore: roundScore(Number(totalScore ?? 0)),
 		})),
 		page,
 		total,

@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, integer, real } from 'drizzle-orm/sqlite-core'
 
 // --- Users ---
 export const users = sqliteTable('users', {
@@ -78,7 +78,7 @@ export const quiz_attempts = sqliteTable('quiz_attempts', {
 	quiz_id: text('quiz_id')
 		.notNull()
 		.references(() => quizzes.id, { onDelete: 'cascade' }),
-	score: integer('score').notNull(),
+	score: real('score').notNull(),
 	correct_count: integer('correct_count').notNull(),
 	total_questions: integer('total_questions').notNull(),
 	completed_at: integer('completed_at', { mode: 'timestamp' })

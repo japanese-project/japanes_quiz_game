@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation'
 	import { resolve } from '$app/paths'
 	import LoginScreen from '$lib/components/LoginScreen.svelte'
+	import { playThemeMusic, stopAllAudio } from '$lib/client/audio'
 	import { signIn } from '$lib/client/progress'
 	import type { PageData } from './$types'
 
@@ -15,6 +16,8 @@
 	})
 
 	async function login(username: string): Promise<string | null> {
+		// Start during the submit gesture so browser autoplay policies allow music after login.
+		playThemeMusic()
 		try {
 			const res = await fetch('/api/auth/login', {
 				method: 'POST',
@@ -22,6 +25,7 @@
 				body: JSON.stringify({ username }),
 			})
 			if (!res.ok) {
+				stopAllAudio()
 				const text = await res.text()
 				return text || 'Could not sign in. Please try again.'
 			}
@@ -30,6 +34,7 @@
 			void goto(resolve('/dashboard'))
 			return null
 		} catch {
+			stopAllAudio()
 			return 'Network error. Please check your connection and try again.'
 		}
 	}

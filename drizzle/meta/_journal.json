@@ -57,6 +57,13 @@
       "when": 1788780000000,
       "tag": "0006_common_ares",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1789545403300,
+      "tag": "0008_quick_skrulls",
+      "breakpoints": true
     }
   ]
 }

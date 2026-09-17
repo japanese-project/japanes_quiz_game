@@ -2,6 +2,7 @@ import { error, json } from '@sveltejs/kit'
 import { count, countDistinct, desc, eq, max, sum } from 'drizzle-orm'
 import { get_db } from '$lib/server/db'
 import { quiz_attempts } from '$lib/server/db/schema'
+import { roundScore } from '$lib/scoring'
 import type { RequestHandler } from './$types'
 
 const DEFAULT_LIMIT = 10
@@ -43,10 +44,10 @@ export const GET: RequestHandler = async ({ url, locals, platform }) => {
 
 	const totals = {
 		attempts: row.attempts,
-		total_score: Number(row.total_score ?? 0),
+		total_score: roundScore(Number(row.total_score ?? 0)),
 		correct: Number(row.correct ?? 0),
 		answered: Number(row.answered ?? 0),
-		best: Number(row.best ?? 0),
+		best: roundScore(Number(row.best ?? 0)),
 		quizzes_played: row.quizzes_played,
 	}
 

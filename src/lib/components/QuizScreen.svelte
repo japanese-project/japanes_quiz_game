@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { onDestroy, onMount } from 'svelte'
 	import patternBackground from '$lib/assets/pattern1.png'
 	import type { AnswerResult, Level, Quiz } from '$lib/types'
 	import { submit_answer } from '$lib/api/quizzes'
+	import { playAnswerSound, playQuizMusic, playThemeMusic } from '$lib/client/audio'
+	import { calculateScore, formatScore, QUESTION_TIME_SECONDS } from '$lib/scoring'
 	import AnswerOption from './AnswerOption.svelte'
 
 	let {
@@ -16,27 +19,47 @@
 		on_exit: () => void
 	} = $props()
 
-	// Track each question's answered state so Back can restore it
-	type QuestionState = {
-		selected_choice_id: string
-		result: AnswerResult
-		counted: boolean // whether correct_count was incremented for this question
-	}
-	let answered = $state<Map<number, QuestionState>>(new Map())
-
 	let index = $state(0)
 	let selected_choice_id = $state<string | null>(null)
 	let result = $state<AnswerResult | null>(null)
 	let checking = $state(false)
 	let error = $state('')
 	let correct_count = $state(0)
+	let score_hundredths = $state(0)
+	let points_earned = $state(0)
+	let advance_timeout: ReturnType<typeof setTimeout> | undefined
+	let question_timer: ReturnType<typeof setInterval> | undefined
+	const scored_question_ids = new Set<string>()
+	const ANSWER_FEEDBACK_MS = 3000
+
+	let seconds_left = $state(QUESTION_TIME_SECONDS)
 
 	let current = $derived(quiz.questions[index])
 	let is_last = $derived(index === quiz.questions.length - 1)
-	let progress = $derived(Math.round(((index + (result ? 1 : 0)) / quiz.questions.length) * 100))
+	let score = $derived(score_hundredths / 100)
+	let timer_progress = $derived((seconds_left / QUESTION_TIME_SECONDS) * 100)
+
+	function stop_question_timer() {
+		clearInterval(question_timer)
+		question_timer = undefined
+	}
+
+	function start_question_timer(from = QUESTION_TIME_SECONDS) {
+		stop_question_timer()
+		seconds_left = from
+		question_timer = setInterval(() => {
+			seconds_left -= 1
+			if (seconds_left <= 0) {
+				stop_question_timer()
+				go_next()
+			}
+		}, 1000)
+	}
 
 	async function select_answer(choice_id: string) {
 		if (result || checking) return
+		stop_question_timer()
+		const submitted_with_seconds_left = seconds_left
 		selected_choice_id = choice_id
 		checking = true
 		error = ''
@@ -49,53 +72,48 @@
 			// cost them the point for a network failure.
 			selected_choice_id = null
 			error = thrown instanceof Error ? thrown.message : 'Could not check that answer.'
+			start_question_timer(Math.max(seconds_left, 1))
 			return
 		} finally {
 			checking = false
 		}
 
-		const counted = result.is_correct
-		if (counted) correct_count += 1
+		// A question can only affect the score once, even if this handler is invoked again.
+		if (!scored_question_ids.has(current.id)) {
+			scored_question_ids.add(current.id)
+			points_earned = calculateScore(submitted_with_seconds_left, result.is_correct)
+			score_hundredths += Math.round(points_earned * 100)
+			if (result.is_correct) correct_count += 1
+		}
 
-		// Persist answered state for this question index
-		answered.set(index, { selected_choice_id: choice_id, result, counted })
-		answered = new Map(answered) // trigger reactivity
+		playAnswerSound(result.is_correct)
+
+		// Keep the result visible long enough for the answer sound to finish.
+		advance_timeout = setTimeout(go_next, ANSWER_FEEDBACK_MS)
 	}
 
 	function go_next() {
 		if (is_last) {
-			on_finish(correct_count * 10, correct_count)
+			on_finish(score, correct_count)
 			return
 		}
 		index += 1
-		// Restore saved state if this question was already answered
-		const saved = answered.get(index)
-		if (saved) {
-			selected_choice_id = saved.selected_choice_id
-			result = saved.result
-		} else {
-			selected_choice_id = null
-			result = null
-		}
+		selected_choice_id = null
+		result = null
+		points_earned = 0
 		error = ''
+		start_question_timer()
 	}
 
-	function go_back() {
-		if (index === 0) return
-		// If current question was answered and counted, undo the count before leaving
-		const current_saved = answered.get(index)
-		// (no need to undo — we re-derive correct_count from the map on demand)
-		index -= 1
-		const saved = answered.get(index)
-		if (saved) {
-			selected_choice_id = saved.selected_choice_id
-			result = saved.result
-		} else {
-			selected_choice_id = null
-			result = null
-		}
-		error = ''
-	}
+	onMount(() => {
+		playQuizMusic()
+		start_question_timer()
+	})
+	onDestroy(() => {
+		clearTimeout(advance_timeout)
+		stop_question_timer()
+		playThemeMusic()
+	})
 </script>
 
 <main
@@ -114,10 +132,19 @@
 			><span class="text-sm font-bold text-blue-100/70"
 				>Question {index + 1} / {quiz.questions.length}</span
 			>
+			<span class="min-w-16 text-right text-sm font-black text-blue-50">{seconds_left}s</span>
 		</div>
 	</div>
 	<div class="h-1.5 w-full overflow-hidden bg-white/10">
-		<div class="h-full bg-[#e52f46] transition-all duration-500" style={`width:${progress}%`}></div>
+		<div
+			class="h-full bg-[#e52f46] transition-[width] duration-1000 ease-linear"
+			style={`width:${timer_progress}%`}
+			role="progressbar"
+			aria-label="Time remaining"
+			aria-valuemin="0"
+			aria-valuemax={QUESTION_TIME_SECONDS}
+			aria-valuenow={seconds_left}
+		></div>
 	</div>
 
 	<section
@@ -171,38 +198,15 @@
 						: 'border-amber-300/40 bg-amber-300/10'}"
 				>
 					<p class="text-sm font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}">
-						{result.is_correct ? 'Correct!' : 'Not quite. Review the correct answer.'}
+						{result.is_correct
+							? `Correct! +${formatScore(points_earned)}`
+							: 'Not quite. Review the correct answer.'}
 					</p>
 					{#if result.explanation}
 						<p class="mt-1 text-sm leading-6 text-blue-100/70">{result.explanation}</p>
 					{/if}
 				</div>
 			{/if}
-
-			<!-- Back / Next navigation -->
-			<div class="mt-auto flex items-center justify-between pt-8">
-				<button
-					onclick={go_back}
-					disabled={index === 0}
-					class="cursor-pointer rounded-full px-6 py-3 text-sm font-bold transition
-						{index === 0
-						? 'pointer-events-none text-blue-100/20'
-						: 'bg-white/10 text-white hover:bg-white/20'}"
-				>
-					← Back
-				</button>
-
-				{#if result}
-					<button
-						onclick={go_next}
-						class="cursor-pointer rounded-full bg-[#2ed573] px-8 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-[#2ecc71]"
-					>
-						{is_last ? 'Finish →' : 'Next →'}
-					</button>
-				{:else}
-					<div class="h-12"></div>
-				{/if}
-			</div>
 		</div>
 	</section>
 </main>

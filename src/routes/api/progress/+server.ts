@@ -2,6 +2,7 @@ import { and, count, countDistinct, eq, max, sum } from 'drizzle-orm'
 import { error, json, type RequestHandler } from '@sveltejs/kit'
 import { get_db } from '$lib/server/db'
 import { levels, quiz_attempts, quizzes } from '$lib/server/db/schema'
+import { roundScore } from '$lib/scoring'
 import type { Level, LevelProgress } from '$lib/types'
 
 /** GET: /api/progress — a user's score & progress, optionally scoped to ?level=N4|N3. */
@@ -36,9 +37,9 @@ export const GET: RequestHandler = async ({ url, locals, platform }) => {
 	const by_level = new Map<string, LevelProgress>()
 	for (const row of rows) {
 		by_level.set(row.level, {
-			score: Number(row.score),
+			score: roundScore(Number(row.score)),
 			answered: Number(row.answered),
-			best: Number(row.best),
+			best: roundScore(Number(row.best)),
 		})
 	}
 
@@ -51,10 +52,10 @@ export const GET: RequestHandler = async ({ url, locals, platform }) => {
 
 	const totals = rows.reduce(
 		(acc, row) => ({
-			total_score: acc.total_score + Number(row.score),
+			total_score: roundScore(acc.total_score + Number(row.score)),
 			correct: acc.correct + Number(row.correct),
 			answered: acc.answered + Number(row.answered),
-			best: Math.max(acc.best, Number(row.best)),
+			best: roundScore(Math.max(acc.best, Number(row.best))),
 			attempts: acc.attempts + row.attempts,
 			quizzes_played: acc.quizzes_played + row.quizzes_played,
 		}),
