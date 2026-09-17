@@ -1,6 +1,7 @@
 import { desc, eq, sum } from 'drizzle-orm'
 import { users, quiz_attempts } from '$lib/server/db/schema'
 import { get_db } from '$lib/server/db'
+import { roundScore } from '$lib/scoring'
 import { json, type RequestHandler } from '@sveltejs/kit'
 
 export const GET: RequestHandler = async ({ platform }) => {
@@ -25,8 +26,8 @@ export const GET: RequestHandler = async ({ platform }) => {
 
 	const ranks = rows.map(({ username, score }) => ({
 		username,
-		total_score: score,
-	}));
+		total_score: roundScore(Number(score ?? 0)),
+	}))
 
 	return json(ranks)
 }

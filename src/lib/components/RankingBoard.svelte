@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { LeaderboardEntry } from '$lib/types'
+	import { formatScore } from '$lib/scoring'
 	import Icon from './Icon.svelte'
 
 	let {
@@ -94,7 +95,7 @@
 							</div>
 						</td>
 						<td class="px-6 py-5 text-right text-base font-black text-blue-50 sm:px-8"
-							>{player.totalScore} pts</td
+							>{formatScore(player.totalScore)} pts</td
 						>
 					</tr>
 				{:else}

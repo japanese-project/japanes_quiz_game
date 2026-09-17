@@ -1,5 +1,6 @@
 <script lang="ts">
 	import patternBackground from '$lib/assets/pattern1.png'
+	import { formatScore } from '$lib/scoring'
 	import Icon from './Icon.svelte'
 
 	let {
@@ -41,7 +42,7 @@
 			class="mx-7 grid grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:mx-10"
 		>
 			<div class="px-3 py-5">
-				<p class="text-2xl font-black text-white">{score}</p>
+				<p class="text-2xl font-black text-white">{formatScore(score)}</p>
 				<p class="mt-1 text-[11px] font-bold text-blue-100/55 uppercase">Points</p>
 			</div>
 			<div class="border-x border-white/10 px-3 py-5">

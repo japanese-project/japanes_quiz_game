@@ -68,7 +68,7 @@
 		"id": 6,
 		"name": "スレンさん",
 		"role": "Backend Developer",
-		"image": "",
+		"image": "sren.png",
 		"tasks": [
 			"Tested login, quiz, results, and leaderboard journeys.",
 			"Added automated browser and component tests.",

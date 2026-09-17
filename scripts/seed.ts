@@ -91,11 +91,15 @@ async function main() {
 	console.log('📈 Seeding quiz attempts...')
 	const attempt_data = Array.from({ length: 20 }).map(() => {
 		const correct_count = faker.number.int({ min: 0, max: 3 })
+		const score = correct_count
+			? Math.round(faker.number.float({ min: correct_count * 0.05, max: correct_count }) * 100) /
+				100
+			: 0
 
 		return {
 			user_id: faker.helpers.arrayElement(inserted_users).id,
 			quiz_id: faker.helpers.arrayElement(inserted_quizzes).id,
-			score: Math.round((correct_count / 3) * 100),
+			score,
 			correct_count,
 			total_questions: 3,
 			completed_at: faker.date.recent({ days: 30 }),

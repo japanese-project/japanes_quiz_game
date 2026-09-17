@@ -135,18 +135,18 @@ describe('getLastResult', () => {
 describe('getRankings', () => {
 	it('orders by total score, then by accuracy', () => {
 		const profiles: UserProfiles = {
-			sakura: { N4: { score: 80, answered: 10, best: 50 }, N3: { score: 0, answered: 0, best: 0 } },
+			sakura: { N4: { score: 8, answered: 10, best: 5 }, N3: { score: 0, answered: 0, best: 0 } },
 			kenji: {
-				N4: { score: 50, answered: 10, best: 50 },
-				N3: { score: 30, answered: 5, best: 30 },
+				N4: { score: 5, answered: 10, best: 5 },
+				N3: { score: 3, answered: 5, best: 3 },
 			},
-			yuki: { N4: { score: 80, answered: 20, best: 40 }, N3: { score: 0, answered: 0, best: 0 } },
+			yuki: { N4: { score: 8, answered: 20, best: 4 }, N3: { score: 0, answered: 0, best: 0 } },
 		}
 
 		expect(getRankings(profiles)).toEqual([
-			{ username: 'sakura', totalScore: 80, answered: 10, accuracy: 80 },
-			{ username: 'kenji', totalScore: 80, answered: 15, accuracy: 53 },
-			{ username: 'yuki', totalScore: 80, answered: 20, accuracy: 40 },
+			{ username: 'sakura', totalScore: 8, answered: 10, accuracy: 80 },
+			{ username: 'kenji', totalScore: 8, answered: 15, accuracy: 53 },
+			{ username: 'yuki', totalScore: 8, answered: 20, accuracy: 40 },
 		])
 	})
 

@@ -1,4 +1,5 @@
 import type { RoundModeId } from '$lib/quiz_config'
+import { roundScore } from '$lib/scoring'
 import type { Level, UserProgress } from '$lib/types'
 
 const USERNAME_KEY = 'jq-username'
@@ -68,7 +69,7 @@ export function saveQuizResult(username: string, result: QuizResult) {
 	const nextProgress: UserProgress = {
 		...progress,
 		[result.level]: {
-			score: previous.score + result.score,
+			score: roundScore(previous.score + result.score),
 			answered: previous.answered + result.total,
 			best: Math.max(previous.best, result.score),
 		},
@@ -90,7 +91,7 @@ export function getRankings(profiles: UserProfiles): Ranking[] {
 				username,
 				totalScore,
 				answered,
-				accuracy: answered ? Math.round((totalScore / (answered * 10)) * 100) : 0,
+				accuracy: answered ? Math.round((totalScore / answered) * 100) : 0,
 			}
 		})
 		.sort((a, b) => b.totalScore - a.totalScore || b.accuracy - a.accuracy)

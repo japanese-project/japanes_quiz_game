@@ -71,11 +71,11 @@ INSERT INTO choices (id, question_id, text, is_correct) VALUES
 
 -- --- QUIZ ATTEMPTS ---
 INSERT INTO quiz_attempts (id, user_id, quiz_id, score, correct_count, total_questions, completed_at) VALUES
-  ('a1', 'u1', 'q1', 67, 2, 3, strftime('%s','now')),
-  ('a2', 'u2', 'q1', 33, 1, 3, strftime('%s','now')),
-  ('a3', 'u3', 'q2', 100, 3, 3, strftime('%s','now')),
+  ('a1', 'u1', 'q1', 1.50, 2, 3, strftime('%s','now')),
+  ('a2', 'u2', 'q1', 0.75, 1, 3, strftime('%s','now')),
+  ('a3', 'u3', 'q2', 2.50, 3, 3, strftime('%s','now')),
   ('a4', 'u4', 'q3', 0, 0, 3, strftime('%s','now')),
-  ('a5', 'u5', 'q4', 67, 2, 3, strftime('%s','now'));
+  ('a5', 'u5', 'q4', 1.25, 2, 3, strftime('%s','now'));
 
 -- --- SESSION ---
 INSERT INTO session (id, user_id, expires_at, created_at) VALUES

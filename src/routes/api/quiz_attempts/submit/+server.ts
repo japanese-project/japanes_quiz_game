@@ -30,14 +30,22 @@ export const POST: RequestHandler = async ({ request, locals, platform }) => {
 	const total_questions = typeof body?.total_questions === 'number' ? body.total_questions : -1
 
 	if (!quiz_id) error(400, 'quiz_id is required.')
-	if (score < 0) error(400, 'score must be a non-negative number.')
+	if (!Number.isFinite(score) || score < 0) error(400, 'score must be a non-negative number.')
 	if (correct_count < 0) error(400, 'correct_count must be a non-negative number.')
 	if (total_questions <= 0) error(400, 'total_questions must be a positive number.')
+	if (score > total_questions) error(400, 'score cannot exceed the number of questions.')
+	if (Math.abs(Math.round(score * 100) - score * 100) > 1e-9) {
+		error(400, 'score can have at most two decimal places.')
+	}
 
 	const db = get_db(platform!.env)
 
 	// Verify the quiz actually exists before inserting.
-	const [quiz] = await db.select({ id: quizzes.id }).from(quizzes).where(eq(quizzes.id, quiz_id)).limit(1)
+	const [quiz] = await db
+		.select({ id: quizzes.id })
+		.from(quizzes)
+		.where(eq(quizzes.id, quiz_id))
+		.limit(1)
 	if (!quiz) error(404, 'Quiz not found.')
 
 	const [attempt] = await db

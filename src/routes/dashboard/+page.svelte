@@ -20,5 +20,10 @@
 <svelte:head><title>Dashboard | Japanese Quest</title></svelte:head>
 
 {#if data.user}
-	<Dashboard username={data.user.username} onStart={startQuiz} onLogout={logout} />
+	<Dashboard
+		username={data.user.username}
+		totalScore={data.totalScore}
+		onStart={startQuiz}
+		onLogout={logout}
+	/>
 {/if}
