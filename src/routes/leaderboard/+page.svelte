@@ -34,14 +34,6 @@
 	</main>
 {:else if leaderboard.current}
 	<AppShell username={data.user.username} active="leaderboard" onLogout={logout}>
-		<div class="mb-4 flex justify-end">
-			<span
-				class="type-label rounded-full px-3 py-1 font-bold {leaderboard.connected
-					? 'bg-emerald-400/10 text-emerald-300'
-					: 'bg-amber-300/10 text-amber-300'}"
-				>{leaderboard.connected ? 'Live' : 'Reconnecting…'}</span
-			>
-		</div>
 		<RankingBoard
 			rankings={leaderboard.current.items}
 			currentUser={data.user.username}

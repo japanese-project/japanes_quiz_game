@@ -1,0 +1,12 @@
+[
+	{ "symbol": "花", "background": "#08b3c0", "foreground": "#06283d" },
+	{ "symbol": "空", "background": "#f0a23b", "foreground": "#382006" },
+	{ "symbol": "海", "background": "#e85d75", "foreground": "#ffffff" },
+	{ "symbol": "月", "background": "#3b82a0", "foreground": "#ffffff" },
+	{ "symbol": "星", "background": "#d98b35", "foreground": "#241506" },
+	{ "symbol": "森", "background": "#269b82", "foreground": "#ffffff" },
+	{ "symbol": "雪", "background": "#87b9d6", "foreground": "#08243d" },
+	{ "symbol": "光", "background": "#d94c62", "foreground": "#ffffff" },
+	{ "symbol": "風", "background": "#39759e", "foreground": "#ffffff" },
+	{ "symbol": "夢", "background": "#e8b84b", "foreground": "#302006" }
+]

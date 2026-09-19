@@ -37,10 +37,6 @@
 			<h1 class="type-h1 mt-5 font-black tracking-tight text-white">
 				Made with care by six creators
 			</h1>
-			<p class="type-body mx-auto mt-4 max-w-2xl leading-7 text-blue-100/65">
-				Meet the people who combined design, development, content, and testing to build Japanese
-				Quest.
-			</p>
 		</div>
 
 		<div class="grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
