@@ -37,7 +37,7 @@
 			</div>
 			<div class="leading-tight">
 				<p class="text-lg font-black tracking-tight text-white">Japanese Quest</p>
-				<p class="text-[10px] font-bold tracking-[0.22em] text-blue-200/70">JLPT LEARNING</p>
+				<p class="type-caption font-bold tracking-[0.22em] text-blue-200/70">JLPT LEARNING</p>
 			</div>
 		</div>
 
@@ -51,7 +51,7 @@
 
 		<form onsubmit={submit} class="mt-3">
 			<label class="block">
-				<span class="mb-2 block text-xs font-black tracking-wide text-blue-100 uppercase"
+				<span class="type-label mb-2 block font-black tracking-wide text-blue-100 uppercase"
 					>Username</span
 				>
 				<div
@@ -68,22 +68,24 @@
 						autocomplete="username"
 						placeholder="e.g. Sakura"
 						aria-describedby={error ? 'username-error' : undefined}
-						class="h-14 w-full bg-transparent text-[15px] font-medium text-slate-800 outline-none placeholder:font-normal placeholder:text-slate-400"
+						class="type-body h-14 w-full bg-transparent font-medium text-slate-800 outline-none placeholder:font-normal placeholder:text-slate-400"
 					/>
 				</div>
-				{#if error}<p id="username-error" class="mt-2 text-xs font-semibold text-red-300">
+				{#if error}<p id="username-error" class="type-caption mt-2 font-semibold text-red-300">
 						{error}
 					</p>{/if}
 			</label>
 			<button
 				type="submit"
 				disabled={pending}
-				class="mt-4 flex h-14 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#d52b45] text-sm font-black text-white shadow-lg shadow-black/20 transition hover:bg-[#bd2038] disabled:cursor-not-allowed disabled:opacity-70"
+				class="type-action mt-4 flex h-14 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#d52b45] font-black text-white shadow-lg shadow-black/20 transition hover:bg-[#bd2038] disabled:cursor-not-allowed disabled:opacity-70"
 				>{pending ? 'Signing in...' : 'Start Learning'} <Icon name="arrow" size={18} /></button
 			>
 		</form>
 
-		<div class="mt-5 flex items-center justify-center gap-5 text-[11px] font-bold text-blue-200/70">
+		<div
+			class="type-caption mt-5 flex items-center justify-center gap-5 font-bold text-blue-200/70"
+		>
 			<span class="flex items-center gap-1.5"
 				><span class="size-1.5 rounded-full bg-[#d52b45]"></span>N4 & N3</span
 			>

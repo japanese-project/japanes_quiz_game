@@ -123,16 +123,16 @@
 	<div class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-5 py-5 sm:px-8">
 		<button
 			onclick={on_exit}
-			class="cursor-pointer text-sm font-bold text-blue-100/70 transition hover:text-white"
+			class="type-action cursor-pointer font-bold text-blue-100/70 transition hover:text-white"
 			>← Dashboard</button
 		>
 		<div class="flex items-center gap-3">
-			<span class="rounded-full bg-[#e52f46] px-3 py-1.5 text-xs font-black text-white"
+			<span class="type-label rounded-full bg-[#e52f46] px-3 py-1.5 font-black text-white"
 				>{level}</span
-			><span class="text-sm font-bold text-blue-100/70"
+			><span class="type-caption font-bold text-blue-100/70"
 				>Question {index + 1} / {quiz.questions.length}</span
 			>
-			<span class="min-w-16 text-right text-sm font-black text-blue-50">{seconds_left}s</span>
+			<span class="type-caption min-w-16 text-right font-black text-blue-50">{seconds_left}s</span>
 		</div>
 	</div>
 	<div class="h-1.5 w-full overflow-hidden bg-white/10">
@@ -152,7 +152,7 @@
 	>
 		<div class="mx-auto flex w-full max-w-4xl flex-1 flex-col px-5 py-7 sm:px-8 sm:py-10">
 			<div>
-				<span class="rounded-full bg-cyan-400/10 px-3 py-1.5 text-xs font-black text-cyan-300"
+				<span class="type-label rounded-full bg-cyan-400/10 px-3 py-1.5 font-black text-cyan-300"
 					>{current.category}</span
 				>
 			</div>
@@ -163,7 +163,7 @@
 				>
 					{current.image}
 				</div>{/if}
-			<h1 class="mt-7 text-lg leading-8 font-black text-blue-50 sm:text-xl">{current.prompt}</h1>
+			<h1 class="type-h1 mt-7 font-black text-blue-50">{current.prompt}</h1>
 			<div class="mt-7 grid gap-3 sm:grid-cols-2">
 				{#each current.choices as choice, choice_index (choice.id)}
 					<AnswerOption
@@ -179,7 +179,7 @@
 			</div>
 
 			{#if checking}
-				<div class="mt-6 flex items-center gap-2 text-sm font-bold text-blue-100/50">
+				<div class="type-body mt-6 flex items-center gap-2 font-bold text-blue-100/50">
 					<span
 						class="size-4 animate-spin rounded-full border-2 border-current border-t-transparent"
 					></span>
@@ -187,7 +187,7 @@
 				</div>
 			{:else if error}
 				<p
-					class="mt-6 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm font-bold text-red-200"
+					class="type-body mt-6 rounded-xl border border-red-400/40 bg-red-400/10 p-4 font-bold text-red-200"
 				>
 					{error}
 				</p>
@@ -197,13 +197,15 @@
 						? 'border-emerald-400/40 bg-emerald-400/10'
 						: 'border-amber-300/40 bg-amber-300/10'}"
 				>
-					<p class="text-sm font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}">
+					<p
+						class="type-body font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}"
+					>
 						{result.is_correct
 							? `Correct! +${formatScore(points_earned)}`
 							: 'Not quite. Review the correct answer.'}
 					</p>
 					{#if result.explanation}
-						<p class="mt-1 text-sm leading-6 text-blue-100/70">{result.explanation}</p>
+						<p class="type-body mt-1 leading-6 text-blue-100/70">{result.explanation}</p>
 					{/if}
 				</div>
 			{/if}

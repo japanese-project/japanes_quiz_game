@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { compact = false, light = false }: { compact?: boolean; light?: boolean } = $props();
+	let { compact = false, light = false }: { compact?: boolean; light?: boolean } = $props()
 </script>
 
 <div class="flex items-center gap-3">
@@ -14,7 +14,7 @@
 				Japanese Quest
 			</p>
 			<p
-				class="text-[10px] font-bold tracking-[0.2em] uppercase {light
+				class="type-caption font-bold tracking-[0.2em] uppercase {light
 					? 'text-blue-200/60'
 					: 'text-slate-400'}"
 			>

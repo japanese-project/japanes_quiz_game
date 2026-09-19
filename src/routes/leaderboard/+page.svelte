@@ -23,11 +23,11 @@
 {:else if leaderboard.error}
 	<main class="grid min-h-screen place-items-center bg-[#071e3b] px-5 text-center text-blue-50">
 		<div>
-			<h1 class="text-2xl font-black">Leaderboard unavailable</h1>
-			<p class="mt-2 text-sm text-blue-100/65">Please check your connection and try again.</p>
+			<h1 class="type-h1 font-black">Leaderboard unavailable</h1>
+			<p class="type-body mt-2 text-blue-100/65">Please check your connection and try again.</p>
 			<button
 				onclick={() => leaderboard.reconnect()}
-				class="mt-6 cursor-pointer rounded-full bg-[#e52f46] px-5 py-3 text-sm font-bold text-white"
+				class="type-action mt-6 cursor-pointer rounded-full bg-[#e52f46] px-5 py-3 font-bold text-white"
 				>Reconnect</button
 			>
 		</div>
@@ -36,7 +36,7 @@
 	<AppShell username={data.user.username} active="leaderboard" onLogout={logout}>
 		<div class="mb-4 flex justify-end">
 			<span
-				class="rounded-full px-3 py-1 text-xs font-bold {leaderboard.connected
+				class="type-label rounded-full px-3 py-1 font-bold {leaderboard.connected
 					? 'bg-emerald-400/10 text-emerald-300'
 					: 'bg-amber-300/10 text-amber-300'}"
 				>{leaderboard.connected ? 'Live' : 'Reconnecting…'}</span

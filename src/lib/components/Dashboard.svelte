@@ -45,16 +45,16 @@
 <AppShell {username} active="quizzes" {onLogout}>
 	<div class="mb-8 flex items-center justify-between gap-5">
 		<div>
-			<h1 class="text-2xl font-black tracking-tight text-white">Choose a level</h1>
-			<p class="mt-2 text-sm text-blue-100/65">Pick a level, then choose a category</p>
+			<h1 class="type-h1 font-black tracking-tight text-white">Choose a level</h1>
+			<p class="type-body mt-2 text-blue-100/65">Pick a level, then choose a category</p>
 		</div>
 		<div class="flex items-center gap-3">
 			<span
-				class="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2.5 text-sm font-black text-cyan-200"
+				class="type-caption rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2.5 font-black text-cyan-200"
 				>Total {formatScore(totalScore)}</span
 			>
 			<span
-				class="hidden rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 text-sm font-bold text-blue-100/75 backdrop-blur-sm sm:inline-flex"
+				class="type-caption hidden rounded-full border border-white/15 bg-white/[0.05] px-5 py-2.5 font-bold text-blue-100/75 backdrop-blur-sm sm:inline-flex"
 				>JLPT Practice</span
 			>
 		</div>
@@ -66,7 +66,7 @@
 		{/each}
 	</section>
 
-	<p class="mt-10 text-center text-sm text-blue-100/60">
+	<p class="type-caption mt-10 text-center text-blue-100/60">
 		Signed in as {username} · progress saved on this browser
 	</p>
 </AppShell>

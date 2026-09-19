@@ -37,11 +37,11 @@
 				<Icon name="trophy" size={24} />
 			</span>
 			<div>
-				<h2 class="text-xl font-black tracking-tight text-white">Leaderboard</h2>
-				<p class="mt-1 text-sm text-blue-100/60">Shared learner rankings, updated live</p>
+				<h2 class="type-h2 font-black tracking-tight text-white">Leaderboard</h2>
+				<p class="type-body mt-1 text-blue-100/60">Shared learner rankings, updated live</p>
 			</div>
 		</div>
-		<span class="rounded-full bg-white/4 px-5 py-3 text-sm font-bold text-blue-100/60"
+		<span class="type-caption rounded-full bg-white/4 px-5 py-3 font-bold text-blue-100/60"
 			>{total} learners</span
 		>
 	</div>
@@ -49,7 +49,7 @@
 	<div class="overflow-x-auto">
 		<table class="w-full min-w-105 text-left">
 			<thead
-				class="bg-[#142d4c]/80 text-xs font-black tracking-[0.16em] text-blue-100/60 uppercase"
+				class="type-label bg-[#142d4c]/80 font-black tracking-[0.16em] text-blue-100/60 uppercase"
 			>
 				<tr>
 					<th class="w-28 px-6 py-5 text-center sm:px-8">Rank</th>
@@ -68,7 +68,7 @@
 						<td class="px-6 py-5 text-center sm:px-8">
 							{#if rank <= 3}
 								<span
-									class="inline-grid size-10 place-items-center rounded-full text-sm font-black {rank ===
+									class="type-body inline-grid size-10 place-items-center rounded-full font-black {rank ===
 									1
 										? 'bg-amber-300 text-[#102a43]'
 										: rank === 2
@@ -76,19 +76,19 @@
 											: 'bg-orange-100 text-orange-700'}">{rank}</span
 								>
 							{:else}
-								<span class="text-sm font-bold text-blue-100/55">{rank}</span>
+								<span class="type-body font-bold text-blue-100/55">{rank}</span>
 							{/if}
 						</td>
 						<td class="px-4 py-5">
 							<div class="flex items-center gap-3">
 								<span
-									class="grid size-10 place-items-center rounded-full bg-[#1a3150] text-sm font-black text-blue-50"
+									class="type-body grid size-10 place-items-center rounded-full bg-[#1a3150] font-black text-blue-50"
 									>{player.username.slice(0, 1).toUpperCase()}</span
 								>
 								<div>
-									<span class="text-sm font-black text-blue-50">{player.username}</span>
+									<span class="type-body font-black text-blue-50">{player.username}</span>
 									{#if player.username === currentUser}<span
-											class="ml-2 rounded-full bg-[#c9273e] px-2 py-0.5 text-[9px] font-black text-white"
+											class="type-label ml-2 rounded-full bg-[#c9273e] px-2 py-0.5 font-black text-white"
 											>You</span
 										>{/if}
 								</div>
@@ -100,7 +100,7 @@
 					</tr>
 				{:else}
 					<tr>
-						<td colspan="3" class="px-6 py-12 text-center text-sm font-semibold text-blue-100/65">
+						<td colspan="3" class="type-body px-6 py-12 text-center font-semibold text-blue-100/65">
 							No completed quiz attempts yet. Be the first learner on the board!
 						</td>
 					</tr>
@@ -111,20 +111,20 @@
 
 	{#if total > 0}
 		<footer class="flex items-center justify-between border-t border-white/10 px-6 py-5 sm:px-8">
-			<p class="text-xs font-bold text-blue-100/60">
+			<p class="type-caption font-bold text-blue-100/60">
 				Page {page} of {totalPages} · 10 learners per page
 			</p>
 			<div class="flex gap-2">
 				<button
 					onclick={onPrevious}
 					disabled={!hasPrevious}
-					class="cursor-pointer rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-blue-100/75 transition hover:bg-white/10 hover:text-white disabled:opacity-40"
+					class="type-action cursor-pointer rounded-full border border-white/15 px-4 py-2 font-bold text-blue-100/75 transition hover:bg-white/10 hover:text-white disabled:opacity-40"
 					>Previous</button
 				>
 				<button
 					onclick={onNext}
 					disabled={!hasNext}
-					class="cursor-pointer rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-blue-100/75 transition hover:bg-white/10 hover:text-white disabled:opacity-40"
+					class="type-action cursor-pointer rounded-full border border-white/15 px-4 py-2 font-bold text-blue-100/75 transition hover:bg-white/10 hover:text-white disabled:opacity-40"
 					>Next</button
 				>
 			</div>

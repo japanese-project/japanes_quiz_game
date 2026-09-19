@@ -38,26 +38,26 @@
 			</div>
 			<div>
 				<span
-					class="rounded-full px-3 py-1.5 text-xs font-black tracking-wide"
+					class="type-label rounded-full px-3 py-1.5 font-black tracking-wide"
 					style={`background:${color}22;color:${color}`}>{tag}</span
 				>
-				<h3 class="mt-3 text-xl font-black tracking-tight text-white">{label}</h3>
-				<p class="mt-2 text-sm font-medium text-blue-100/60">{level} · {subtitle}</p>
+				<h3 class="type-h3 mt-3 font-black tracking-tight text-white">{label}</h3>
+				<p class="type-caption mt-2 font-medium text-blue-100/60">{level} · {subtitle}</p>
 			</div>
 		</div>
-		<p class="mt-8 text-sm leading-7 text-blue-100/65">{description}</p>
+		<p class="type-body mt-8 leading-7 text-blue-100/65">{description}</p>
 		<div class="mt-6 flex flex-wrap gap-2.5">
 			{#each ['Vocabulary', 'Kanji', 'Grammar'] as subject (subject)}
-				<span class="rounded-full bg-white/[0.05] px-4 py-2 text-xs font-bold text-blue-100/65"
+				<span class="type-caption rounded-full bg-white/[0.05] px-4 py-2 font-bold text-blue-100/65"
 					>{subject}</span
 				>
 			{/each}
 		</div>
 		<div class="mt-auto flex items-center justify-between border-t border-white/15 pt-6">
-			<span class="text-sm font-medium text-blue-100/65">Easy, Medium or Hard</span>
+			<span class="type-body font-medium text-blue-100/65">Easy, Medium or Hard</span>
 			<button
 				onclick={() => onStart(level)}
-				class="flex cursor-pointer items-center gap-3 rounded-full bg-[#e52f46] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#f13b51] hover:shadow-lg"
+				class="type-action flex cursor-pointer items-center gap-3 rounded-full bg-[#e52f46] px-6 py-3 font-bold text-white shadow-sm transition hover:bg-[#f13b51] hover:shadow-lg"
 				>Start Quiz <Icon name="arrow" size={17} /></button
 			>
 		</div>

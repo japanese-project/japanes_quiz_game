@@ -40,19 +40,21 @@
 			<Logo light />
 			<button
 				onclick={on_back}
-				class="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-black text-blue-100/80 transition hover:bg-white/10 hover:text-white"
+				class="type-action flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-3 font-black text-blue-100/80 transition hover:bg-white/10 hover:text-white"
 				>Back</button
 			>
 		</div>
 	</header>
 
 	<div class="mx-auto w-full max-w-[1280px] flex-1 px-5 py-10 sm:px-8">
-		<p class="text-xs font-black tracking-[0.22em] text-blue-200/70 uppercase">{level} level</p>
-		<h1 class="mt-2 text-2xl font-black text-blue-50 sm:text-3xl">Choose a category</h1>
-		<p class="mt-2 text-sm text-blue-100/70">Pick a category, then choose how long a round runs.</p>
+		<p class="type-label font-black tracking-[0.22em] text-blue-200/70 uppercase">{level} level</p>
+		<h1 class="type-h1 mt-2 font-black text-blue-50">Choose a category</h1>
+		<p class="type-body mt-2 text-blue-100/70">
+			Pick a category, then choose how long a round runs.
+		</p>
 
 		{#if quizzes.length === 0}
-			<p class="mt-10 text-sm font-bold text-blue-100/70">
+			<p class="type-body mt-10 font-bold text-blue-100/70">
 				No quizzes have been added for {level} yet.
 			</p>
 		{:else}
@@ -64,15 +66,15 @@
 						class="flex cursor-pointer flex-col rounded-2xl border border-white/10 bg-[#0c2744]/65 p-6 text-left transition hover:border-white/25 hover:bg-[#0c2744] disabled:cursor-not-allowed disabled:opacity-50"
 					>
 						<span
-							class="inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-black text-white"
+							class="type-label inline-flex w-fit rounded-full px-3 py-1 font-black text-white"
 							style={`background-color: ${accents[quiz.category] ?? '#08b3c0'}`}
 							>{quiz.category}</span
 						>
-						<span class="mt-4 text-lg font-black text-blue-50">{quiz.title}</span>
-						<span class="mt-1 text-sm leading-6 text-blue-100/70"
+						<span class="type-h3 mt-4 font-black text-blue-50">{quiz.title}</span>
+						<span class="type-body mt-1 leading-6 text-blue-100/70"
 							>{blurbs[quiz.category] ?? ''}</span
 						>
-						<span class="mt-5 flex items-center gap-2 text-xs font-black text-blue-200/70">
+						<span class="type-caption mt-5 flex items-center gap-2 font-black text-blue-200/70">
 							{quiz.question_count} questions available
 							<Icon name="arrow" size={16} />
 						</span>

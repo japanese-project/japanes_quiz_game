@@ -79,10 +79,10 @@
 {#if load_error}
 	<main class="grid min-h-screen place-items-center bg-[#071e3b] px-5 text-center text-blue-50">
 		<div>
-			<p class="text-lg font-black text-red-400">{load_error}</p>
+			<p class="type-h3 font-black text-red-400">{load_error}</p>
 			<button
 				onclick={to_dashboard}
-				class="mt-6 cursor-pointer rounded-full bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20"
+				class="type-action mt-6 cursor-pointer rounded-full bg-white/10 px-5 py-3 font-bold text-white hover:bg-white/20"
 				>← Back to Dashboard</button
 			>
 		</div>

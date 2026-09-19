@@ -27,18 +27,18 @@
 			<Logo light />
 			<button
 				onclick={on_back}
-				class="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-black text-blue-100/80 transition hover:bg-white/10 hover:text-white"
+				class="type-action flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-3 font-black text-blue-100/80 transition hover:bg-white/10 hover:text-white"
 				>Back</button
 			>
 		</div>
 	</header>
 
 	<div class="mx-auto w-full max-w-[900px] flex-1 px-5 py-10 sm:px-8">
-		<p class="text-xs font-black tracking-[0.22em] text-blue-200/70 uppercase">
+		<p class="type-label font-black tracking-[0.22em] text-blue-200/70 uppercase">
 			{quiz.level} · {quiz.category}
 		</p>
-		<h1 class="mt-2 text-2xl font-black text-blue-50 sm:text-3xl">Choose a round length</h1>
-		<p class="mt-2 text-sm text-blue-100/70">
+		<h1 class="type-h1 mt-2 font-black text-blue-50">Choose a round length</h1>
+		<p class="type-body mt-2 text-blue-100/70">
 			{quiz.question_count} questions available. Each round is picked at random.
 		</p>
 
@@ -48,9 +48,9 @@
 					onclick={() => on_start(mode)}
 					class="flex cursor-pointer flex-col rounded-2xl border border-white/10 bg-[#0c2744]/65 p-6 text-left transition hover:border-white/25 hover:bg-[#0c2744]"
 				>
-					<span class="text-lg font-black text-blue-50">{mode.label}</span>
-					<span class="mt-1 text-sm leading-6 text-blue-100/70">{mode.blurb}</span>
-					<span class="mt-5 flex items-center gap-2 text-xs font-black text-blue-200/70">
+					<span class="type-h3 font-black text-blue-50">{mode.label}</span>
+					<span class="type-body mt-1 leading-6 text-blue-100/70">{mode.blurb}</span>
+					<span class="type-caption mt-5 flex items-center gap-2 font-black text-blue-200/70">
 						{round_size(mode, quiz.question_count)} questions
 						<Icon name="arrow" size={16} />
 					</span>

@@ -35,7 +35,7 @@
 					<a
 						href={resolve('/dashboard')}
 						aria-current={active === 'quizzes' ? 'page' : undefined}
-						class="flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-black transition sm:px-7 {active ===
+						class="type-action flex items-center justify-center gap-2 rounded-full px-4 py-3 font-black transition sm:px-7 {active ===
 						'quizzes'
 							? 'bg-[#e52f46] text-white shadow-sm'
 							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
@@ -44,7 +44,7 @@
 					<a
 						href={resolve('/leaderboard')}
 						aria-current={active === 'leaderboard' ? 'page' : undefined}
-						class="flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-black transition sm:px-7 {active ===
+						class="type-action flex items-center justify-center gap-2 rounded-full px-4 py-3 font-black transition sm:px-7 {active ===
 						'leaderboard'
 							? 'bg-[#e52f46] text-white shadow-sm'
 							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
@@ -53,7 +53,7 @@
 					<a
 						href={resolve('/credits')}
 						aria-current={active === 'credits' ? 'page' : undefined}
-						class="flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-black transition sm:px-7 {active ===
+						class="type-action flex items-center justify-center gap-2 rounded-full px-4 py-3 font-black transition sm:px-7 {active ===
 						'credits'
 							? 'bg-[#e52f46] text-white shadow-sm'
 							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
@@ -62,7 +62,7 @@
 				</nav>
 				<button
 					onclick={onLogout}
-					class="flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-3.5 text-sm font-bold text-blue-100/70 transition hover:bg-white/10 hover:text-white sm:px-6"
+					class="type-action flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-3.5 font-bold text-blue-100/70 transition hover:bg-white/10 hover:text-white sm:px-6"
 					aria-label={`Log out ${username}`}
 					><Icon name="logout" size={18} /><span class="hidden sm:inline">Log out</span></button
 				>
