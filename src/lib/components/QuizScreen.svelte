@@ -156,11 +156,19 @@
 		points_earned = 0
 	}
 
+	/** No-op used when answer selection is locked during review mode */
+	function noop_select(_choice_id: string): void {
+		// intentionally empty: answer selection is disabled while reviewing
+	}
+
 	function go_next() {
 		if (index < furthest_index) {
 			// Navigating forward within reviewed questions
-			index += 1
-			load_saved_answer(quiz.questions[index].id)
+			const next_index = index + 1
+			const next_question = quiz.questions[next_index]
+			if (!next_question) return
+			index = next_index
+			load_saved_answer(next_question.id)
 			stop_question_timer()
 		} else if (index === furthest_index && answers_map.has(current.id)) {
 			// Moving past the last answered question to the next unanswered one
@@ -181,8 +189,11 @@
 	function go_back() {
 		if (!can_go_back) return
 		stop_question_timer()
-		index -= 1
-		load_saved_answer(quiz.questions[index].id)
+		const prev_index = index - 1
+		const prev_question = quiz.questions[prev_index]
+		if (!prev_question) return
+		index = prev_index
+		load_saved_answer(prev_question.id)
 	}
 
 	onMount(() => {
@@ -269,7 +280,7 @@
 						correct_choice_id={result?.correct_choice_id ?? null}
 						submitted={!!result}
 						checking={checking && !is_reviewing}
-						onSelect={is_reviewing ? () => {} : select_answer}
+						onSelect={is_reviewing ? noop_select : select_answer}
 					/>
 				{/each}
 			</div>
