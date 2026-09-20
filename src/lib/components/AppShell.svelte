@@ -51,8 +51,8 @@
 						'leaderboard'
 							? 'bg-[#e52f46] text-white shadow-sm'
 							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
-						><Icon name="trophy" size={18} /> <span class="max-sm:hidden">Leaderboard</span><span
-							class="sm:hidden">Ranks</span
+						><Icon name="trophy" size={18} /> <span class="hidden md:inline">Leaderboard</span><span
+							class="md:hidden">Ranks</span
 						></a
 					>
 					<a
@@ -63,7 +63,7 @@
 							? 'bg-[#e52f46] text-white shadow-sm'
 							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
 						><Icon name="users" size={18} /> <span class="hidden md:inline">Credits</span><span
-							class="sm:hidden">Team</span
+							class="md:hidden">Team</span
 						></a
 					>
 				</nav>

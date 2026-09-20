@@ -63,7 +63,7 @@
 		{/each}
 	</section>
 
-	<section class="hidden items-stretch gap-7 sm:grid lg:grid-cols-2">
+	<section class="hidden items-stretch gap-7 sm:grid md:grid-cols-2">
 		{#each levels as item (item.level)}
 			<LevelCard {...item} {onStart} />
 		{/each}

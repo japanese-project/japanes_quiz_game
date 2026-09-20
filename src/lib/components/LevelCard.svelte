@@ -80,7 +80,7 @@
 		</div>
 	</div>
 
-	<div class="hidden min-h-[350px] flex-col p-6 sm:flex sm:p-7">
+	<div class="hidden min-h-[350px] flex-col p-6 sm:flex sm:p-7 md:max-lg:p-5">
 		<div class="flex items-center gap-5">
 			<div
 				class="grid size-16 shrink-0 place-items-center rounded-full text-xl font-black shadow-sm {level ===
@@ -113,11 +113,11 @@
 				>
 			{/each}
 		</div>
-		<div class="mt-auto flex items-center justify-between gap-3 border-t border-white/15 pt-6">
+		<div class="mt-auto flex items-center justify-between gap-3 pt-6">
 			<span class="type-caption font-medium text-blue-100/65">Choose difficulty</span>
 			<button
 				onclick={() => onStart(level)}
-				class="type-action flex cursor-pointer items-center gap-3 rounded-full bg-[#e52f46] px-6 py-3 font-bold text-white shadow-sm transition hover:bg-[#f13b51] hover:shadow-lg"
+				class="type-action flex shrink-0 cursor-pointer items-center gap-3 rounded-full bg-[#e52f46] px-6 py-3 font-bold whitespace-nowrap text-white shadow-sm transition hover:bg-[#f13b51] hover:shadow-lg md:max-lg:px-4"
 				>Start Quiz <Icon name="arrow" size={17} /></button
 			>
 		</div>

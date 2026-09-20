@@ -70,6 +70,12 @@
 		selected_choice_id = null
 		points_earned = 0
 
+		// The regular one-second width transition would otherwise still show the last
+		// sliver of the progress bar while the answer is being revealed. Let the zero
+		// state paint first so the visual countdown and timeout agree exactly.
+		await tick()
+		await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+
 		try {
 			result = await reveal_answer(quiz.id, current.id)
 			playAnswerSound(false)
@@ -151,31 +157,28 @@
 	style={`background-image: linear-gradient(rgba(7, 30, 59, 0.94), rgba(7, 30, 59, 0.96)), url('${patternBackground}')`}
 >
 	<div
-		class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-5 py-5 max-sm:grid max-sm:grid-cols-[1fr_auto_1fr] max-sm:px-4 max-sm:py-3 sm:px-8"
+		class="mx-auto grid w-full max-w-[1280px] grid-cols-[1fr_auto_1fr] items-center px-4 py-3 sm:px-8 sm:py-5"
 	>
 		<button
 			onclick={on_exit}
-			class="type-action cursor-pointer font-bold text-blue-100/70 transition hover:text-white max-sm:justify-self-start max-sm:text-2xl max-sm:leading-none"
+			class="cursor-pointer justify-self-start text-2xl leading-none font-bold text-blue-100/70 transition hover:text-white"
 			aria-label="Back to dashboard"
-			><span aria-hidden="true">←</span><span class="max-sm:sr-only"> Dashboard</span></button
+			><span aria-hidden="true">←</span><span class="sr-only"> Dashboard</span></button
 		>
-		<div class="flex items-center gap-3 max-sm:contents">
+		<div class="contents">
 			<span
-				class="type-label rounded-full bg-[#e52f46] px-3 py-1.5 font-black text-white max-sm:col-start-2 max-sm:row-start-1 max-sm:px-4 max-sm:py-2"
+				class="type-label col-start-2 row-start-1 rounded-full bg-[#e52f46] px-4 py-2 font-black text-white"
 				>{level}</span
 			><span
-				class="type-caption font-bold text-blue-100/70 max-sm:col-start-3 max-sm:row-start-1 max-sm:justify-self-end max-sm:whitespace-nowrap"
+				class="type-caption col-start-3 row-start-1 justify-self-end font-bold whitespace-nowrap text-blue-100/70"
 				>Question {index + 1} / {quiz.questions.length}</span
-			>
-			<span class="type-caption min-w-16 text-right font-black text-blue-50 max-sm:hidden"
-				>{seconds_left}s</span
 			>
 		</div>
 	</div>
 	<div class="h-1.5 w-full overflow-hidden bg-white/10">
 		<div
 			class="h-full bg-[#e52f46] transition-[width] duration-1000 ease-linear"
-			style={`width:${timer_progress}%`}
+			style={`width:${timer_progress}%;transition-duration:${seconds_left === 0 || seconds_left === QUESTION_TIME_SECONDS ? 0 : 1000}ms`}
 			role="progressbar"
 			aria-label="Time remaining"
 			aria-valuemin="0"
@@ -187,7 +190,7 @@
 	<section
 		class="flex flex-1 flex-col border-y border-white/10 bg-gradient-to-b from-[#1a3555]/90 to-[#102b49]/90 shadow-2xl shadow-black/20"
 	>
-		<div class="mx-auto flex w-full max-w-4xl flex-1 flex-col px-5 py-7 sm:px-8 sm:py-10">
+		<div class="mx-auto flex w-full max-w-2xl flex-1 flex-col px-5 py-7 sm:px-8 sm:py-10">
 			<div>
 				<span class="type-label rounded-full bg-cyan-400/10 px-3 py-1.5 font-black text-cyan-300"
 					>{current.category}</span
@@ -203,7 +206,7 @@
 			<h1 class="quiz-question type-h1 mt-7 font-black text-blue-50">
 				{current.prompt}
 			</h1>
-			<div class="mt-7 grid gap-3 sm:grid-cols-2">
+			<div class="mt-7 grid gap-3">
 				{#each current.choices as choice, choice_index (choice.id)}
 					<AnswerOption
 						{choice}
@@ -236,10 +239,8 @@
 </main>
 
 <style>
-	@media (max-width: 639px) {
-		.quiz-question {
-			font-size: 1.5rem;
-			line-height: 1.35;
-		}
+	.quiz-question {
+		font-size: clamp(1.5rem, 2.5vw, 2rem);
+		line-height: 1.35;
 	}
 </style>
