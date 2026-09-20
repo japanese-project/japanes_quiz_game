@@ -115,3 +115,26 @@ export async function check_answer(db: Db, quiz_id: string, choice_id: string) {
 		explanation: question?.explanation ?? null,
 	}
 }
+
+export async function reveal_answer(db: Db, quiz_id: string, question_id: string) {
+	const [answer] = await db
+		.select({
+			correct_choice_id: choices.id,
+			explanation: questions.explanation,
+		})
+		.from(questions)
+		.innerJoin(
+			choices,
+			and(eq(choices.question_id, questions.id), eq(choices.is_correct, true)),
+		)
+		.where(and(eq(questions.id, question_id), eq(questions.quiz_id, quiz_id)))
+		.limit(1)
+
+	if (!answer) return null
+
+	return {
+		is_correct: false,
+		correct_choice_id: answer.correct_choice_id,
+		explanation: answer.explanation ?? null,
+	}
+}

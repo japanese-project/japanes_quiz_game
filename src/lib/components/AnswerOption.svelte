@@ -32,9 +32,7 @@
 		? 'border-emerald-500 bg-emerald-500 text-white shadow-lg shadow-emerald-950/25'
 		: isWrong
 			? 'border-red-500 bg-red-500 text-white shadow-lg shadow-red-950/25'
-			: isSelected
-				? 'border-cyan-400 bg-cyan-400/10 text-cyan-100'
-				: 'border-white/15 bg-white/[0.03] text-blue-100/75 hover:border-white/30 hover:bg-white/[0.07]'}"
+			: 'border-white/15 bg-white/[0.03] text-blue-100/75 hover:border-white/30 hover:bg-white/[0.07]'}"
 >
 	<span
 		class="type-label grid size-8 shrink-0 place-items-center rounded-lg bg-[#0a2440] font-black text-blue-100 ring-1 ring-white/10"

@@ -32,7 +32,7 @@
 			<a href={resolve('/dashboard')} aria-label="Japanese Quest dashboard"><Logo light /></a>
 			<div class="flex items-center gap-3 max-sm:contents sm:gap-5">
 				<nav
-					class="flex rounded-full border border-white/15 bg-white/[0.04] p-1.5 shadow-lg shadow-black/10 max-sm:order-3 max-sm:w-full max-sm:p-1"
+					class="flex rounded-full border border-white/15 bg-white/[0.04] p-1.5 shadow-lg shadow-black/10 max-sm:order-3 max-sm:mt-[30px] max-sm:w-full max-sm:p-1"
 					aria-label="Main navigation"
 				>
 					<a

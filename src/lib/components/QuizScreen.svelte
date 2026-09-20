@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte'
+	import { onDestroy, onMount, tick } from 'svelte'
 	import patternBackground from '$lib/assets/pattern1.png'
 	import type { AnswerResult, Level, Quiz } from '$lib/types'
-	import { submit_answer } from '$lib/api/quizzes'
+	import { reveal_answer, submit_answer } from '$lib/api/quizzes'
 	import { playAnswerSound, playQuizMusic, playThemeMusic } from '$lib/client/audio'
-	import { calculateScore, formatScore, QUESTION_TIME_SECONDS } from '$lib/scoring'
+	import { calculateScore, QUESTION_TIME_SECONDS } from '$lib/scoring'
 	import AnswerOption from './AnswerOption.svelte'
 
 	let {
@@ -51,9 +51,37 @@
 			seconds_left -= 1
 			if (seconds_left <= 0) {
 				stop_question_timer()
-				go_next()
+				void handle_timeout()
 			}
 		}, 1000)
+	}
+
+	async function show_feedback_then_advance() {
+		// Start the feedback delay only after Svelte has painted the highlighted answer.
+		await tick()
+		clearTimeout(advance_timeout)
+		advance_timeout = setTimeout(go_next, ANSWER_FEEDBACK_MS)
+	}
+
+	async function handle_timeout() {
+		if (result || checking) return
+		checking = true
+		error = ''
+		selected_choice_id = null
+		points_earned = 0
+
+		try {
+			result = await reveal_answer(quiz.id, current.id)
+			playAnswerSound(false)
+		} catch (thrown) {
+			error = thrown instanceof Error ? thrown.message : 'Could not reveal the correct answer.'
+		} finally {
+			checking = false
+		}
+
+		// Do not skip the question when the answer could not be loaded. The choices stay
+		// enabled so the learner can still answer, and the error remains visible.
+		if (result) await show_feedback_then_advance()
 	}
 
 	async function select_answer(choice_id: string) {
@@ -89,10 +117,12 @@
 		playAnswerSound(result.is_correct)
 
 		// Keep the result visible long enough for the answer sound to finish.
-		advance_timeout = setTimeout(go_next, ANSWER_FEEDBACK_MS)
+		await show_feedback_then_advance()
 	}
 
 	function go_next() {
+		clearTimeout(advance_timeout)
+		advance_timeout = undefined
 		if (is_last) {
 			on_finish(score, correct_count)
 			return
@@ -120,19 +150,26 @@
 	class="flex min-h-screen flex-col overflow-x-hidden bg-[#071e3b] bg-cover bg-fixed bg-center bg-no-repeat"
 	style={`background-image: linear-gradient(rgba(7, 30, 59, 0.94), rgba(7, 30, 59, 0.96)), url('${patternBackground}')`}
 >
-	<div class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-5 py-5 sm:px-8">
+	<div
+		class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-5 py-5 max-sm:grid max-sm:grid-cols-[1fr_auto_1fr] max-sm:px-4 max-sm:py-3 sm:px-8"
+	>
 		<button
 			onclick={on_exit}
-			class="type-action cursor-pointer font-bold text-blue-100/70 transition hover:text-white"
-			>← Dashboard</button
+			class="type-action cursor-pointer font-bold text-blue-100/70 transition hover:text-white max-sm:justify-self-start max-sm:text-2xl max-sm:leading-none"
+			aria-label="Back to dashboard"
+			><span aria-hidden="true">←</span><span class="max-sm:sr-only"> Dashboard</span></button
 		>
-		<div class="flex items-center gap-3">
-			<span class="type-label rounded-full bg-[#e52f46] px-3 py-1.5 font-black text-white"
+		<div class="flex items-center gap-3 max-sm:contents">
+			<span
+				class="type-label rounded-full bg-[#e52f46] px-3 py-1.5 font-black text-white max-sm:col-start-2 max-sm:row-start-1 max-sm:px-4 max-sm:py-2"
 				>{level}</span
-			><span class="type-caption font-bold text-blue-100/70"
+			><span
+				class="type-caption font-bold text-blue-100/70 max-sm:col-start-3 max-sm:row-start-1 max-sm:justify-self-end max-sm:whitespace-nowrap"
 				>Question {index + 1} / {quiz.questions.length}</span
 			>
-			<span class="type-caption min-w-16 text-right font-black text-blue-50">{seconds_left}s</span>
+			<span class="type-caption min-w-16 text-right font-black text-blue-50 max-sm:hidden"
+				>{seconds_left}s</span
+			>
 		</div>
 	</div>
 	<div class="h-1.5 w-full overflow-hidden bg-white/10">
@@ -163,7 +200,9 @@
 				>
 					{current.image}
 				</div>{/if}
-			<h1 class="type-h1 mt-7 font-black text-blue-50">{current.prompt}</h1>
+			<h1 class="quiz-question type-h1 mt-7 font-black text-blue-50">
+				{current.prompt}
+			</h1>
 			<div class="mt-7 grid gap-3 sm:grid-cols-2">
 				{#each current.choices as choice, choice_index (choice.id)}
 					<AnswerOption
@@ -191,24 +230,16 @@
 				>
 					{error}
 				</p>
-			{:else if result}
-				<div
-					class="mt-6 rounded-xl border p-4 {result.is_correct
-						? 'border-emerald-400/40 bg-emerald-400/10'
-						: 'border-amber-300/40 bg-amber-300/10'}"
-				>
-					<p
-						class="type-body font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}"
-					>
-						{result.is_correct
-							? `Correct! +${formatScore(points_earned)}`
-							: 'Not quite. Review the correct answer.'}
-					</p>
-					{#if result.explanation}
-						<p class="type-body mt-1 leading-6 text-blue-100/70">{result.explanation}</p>
-					{/if}
-				</div>
 			{/if}
 		</div>
 	</section>
 </main>
+
+<style>
+	@media (max-width: 639px) {
+		.quiz-question {
+			font-size: 1.5rem;
+			line-height: 1.35;
+		}
+	}
+</style>

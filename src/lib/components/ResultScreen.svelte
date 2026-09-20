@@ -8,14 +8,14 @@
 		score,
 		correct,
 		total,
-		onDashboard,
+		onHome,
 		onRetry,
 	}: {
 		level: string
 		score: number
 		correct: number
 		total: number
-		onDashboard: () => void
+		onHome: () => void
 		onRetry: () => void
 	} = $props()
 	let percentage = $derived(Math.round((correct / total) * 100))
@@ -61,9 +61,9 @@
 				>Try Again</button
 			>
 			<button
-				onclick={onDashboard}
+				onclick={onHome}
 				class="type-action flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#e52f46] px-5 py-3.5 font-bold text-white transition hover:bg-[#f13b51]"
-				>Dashboard <Icon name="arrow" size={17} /></button
+				>Home <Icon name="arrow" size={17} /></button
 			>
 		</div>
 	</section>

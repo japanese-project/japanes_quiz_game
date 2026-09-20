@@ -108,11 +108,11 @@
 			>
 				<tr>
 					<th
-						class="w-28 px-6 py-5 text-center max-sm:w-[44px] max-sm:py-2 max-sm:pr-0 max-sm:pl-[10px] sm:px-8"
+						class="w-28 px-6 py-5 text-center max-sm:w-14 max-sm:py-2 max-sm:pr-1 max-sm:pl-3 sm:px-8"
 					>
 						Rank
 					</th>
-					<th class="px-4 py-5 max-sm:px-2 max-sm:py-2">Name</th>
+					<th class="px-4 py-5 max-sm:px-3 max-sm:py-2">Name</th>
 					<th
 						class="px-6 py-5 text-right max-sm:w-[104px] max-sm:py-2 max-sm:pr-[10px] max-sm:pl-0 sm:px-8"
 					>
@@ -129,7 +129,7 @@
 							? 'bg-[#24577f]/55'
 							: 'transition hover:bg-white/5'}"
 					>
-						<td class="px-6 py-5 text-center max-sm:py-1 max-sm:pr-0 max-sm:pl-[10px] sm:px-8">
+						<td class="px-6 py-5 text-center max-sm:py-1 max-sm:pr-1 max-sm:pl-3 sm:px-8">
 							{#if rank <= 3}
 								<span
 									class="type-body inline-grid size-10 place-items-center rounded-full font-black max-sm:size-7 max-sm:text-xs {rank ===
@@ -143,7 +143,7 @@
 								<span class="type-body font-bold text-blue-100/55 max-sm:text-sm">{rank}</span>
 							{/if}
 						</td>
-						<td class="px-4 py-5 max-sm:px-2 max-sm:py-1">
+						<td class="px-4 py-5 max-sm:px-3 max-sm:py-1">
 							<div class="flex min-w-0 items-center gap-3 max-sm:gap-0">
 								<span
 									class="type-body grid size-10 place-items-center rounded-full bg-[#1a3150] font-black text-blue-50 max-sm:hidden"
