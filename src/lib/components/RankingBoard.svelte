@@ -92,10 +92,10 @@
 		</div>
 	{/if}
 
-	<div class="min-h-0 flex-1 overflow-hidden">
+	<div class="min-h-0 flex-1 overflow-y-auto">
 		<table class="w-full table-fixed text-left">
 			<thead
-				class="bg-bg-deep/60 text-xs font-black tracking-[0.08em] text-text-secondary uppercase sm:text-sm"
+				class="sticky top-0 bg-bg-deep/95 text-xs font-black tracking-[0.08em] text-text-secondary uppercase backdrop-blur-sm sm:text-sm"
 			>
 				<tr>
 					<th class="w-14 py-2 pr-1 pl-3 text-center sm:w-20 sm:py-3"> Rank </th>
