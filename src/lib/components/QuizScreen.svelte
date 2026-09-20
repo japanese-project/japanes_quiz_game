@@ -153,31 +153,31 @@
 </script>
 
 <main
-	class="flex min-h-screen flex-col overflow-x-hidden bg-[#071e3b] bg-cover bg-fixed bg-center bg-no-repeat"
-	style={`background-image: linear-gradient(rgba(7, 30, 59, 0.94), rgba(7, 30, 59, 0.96)), url('${patternBackground}')`}
+	class="app-pattern-bg flex min-h-screen flex-col overflow-x-hidden bg-cover bg-fixed bg-center bg-no-repeat"
+	style={`--pattern-image:url('${patternBackground}')`}
 >
 	<div
 		class="mx-auto grid w-full max-w-[1280px] grid-cols-[1fr_auto_1fr] items-center px-4 py-3 sm:px-8 sm:py-5"
 	>
 		<button
 			onclick={on_exit}
-			class="cursor-pointer justify-self-start text-2xl leading-none font-bold text-blue-100/70 transition hover:text-white"
+			class="grid h-11 w-12 cursor-pointer place-items-center justify-self-start rounded-xl border border-border bg-surface/80 text-2xl leading-none font-bold text-text-secondary shadow-sm transition hover:border-secondary/60 hover:bg-surface-hover hover:text-text-primary active:scale-95"
 			aria-label="Back to dashboard"
 			><span aria-hidden="true">←</span><span class="sr-only"> Dashboard</span></button
 		>
 		<div class="contents">
 			<span
-				class="type-label col-start-2 row-start-1 rounded-full bg-[#e52f46] px-4 py-2 font-black text-white"
+				class="type-label col-start-2 row-start-1 rounded-full bg-primary px-4 py-2 font-black text-text-primary"
 				>{level}</span
 			><span
-				class="type-caption col-start-3 row-start-1 justify-self-end font-bold whitespace-nowrap text-blue-100/70"
+				class="type-caption col-start-3 row-start-1 justify-self-end font-bold whitespace-nowrap text-text-secondary"
 				>Question {index + 1} / {quiz.questions.length}</span
 			>
 		</div>
 	</div>
-	<div class="h-1.5 w-full overflow-hidden bg-white/10">
+	<div class="h-1.5 w-full overflow-hidden bg-disabled/25">
 		<div
-			class="h-full bg-[#e52f46] transition-[width] duration-1000 ease-linear"
+			class="h-full bg-secondary transition-[width] duration-1000 ease-linear"
 			style={`width:${timer_progress}%;transition-duration:${seconds_left === 0 || seconds_left === QUESTION_TIME_SECONDS ? 0 : 1000}ms`}
 			role="progressbar"
 			aria-label="Time remaining"
@@ -188,22 +188,23 @@
 	</div>
 
 	<section
-		class="flex flex-1 flex-col border-y border-white/10 bg-gradient-to-b from-[#1a3555]/90 to-[#102b49]/90 shadow-2xl shadow-black/20"
+		class="flex flex-1 flex-col border-y border-border bg-gradient-to-b from-surface/95 to-bg-deep shadow-2xl shadow-black/20"
 	>
 		<div class="mx-auto flex w-full max-w-2xl flex-1 flex-col px-5 py-7 sm:px-8 sm:py-10">
 			<div>
-				<span class="type-label rounded-full bg-cyan-400/10 px-3 py-1.5 font-black text-cyan-300"
+				<span
+					class="type-label rounded-full bg-secondary/10 px-3 py-1.5 font-black text-secondary-hover"
 					>{current.category}</span
 				>
 			</div>
 			{#if current.image}<div
-					class="mt-6 mb-7 grid h-32 place-items-center rounded-2xl border border-white/10 bg-[#0c2744]/65 text-6xl"
+					class="mt-6 mb-7 grid h-32 place-items-center rounded-2xl border border-border bg-bg-deep/65 text-6xl"
 					role="img"
 					aria-label="Question illustration"
 				>
 					{current.image}
 				</div>{/if}
-			<h1 class="quiz-question type-h1 mt-7 font-black text-blue-50">
+			<h1 class="quiz-question type-h1 mt-7 font-black text-text-primary">
 				{current.prompt}
 			</h1>
 			<div class="mt-7 grid gap-3">
@@ -221,7 +222,7 @@
 			</div>
 
 			{#if checking}
-				<div class="type-body mt-6 flex items-center gap-2 font-bold text-blue-100/50">
+				<div class="type-body mt-6 flex items-center gap-2 font-bold text-text-secondary">
 					<span
 						class="size-4 animate-spin rounded-full border-2 border-current border-t-transparent"
 					></span>
@@ -229,7 +230,7 @@
 				</div>
 			{:else if error}
 				<p
-					class="type-body mt-6 rounded-xl border border-red-400/40 bg-red-400/10 p-4 font-bold text-red-200"
+					class="type-body mt-6 rounded-xl border border-error/60 bg-error/10 p-4 font-bold text-error"
 				>
 					{error}
 				</p>

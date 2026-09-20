@@ -30,11 +30,11 @@
 	<section class="mx-auto w-full max-w-6xl">
 		<div class="mb-10 text-center">
 			<span
-				class="type-label inline-flex rounded-full border border-white/15 bg-white/[0.05] px-4 py-2 font-black tracking-[0.2em] text-[#67e8f9] uppercase"
+				class="type-label inline-flex rounded-full border border-border bg-surface/30 px-4 py-2 font-black tracking-[0.2em] text-secondary-hover uppercase"
 			>
 				The team
 			</span>
-			<h1 class="type-h1 mt-5 font-black tracking-tight text-white">
+			<h1 class="type-h1 mt-5 font-black tracking-tight text-text-primary">
 				Made with care by six creators
 			</h1>
 		</div>
@@ -45,7 +45,7 @@
 			{/each}
 		</div>
 
-		<p class="type-caption mt-10 text-center text-blue-100/50">
+		<p class="type-caption mt-10 text-center text-text-secondary">
 			ありがとうございます · Thank you for learning with us
 		</p>
 	</section>

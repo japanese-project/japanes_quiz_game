@@ -19,20 +19,20 @@
 </script>
 
 <main
-	class="flex min-h-screen flex-col overflow-x-hidden bg-[#071e3b] bg-cover bg-fixed bg-center bg-no-repeat {active !==
+	class="app-pattern-bg flex min-h-screen flex-col overflow-x-hidden bg-cover bg-fixed bg-center bg-no-repeat {active !==
 	'credits'
 		? 'max-sm:h-dvh max-sm:min-h-0 max-sm:overflow-hidden'
 		: ''}"
-	style={`background-image: linear-gradient(rgba(7, 30, 59, 0.94), rgba(7, 30, 59, 0.96)), url('${patternBackground}')`}
+	style={`--pattern-image:url('${patternBackground}')`}
 >
-	<header class="border-b border-white/10 bg-[#061b35]/95">
+	<header class="border-b border-border/50 bg-bg-deep/95">
 		<div
 			class="mx-auto flex min-h-24 max-w-[1280px] flex-wrap items-center justify-between gap-4 px-5 py-4 max-sm:min-h-0 max-sm:gap-2 max-sm:px-4 max-sm:py-3 sm:px-8"
 		>
 			<a href={resolve('/dashboard')} aria-label="Japanese Quest dashboard"><Logo light /></a>
 			<div class="flex items-center gap-3 max-sm:contents sm:gap-5">
 				<nav
-					class="flex rounded-full border border-white/15 bg-white/[0.04] p-1.5 shadow-lg shadow-black/10 max-sm:order-3 max-sm:mt-[30px] max-sm:w-full max-sm:p-1"
+					class="flex rounded-full border border-border bg-surface/20 p-1.5 shadow-lg shadow-black/10 max-sm:order-3 max-sm:mt-[30px] max-sm:w-full max-sm:p-1"
 					aria-label="Main navigation"
 				>
 					<a
@@ -40,8 +40,8 @@
 						aria-current={active === 'quizzes' ? 'page' : undefined}
 						class="type-action flex items-center justify-center gap-2 rounded-full px-4 py-3 font-black transition max-sm:flex-1 max-sm:px-2 max-sm:py-2.5 sm:px-7 {active ===
 						'quizzes'
-							? 'bg-[#e52f46] text-white shadow-sm'
-							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
+							? 'bg-primary text-text-primary shadow-sm'
+							: 'text-text-secondary hover:bg-surface-hover/60 hover:text-text-primary'}"
 						><Icon name="book" size={18} /> Quizzes</a
 					>
 					<a
@@ -49,8 +49,8 @@
 						aria-current={active === 'leaderboard' ? 'page' : undefined}
 						class="type-action flex items-center justify-center gap-2 rounded-full px-4 py-3 font-black transition max-sm:flex-1 max-sm:px-2 max-sm:py-2.5 sm:px-7 {active ===
 						'leaderboard'
-							? 'bg-[#e52f46] text-white shadow-sm'
-							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
+							? 'bg-primary text-text-primary shadow-sm'
+							: 'text-text-secondary hover:bg-surface-hover/60 hover:text-text-primary'}"
 						><Icon name="trophy" size={18} /> <span class="hidden md:inline">Leaderboard</span><span
 							class="md:hidden">Ranks</span
 						></a
@@ -60,8 +60,8 @@
 						aria-current={active === 'credits' ? 'page' : undefined}
 						class="type-action flex items-center justify-center gap-2 rounded-full px-4 py-3 font-black transition max-sm:flex-1 max-sm:px-2 max-sm:py-2.5 sm:px-7 {active ===
 						'credits'
-							? 'bg-[#e52f46] text-white shadow-sm'
-							: 'text-blue-100/70 hover:bg-white/10 hover:text-white'}"
+							? 'bg-primary text-text-primary shadow-sm'
+							: 'text-text-secondary hover:bg-surface-hover/60 hover:text-text-primary'}"
 						><Icon name="users" size={18} /> <span class="hidden md:inline">Credits</span><span
 							class="md:hidden">Team</span
 						></a
@@ -69,7 +69,7 @@
 				</nav>
 				<button
 					onclick={onLogout}
-					class="type-action flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-3.5 font-bold text-blue-100/70 transition hover:bg-white/10 hover:text-white max-sm:p-3 sm:px-6"
+					class="type-action flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-border bg-surface/20 px-4 py-3.5 font-bold text-text-secondary transition hover:bg-surface-hover/60 hover:text-text-primary max-sm:p-3 sm:px-6"
 					aria-label={`Log out ${username}`}
 					><Icon name="logout" size={18} /><span class="hidden sm:inline">Log out</span></button
 				>

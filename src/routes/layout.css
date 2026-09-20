@@ -5,13 +5,30 @@
 	--font-sans:
 		'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Inter, ui-sans-serif, system-ui,
 		sans-serif;
+
+	/* Japanese Quest color system */
+	--color-bg-primary: #071f38;
+	--color-bg-deep: #061a30;
+	--color-surface: #193b5c;
+	--color-surface-hover: #214a70;
+	--color-primary: #ef334e;
+	--color-primary-hover: #d92742;
+	--color-secondary: #13bcd0;
+	--color-secondary-hover: #22d3e5;
+	--color-text-primary: #f8fafc;
+	--color-text-secondary: #9cb3cc;
+	--color-border: #365775;
+	--color-success: #22c55e;
+	--color-error: #ef334e;
+	--color-warning: #fbbf24;
+	--color-disabled: #60758d;
 }
 
 :root {
 	font-family: var(--font-sans);
 	font-synthesis: none;
-	color: #102a43;
-	background: #f5f8fc;
+	color: var(--color-text-primary);
+	background: var(--color-bg-primary);
 }
 
 html {
@@ -28,9 +45,20 @@ input {
 	font: inherit;
 }
 button:focus-visible,
-input:focus-visible {
-	outline: 3px solid rgb(59 130 246 / 30%);
+input:focus-visible,
+a:focus-visible {
+	outline: 3px solid color-mix(in srgb, var(--color-secondary) 55%, transparent);
 	outline-offset: 2px;
+}
+
+.app-pattern-bg {
+	background-color: var(--color-bg-primary);
+	background-image:
+		linear-gradient(
+			color-mix(in srgb, var(--color-bg-primary) 94%, transparent),
+			color-mix(in srgb, var(--color-bg-primary) 96%, transparent)
+		),
+		var(--pattern-image);
 }
 
 /* Responsive type scale: mobile first, tablet at 768px, desktop at 1024px. */
