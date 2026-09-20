@@ -196,7 +196,7 @@
 </script>
 
 <main
-	class="app-pattern-bg flex min-h-screen flex-col overflow-x-hidden bg-cover bg-fixed bg-center bg-no-repeat"
+	class="app-pattern-bg flex h-dvh flex-col overflow-hidden bg-cover bg-fixed bg-center bg-no-repeat"
 	style={`--pattern-image:url('${patternBackground}')`}
 >
 	<div
@@ -218,7 +218,7 @@
 			>
 		</div>
 	</div>
-	<div class="h-1.5 w-full overflow-hidden bg-disabled/25">
+	<div class="h-1.5 w-full shrink-0 overflow-hidden bg-disabled/25">
 		{#if !is_reviewing}
 			<div
 				class="h-full bg-secondary transition-[width] duration-1000 ease-linear"
@@ -232,10 +232,11 @@
 		{/if}
 	</div>
 
+	<!-- Scrollable question area -->
 	<section
-		class="flex flex-1 flex-col border-y border-border bg-gradient-to-b from-surface/95 to-bg-deep shadow-2xl shadow-black/20"
+		class="flex-1 overflow-y-auto border-t border-border bg-gradient-to-b from-surface/95 to-bg-deep"
 	>
-		<div class="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-5 sm:px-8 sm:py-10">
+		<div class="mx-auto w-full max-w-2xl px-4 py-5 sm:px-8 sm:py-10">
 			<div class="flex flex-wrap items-center gap-2">
 				<span
 					class="type-label rounded-full bg-secondary/10 px-3 py-1.5 font-black text-secondary-hover"
@@ -298,36 +299,46 @@
 					<p class="text-sm leading-relaxed sm:text-base">{result.explanation}</p>
 				</div>
 			{/if}
-
-			{#if result || is_reviewing}
-				<div class="mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:flex sm:justify-between sm:gap-3">
-					<button
-						onclick={go_back}
-						disabled={!can_go_back}
-						class="flex h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-border bg-surface/80 px-3 text-sm font-bold text-text-secondary shadow-sm transition hover:border-secondary/60 hover:bg-surface-hover hover:text-text-primary active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:px-5 sm:text-base"
-					>
-						<span aria-hidden="true">←</span> Back
-					</button>
-					<button
-						onclick={go_next}
-						disabled={!can_go_next}
-						class="flex h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-secondary bg-secondary px-3 text-sm font-bold text-white shadow-sm transition hover:bg-secondary-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:px-6 sm:text-base"
-					>
-						{#if is_last && !is_reviewing}
-							Finish 🎉
-						{:else}
-							Next <span aria-hidden="true">→</span>
-						{/if}
-					</button>
-				</div>
-			{/if}
 		</div>
 	</section>
+
+	<!-- Sticky bottom nav bar — always visible, never scrolls away -->
+	{#if result || is_reviewing}
+		<div
+			class="nav-bar shrink-0 border-t border-border bg-surface/95 px-4 py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.15)] backdrop-blur-sm sm:px-8"
+		>
+			<div class="mx-auto grid w-full max-w-2xl grid-cols-2 gap-2 sm:flex sm:justify-between sm:gap-3">
+				<button
+					onclick={go_back}
+					disabled={!can_go_back}
+					class="flex h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-border bg-surface px-3 text-sm font-bold text-text-secondary shadow-sm transition hover:border-secondary/60 hover:bg-surface-hover hover:text-text-primary active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:px-5 sm:text-base"
+				>
+					<span aria-hidden="true">←</span> Back
+				</button>
+				<button
+					onclick={go_next}
+					disabled={!can_go_next}
+					class="flex h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-secondary bg-secondary px-3 text-sm font-bold text-white shadow-sm transition hover:bg-secondary-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto sm:px-6 sm:text-base"
+				>
+					{#if is_last && !is_reviewing}
+						Finish 🎉
+					{:else}
+						Next <span aria-hidden="true">→</span>
+					{/if}
+				</button>
+			</div>
+		</div>
+	{/if}
 </main>
 
 <style>
 	.quiz-question {
 		font-size: clamp(1.2rem, 4vw, 2rem);
 		line-height: 1.35;
+	}
+
+	/* Respect the iPhone home bar so buttons aren't clipped */
+	.nav-bar {
+		padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
 	}
 </style>
