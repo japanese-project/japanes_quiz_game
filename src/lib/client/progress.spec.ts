@@ -4,6 +4,7 @@ import {
 	getLastResult,
 	getRankings,
 	getSession,
+	getUserAvatar,
 	saveQuizResult,
 	signIn,
 	signOut,
@@ -69,6 +70,14 @@ describe('signIn', () => {
 		signIn('sakura')
 
 		expect(getSession().progress.N4).toEqual({ score: 30, answered: 10, best: 30 })
+	})
+
+	it('saves the selected animal avatar for each user', () => {
+		signIn('sakura', 'fox')
+		signIn('kenji', 'panda')
+
+		expect(getUserAvatar('sakura')).toBe('fox')
+		expect(getUserAvatar('kenji')).toBe('panda')
 	})
 })
 

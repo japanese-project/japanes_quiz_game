@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte'
+	import { onDestroy, onMount, tick } from 'svelte'
 	import patternBackground from '$lib/assets/pattern1.png'
 	import type { AnswerResult, Level, Quiz } from '$lib/types'
-	import { submit_answer } from '$lib/api/quizzes'
+	import { reveal_answer, submit_answer } from '$lib/api/quizzes'
 	import { playAnswerSound, playQuizMusic, playThemeMusic } from '$lib/client/audio'
-	import { calculateScore, formatScore, QUESTION_TIME_SECONDS } from '$lib/scoring'
+	import { calculateScore, QUESTION_TIME_SECONDS } from '$lib/scoring'
 	import AnswerOption from './AnswerOption.svelte'
 
 	let {
@@ -51,9 +51,43 @@
 			seconds_left -= 1
 			if (seconds_left <= 0) {
 				stop_question_timer()
-				go_next()
+				void handle_timeout()
 			}
 		}, 1000)
+	}
+
+	async function show_feedback_then_advance() {
+		// Start the feedback delay only after Svelte has painted the highlighted answer.
+		await tick()
+		clearTimeout(advance_timeout)
+		advance_timeout = setTimeout(go_next, ANSWER_FEEDBACK_MS)
+	}
+
+	async function handle_timeout() {
+		if (result || checking) return
+		checking = true
+		error = ''
+		selected_choice_id = null
+		points_earned = 0
+
+		// The regular one-second width transition would otherwise still show the last
+		// sliver of the progress bar while the answer is being revealed. Let the zero
+		// state paint first so the visual countdown and timeout agree exactly.
+		await tick()
+		await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+
+		try {
+			result = await reveal_answer(quiz.id, current.id)
+			playAnswerSound(false)
+		} catch (thrown) {
+			error = thrown instanceof Error ? thrown.message : 'Could not reveal the correct answer.'
+		} finally {
+			checking = false
+		}
+
+		// Do not skip the question when the answer could not be loaded. The choices stay
+		// enabled so the learner can still answer, and the error remains visible.
+		if (result) await show_feedback_then_advance()
 	}
 
 	async function select_answer(choice_id: string) {
@@ -89,10 +123,12 @@
 		playAnswerSound(result.is_correct)
 
 		// Keep the result visible long enough for the answer sound to finish.
-		advance_timeout = setTimeout(go_next, ANSWER_FEEDBACK_MS)
+		await show_feedback_then_advance()
 	}
 
 	function go_next() {
+		clearTimeout(advance_timeout)
+		advance_timeout = undefined
 		if (is_last) {
 			on_finish(score, correct_count)
 			return
@@ -117,28 +153,32 @@
 </script>
 
 <main
-	class="flex min-h-screen flex-col overflow-x-hidden bg-[#071e3b] bg-cover bg-fixed bg-center bg-no-repeat"
-	style={`background-image: linear-gradient(rgba(7, 30, 59, 0.94), rgba(7, 30, 59, 0.96)), url('${patternBackground}')`}
+	class="app-pattern-bg flex min-h-screen flex-col overflow-x-hidden bg-cover bg-fixed bg-center bg-no-repeat"
+	style={`--pattern-image:url('${patternBackground}')`}
 >
-	<div class="mx-auto flex w-full max-w-[1280px] items-center justify-between px-5 py-5 sm:px-8">
+	<div
+		class="mx-auto grid w-full max-w-[1280px] grid-cols-[1fr_auto_1fr] items-center px-4 py-3 sm:px-8 sm:py-5"
+	>
 		<button
 			onclick={on_exit}
-			class="cursor-pointer text-sm font-bold text-blue-100/70 transition hover:text-white"
-			>← Dashboard</button
+			class="grid h-11 w-12 cursor-pointer place-items-center justify-self-start rounded-xl border border-border bg-surface/80 text-2xl leading-none font-bold text-text-secondary shadow-sm transition hover:border-secondary/60 hover:bg-surface-hover hover:text-text-primary active:scale-95"
+			aria-label="Back to dashboard"
+			><span aria-hidden="true">←</span><span class="sr-only"> Dashboard</span></button
 		>
-		<div class="flex items-center gap-3">
-			<span class="rounded-full bg-[#e52f46] px-3 py-1.5 text-xs font-black text-white"
+		<div class="contents">
+			<span
+				class="type-label col-start-2 row-start-1 rounded-full bg-primary px-4 py-2 font-black text-text-primary"
 				>{level}</span
-			><span class="text-sm font-bold text-blue-100/70"
+			><span
+				class="type-caption col-start-3 row-start-1 justify-self-end font-bold whitespace-nowrap text-text-secondary"
 				>Question {index + 1} / {quiz.questions.length}</span
 			>
-			<span class="min-w-16 text-right text-sm font-black text-blue-50">{seconds_left}s</span>
 		</div>
 	</div>
-	<div class="h-1.5 w-full overflow-hidden bg-white/10">
+	<div class="h-1.5 w-full overflow-hidden bg-disabled/25">
 		<div
-			class="h-full bg-[#e52f46] transition-[width] duration-1000 ease-linear"
-			style={`width:${timer_progress}%`}
+			class="h-full bg-secondary transition-[width] duration-1000 ease-linear"
+			style={`width:${timer_progress}%;transition-duration:${seconds_left === 0 || seconds_left === QUESTION_TIME_SECONDS ? 0 : 1000}ms`}
 			role="progressbar"
 			aria-label="Time remaining"
 			aria-valuemin="0"
@@ -148,23 +188,26 @@
 	</div>
 
 	<section
-		class="flex flex-1 flex-col border-y border-white/10 bg-gradient-to-b from-[#1a3555]/90 to-[#102b49]/90 shadow-2xl shadow-black/20"
+		class="flex flex-1 flex-col border-y border-border bg-gradient-to-b from-surface/95 to-bg-deep shadow-2xl shadow-black/20"
 	>
-		<div class="mx-auto flex w-full max-w-4xl flex-1 flex-col px-5 py-7 sm:px-8 sm:py-10">
+		<div class="mx-auto flex w-full max-w-2xl flex-1 flex-col px-5 py-7 sm:px-8 sm:py-10">
 			<div>
-				<span class="rounded-full bg-cyan-400/10 px-3 py-1.5 text-xs font-black text-cyan-300"
+				<span
+					class="type-label rounded-full bg-secondary/10 px-3 py-1.5 font-black text-secondary-hover"
 					>{current.category}</span
 				>
 			</div>
 			{#if current.image}<div
-					class="mt-6 mb-7 grid h-32 place-items-center rounded-2xl border border-white/10 bg-[#0c2744]/65 text-6xl"
+					class="mt-6 mb-7 grid h-32 place-items-center rounded-2xl border border-border bg-bg-deep/65 text-6xl"
 					role="img"
 					aria-label="Question illustration"
 				>
 					{current.image}
 				</div>{/if}
-			<h1 class="mt-7 text-lg leading-8 font-black text-blue-50 sm:text-xl">{current.prompt}</h1>
-			<div class="mt-7 grid gap-3 sm:grid-cols-2">
+			<h1 class="quiz-question type-h1 mt-7 font-black text-text-primary">
+				{current.prompt}
+			</h1>
+			<div class="mt-7 grid gap-3">
 				{#each current.choices as choice, choice_index (choice.id)}
 					<AnswerOption
 						{choice}
@@ -179,7 +222,7 @@
 			</div>
 
 			{#if checking}
-				<div class="mt-6 flex items-center gap-2 text-sm font-bold text-blue-100/50">
+				<div class="type-body mt-6 flex items-center gap-2 font-bold text-text-secondary">
 					<span
 						class="size-4 animate-spin rounded-full border-2 border-current border-t-transparent"
 					></span>
@@ -187,26 +230,18 @@
 				</div>
 			{:else if error}
 				<p
-					class="mt-6 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm font-bold text-red-200"
+					class="type-body mt-6 rounded-xl border border-error/60 bg-error/10 p-4 font-bold text-error"
 				>
 					{error}
 				</p>
-			{:else if result}
-				<div
-					class="mt-6 rounded-xl border p-4 {result.is_correct
-						? 'border-emerald-400/40 bg-emerald-400/10'
-						: 'border-amber-300/40 bg-amber-300/10'}"
-				>
-					<p class="text-sm font-black {result.is_correct ? 'text-emerald-300' : 'text-amber-300'}">
-						{result.is_correct
-							? `Correct! +${formatScore(points_earned)}`
-							: 'Not quite. Review the correct answer.'}
-					</p>
-					{#if result.explanation}
-						<p class="mt-1 text-sm leading-6 text-blue-100/70">{result.explanation}</p>
-					{/if}
-				</div>
 			{/if}
 		</div>
 	</section>
 </main>
+
+<style>
+	.quiz-question {
+		font-size: clamp(1.5rem, 2.5vw, 2rem);
+		line-height: 1.35;
+	}
+</style>

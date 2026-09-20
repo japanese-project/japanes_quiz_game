@@ -4,6 +4,7 @@ import type { Level, UserProgress } from '$lib/types'
 
 const USERNAME_KEY = 'jq-username'
 const USERS_KEY = 'jq-users'
+const AVATARS_KEY = 'jq-avatars'
 const RESULT_KEY = 'jq-last-result'
 const LEGACY_PROGRESS_KEY = 'jq-progress'
 
@@ -50,11 +51,19 @@ export function getSession() {
 	return { username, profiles, progress: profiles[username] ?? emptyProgress() }
 }
 
-export function signIn(username: string) {
+export function signIn(username: string, avatarId?: string) {
 	const profiles = readJson<UserProfiles>(USERS_KEY, {})
 	const nextProfiles = profiles[username] ? profiles : { ...profiles, [username]: emptyProgress() }
 	localStorage.setItem(USERNAME_KEY, username)
 	localStorage.setItem(USERS_KEY, JSON.stringify(nextProfiles))
+	if (avatarId) {
+		const avatars = readJson<Record<string, string>>(AVATARS_KEY, {})
+		localStorage.setItem(AVATARS_KEY, JSON.stringify({ ...avatars, [username]: avatarId }))
+	}
+}
+
+export function getUserAvatar(username: string) {
+	return readJson<Record<string, string>>(AVATARS_KEY, {})[username] ?? ''
 }
 
 export function signOut() {

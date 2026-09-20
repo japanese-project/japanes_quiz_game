@@ -15,7 +15,7 @@
 		}
 	})
 
-	async function login(username: string): Promise<string | null> {
+	async function login(username: string, avatarId: string): Promise<string | null> {
 		// Start during the submit gesture so browser autoplay policies allow music after login.
 		playThemeMusic()
 		try {
@@ -30,7 +30,7 @@
 				return text || 'Could not sign in. Please try again.'
 			}
 			// Keep localStorage in sync so other pages that read it still work.
-			signIn(username)
+			signIn(username, avatarId)
 			void goto(resolve('/dashboard'))
 			return null
 		} catch {

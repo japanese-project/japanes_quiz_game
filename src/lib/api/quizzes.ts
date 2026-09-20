@@ -35,6 +35,14 @@ export function submit_answer(quiz_id: string, choice_id: string) {
 	})
 }
 
+export function reveal_answer(quiz_id: string, question_id: string) {
+	return request<AnswerResult>(`/api/quizzes/${quiz_id}/answers`, {
+		method: 'POST',
+		headers: { 'content-type': 'application/json' },
+		body: JSON.stringify({ question_id }),
+	})
+}
+
 /**
  * Saves a completed quiz attempt on the server so it is counted in the leaderboard.
  * Returns the new attempt id, or null if the save failed (non-fatal — local progress

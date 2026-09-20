@@ -44,7 +44,7 @@
 		score={result.score}
 		correct={result.correct}
 		total={result.total}
-		onDashboard={() => void goto(resolve('/dashboard'))}
+		onHome={() => void goto(resolve('/dashboard'))}
 		onRetry={retry}
 	/>
 {:else}
