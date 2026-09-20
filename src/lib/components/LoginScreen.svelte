@@ -88,7 +88,7 @@
 							autocomplete="username"
 							placeholder="e.g. Sakura"
 							aria-describedby={error ? 'login-error' : undefined}
-							class="type-body h-14 w-full bg-transparent font-medium text-text-primary outline-none placeholder:font-normal placeholder:text-text-secondary"
+							class="type-body h-14 w-full appearance-none border-0 bg-transparent font-medium text-text-primary outline-none ring-0 placeholder:font-normal placeholder:text-text-secondary"
 						/>
 					</div>
 				</label>
@@ -157,3 +157,18 @@
 		</div>
 	</section>
 </main>
+
+<style>
+	/* iOS Safari injects its own focus ring on inputs that Tailwind classes alone can't suppress */
+	input {
+		-webkit-appearance: none;
+		-webkit-tap-highlight-color: transparent;
+		outline: none;
+		box-shadow: none;
+	}
+	input:focus {
+		outline: none !important;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+	}
+</style>
