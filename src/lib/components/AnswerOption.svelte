@@ -32,7 +32,7 @@
 		? 'border-success bg-success/15 text-text-primary shadow-lg shadow-black/20'
 		: isWrong
 			? 'border-error bg-error/15 text-text-primary shadow-lg shadow-black/20'
-			: isSelected
+			: isSelected && !checking
 				? 'border-secondary bg-secondary/10 text-text-primary'
 				: 'border-border bg-bg-deep/35 text-text-secondary hover:border-secondary/60 hover:bg-surface-hover'}"
 >
